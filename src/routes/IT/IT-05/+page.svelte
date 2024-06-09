@@ -1,5 +1,5 @@
 <script>
-  import EKJ from '$lib/ITCS/KJ.jpg?url';
+  import EKJ from '$lib/assets/ITCS/KJ.jpg?url';
 	import { goto } from "$app/navigation";
   import { onMount } from 'svelte';
 $:{

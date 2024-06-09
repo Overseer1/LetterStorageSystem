@@ -1,5 +1,5 @@
 <script>
-  import MMK from '$lib/ITCS/MK.jpg?url';
+  import MMK from '$lib/assets/ITCS/MK.jpg?url';
 	import { goto } from "$app/navigation";
   import { onMount } from 'svelte';
 $:{
