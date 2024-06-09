@@ -1,6 +1,6 @@
 <script>
     import "../app.css";
-    // import Footer from "../routes/components/Footer.svelte";
+    import Footer from "../routes/components/Footer.svelte";
 </script>
 <div>
     <!-- <div class="sticky top-0 flex">
@@ -9,9 +9,9 @@
 	<main class="sticky top-0">
 		<slot />
 	</main>
-	<!-- <div class="text-xl text-white text-center fixed inset-x-0 bottom-0 p-1 bgFooter">
+	<div class="text-xl text-white text-center fixed inset-x-0 bottom-0 p-1 bgFooter">
 		<Footer />
-	</div> -->
+	</div>
 </div>
 <style lang="postcss">
 	.bgFooter {
