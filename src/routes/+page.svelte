@@ -154,10 +154,12 @@
           </p>
         </div> 
         <div class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "MA"}> 
-          <img src={CMA} alt="N/A" class=""/>
+          <div>
+          <img src={CMA} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
           <p class="text-xl ml-4">
             1st year <br/> TM-12
           </p>
+        </div>
         </div> 
         <div class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "J"}> 
           <img src={MJ} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
