@@ -141,12 +141,10 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-img-redundant-alt -->
-  <div>
-    
    <h1 class="text-lg m-2 text-center"> Please select your Year/Course or work in the list below </h1>
     <div class="row">
       <!-- TM -->
-      <main class="gridName"> 
+      <div class="gridName">
         <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1> 
         <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
         <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => QKey = "KC"}> 
@@ -154,12 +152,12 @@
             3rd year <br/> TM-KC
           </p>
         </div> 
-        <article class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "MA"}> 
+        <div class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "MA"}> 
           <img src={CMA} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
           <p class="text-xl ml-4">
             1st year <br/> TM-12
           </p>
-        </article> 
+        </div> 
         <div class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "J"}> 
           <img src={MJ} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
           <p class="text-xl ml-4">
@@ -172,7 +170,7 @@
             1st year <br/> TM-26
           </p>
         </div>  
-      </main>
+      </div>
       <!-- IT/CS -->
       <div class="gridName"> 
         <h1 class="text-2xl mb-2">ICT</h1>
@@ -212,7 +210,7 @@
         </div> 
       </div>
     </div>
-  </div>
+  
   <Modal bind:showModal>
     <h2 slot="header" class="text-2xl text-center">
       Passphrase
