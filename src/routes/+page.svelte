@@ -226,7 +226,7 @@
   </Modal>
   <style lang="postcss">
       *{
-        box-sizing: border-box;
+        /* box-sizing: border-box; */
       }
       .textWarning
       {
@@ -240,8 +240,8 @@
       }
       .gridDesc
       {
-        /* display: grid;
-        grid-template-columns: 50% 50%; */
+        display: grid;
+        grid-template-columns: 50% 50%;
         align-items: center;
         cursor: pointer;
       }
