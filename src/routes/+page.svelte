@@ -1,4 +1,6 @@
 <script>
+  import { base } from "$app/paths";
+  
   import CKC from '$lib/assets/TM/KC.jpg?url';
   import CMA from '$lib/assets/TM/MA.jpg?url';
   import MJ from '$lib/assets/TM/J.jpg?url';
@@ -86,49 +88,49 @@
     if (Answer == import.meta.env.VITE_TM_KC_A1 || Answer == import.meta.env.VITE_TM_KC_A2)
     {
       localStorage.setItem('letterKey', 'TM-KC');
-      goto("/TM/TM-KC");
+      goto(base + "/TM/TM-KC");
     }
     else if (Answer == import.meta.env.VITE_TM_12_A)
     {
       localStorage.setItem('letterKey', 'TM-12');
-      goto("/TM/TM-12");
+      goto(base + "/TM/TM-12");
     }
     else if (Answer == import.meta.env.VITE_TM_10_A)
     {
       localStorage.setItem('letterKey', 'TM-10');
-      goto("/TM/TM-10");
+      goto(base + "/TM/TM-10");
     }
     else if (Answer == import.meta.env.VITE_TM_26_A)
     {
       localStorage.setItem('letterKey', 'TM-26');
-      goto("/TM/TM-26");
+      goto(base + "/TM/TM-26");
     }
     //ITCS
     else if (Answer == import.meta.env.VITE_IT_05_A1 || Answer ==  import.meta.env.VITE_IT_05_A2)
     {
       localStorage.setItem('letterKey', 'IT-05');
-      goto("/IT/IT-05");
+      goto(base + "/IT/IT-05");
     }
     else if (Answer == import.meta.env.VITE_CS_15_A)
     {
       localStorage.setItem('letterKey', 'CS-15');
-      goto("/CS/CS-15");
+      goto(base + "/CS/CS-15");
     }
     //NTS
     else if (Answer == import.meta.env.VITE_GA_15_A)
     {
       localStorage.setItem('letterKey', 'GA-15');
-      goto("/NTS/GA-15");
+      goto(base + "/NTS/GA-15");
     }
     else if (Answer == import.meta.env.VITE_SL_24_A1 || Answer == import.meta.env.VITE_SL_24_A2)
     {
       localStorage.setItem('letterKey', 'SL-24');
-      goto("/NTS/SL-24");
+      goto(base + "/NTS/SL-24");
     }
     else if (Answer == import.meta.env.VITE_SN_19_A)
     { 
       localStorage.setItem('letterKey', 'SN-19');
-      goto("/NTS/SN-19");
+      goto(base + "/NTS/SN-19");
     }
     Answer = ""
   }
