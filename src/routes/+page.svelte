@@ -145,16 +145,17 @@
    <h1 class="text-lg m-2 text-center"> Please select your Year/Course or work in the list below </h1>
     <div class="row">
       <!-- TM -->
-      <div class="gridName"> 
-        <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1> 
-        <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
+      <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1>
+      <div class="gridName gridDesc"> 
+         
+        
         <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => QKey = "KC"}> 
+          <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
           <p class="text-xl ml-5 textRealign">
             3rd year <br/> TM-KC
           </p>
         </div> 
         <div class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "MA"}> 
-          <div></div>
           <img src={CMA} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
           <p class="text-xl ml-4">
             1st year <br/> TM-12
