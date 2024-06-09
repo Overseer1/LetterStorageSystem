@@ -143,15 +143,14 @@
   <!-- svelte-ignore a11y-img-redundant-alt -->
   <div>
    <h1 class="text-lg m-2 text-center"> Please select your Year/Course or work in the list below </h1>
-    <div class="row">
+    
       <!-- TM -->
-      <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1>
-      <div class="gridName gridDesc"> 
-         
+      <div class="gridName"> 
+        <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1> 
         
-        <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => QKey = "KC"}> 
+        <div class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "KC"}> 
           <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
-          <p class="text-xl ml-5 textRealign">
+          <p class="text-xl ml-4">
             3rd year <br/> TM-KC
           </p>
         </div> 
@@ -212,7 +211,7 @@
           </p>
         </div> 
       </div>
-    </div>
+    
   </div>
   <Modal bind:showModal>
     <h2 slot="header" class="text-2xl text-center">
@@ -228,7 +227,7 @@
   </Modal>
   <style lang="postcss">
       *{
-        /* box-sizing: border-box; */
+        box-sizing: border-box;
       }
       .textWarning
       {
