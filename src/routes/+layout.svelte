@@ -17,4 +17,7 @@
 	.bgFooter {
       color: #dddddd;
     }
+	:global(html) {
+        background-color: theme(colors.bgBlack);
+      }
 </style>

@@ -2,6 +2,7 @@
   import MJ from '$lib/assets/TM/J.jpg?url';
 	import { goto } from "$app/navigation";
   import { onMount } from 'svelte';
+  import { base } from "$app/paths";
 $:{
   let hasItem;
   let valueCheck;
@@ -15,7 +16,7 @@ onMount(async () => {
   } 
   else
   {
-   goto("/");
+   goto(base +"/");
   }
 });
   }

@@ -1,7 +1,7 @@
 <script>
   import { base } from "$app/paths";
   
-  // import CKC from '$lib/assets/TM/KC.jpg?url';
+  import CKC from '$lib/assets/TM/KC.jpg?url';
   import CMA from '$lib/assets/TM/MA.jpg?url';
   import MJ from '$lib/assets/TM/J.jpg?url';
   import PE from '$lib/assets/TM/E.jpg?url';
@@ -26,7 +26,6 @@
     let hasItem;
     onMount(async () => {
     hasItem = localStorage.getItem('letterKey') !== null;
-    // Conditional logic based on hasItem
     if (hasItem) 
     {
       localStorage.removeItem('letterKey')
@@ -135,6 +134,7 @@
     Answer = ""
   }
   </script>
+  <title>Letter Storage System</title>
   <h1 class="text-3xl text-center m-9 mb-4">
       Welcome
   </h1>
@@ -148,8 +148,9 @@
       <!-- TM -->
       <div class="gridName"> 
         <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1> 
+        <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
         <div class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "KC"}> 
-          <img src="%sveltekit.assets%/KC.jpg" alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
+          
           <p class="text-xl ml-4">
             3rd year <br/> TM-KC
           </p>
