@@ -32,11 +32,11 @@ onMount(async () => {
 <style lang="postcss">
     .cheatline
   {
-    background-color: #dddddd;
-    color:#313131;
+    background-color: #8f011b;
+    color:#dddddd;
   }
   :global(html) {
-      background-color: theme(colors.bgBlackWhite);
+      background-color: theme(colors.bgMaroon);
       color: #dddddd;
     }
 </style>

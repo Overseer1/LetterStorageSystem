@@ -8,7 +8,8 @@ export default {
       'bgPink': '#673249',
       'bgRoseGold': '#5f3e42',
       'bgBlackWhite': '#474747',
-      'bgGreen': '#174724'
+      'bgGreen': '#174724',
+      'bgMaroon': '#4f1817'
     },
     extend: {},
   },
