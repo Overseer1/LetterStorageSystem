@@ -141,10 +141,11 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-img-redundant-alt -->
+  <div>
    <h1 class="text-lg m-2 text-center"> Please select your Year/Course or work in the list below </h1>
     <div class="row">
       <!-- TM -->
-      <div class="gridName">
+      <div class="gridName"> 
         <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1> 
         <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
         <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => QKey = "KC"}> 
@@ -210,7 +211,7 @@
         </div> 
       </div>
     </div>
-  
+  </div>
   <Modal bind:showModal>
     <h2 slot="header" class="text-2xl text-center">
       Passphrase
@@ -239,8 +240,8 @@
       }
       .gridDesc
       {
-        display: grid;
-        grid-template-columns: 50% 50%;
+        /* display: grid;
+        grid-template-columns: 50% 50%; */
         align-items: center;
         cursor: pointer;
       }
