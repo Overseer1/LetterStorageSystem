@@ -113,12 +113,12 @@
 	<!-- TM -->
 	<div class="gridName">
 		<h1 class="text-2xl mb-2 ml-5">Tourism Management</h1>
-		<a class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
 			<img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
 			<p class="text-xl ml-4">
 				3rd year <br /> TM-KC
 			</p>
-		</a>
+		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MA')}>
 			<img src={CMA} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
 			<p class="text-xl ml-4">

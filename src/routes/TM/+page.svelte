@@ -37,32 +37,32 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-img-redundant-alt -->
+<h1 class="text-2xl mb-2 ml-5 text-center">Tourism Management</h1>
 <div class="gridName">
-    <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1>
-    <div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
-        <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
-        <p class="text-xl ml-4">
+    
+   
+        <img src={CKC} alt="N/A" class="object-cover ml-5 mb-7 h-[150px] w-[150px] rounded-lg" />
+        <p class="text-xl ml-4 mb-7">
             3rd year <br /> TM-KC
         </p>
-    </div>
-    <div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MA')}>
-        <img src={CMA} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
-        <p class="text-xl ml-4">
+
+  
+        <img src={CMA} alt="N/A" class="object-cover ml-5 mb-7 h-[150px] w-[150px] rounded-lg" />
+        <p class="text-xl ml-4 mb-7">
             1st year <br /> TM-12
         </p>
-    </div>
-    <div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'J')}>
-        <img src={MJ} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
-        <p class="text-xl ml-4">
+
+   
+        <img src={MJ} alt="N/A" class="object-cover ml-5 mb-7 h-[150px] w-[150px] rounded-lg" />
+        <p class="text-xl ml-4 mb-7">
             1st year <br /> TM-10
         </p>
-    </div>
-    <div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'E')}>
-        <img src={PE} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
-        <p class="text-xl ml-4">
+
+   
+        <img src={PE} alt="N/A" class="object-cover ml-5 mb-7 h-[150px] w-[150px] rounded-lg" />
+        <p class="text-xl ml-4 mb-7">
             1st year <br /> TM-26
         </p>
-    </div>
 </div>
 <style lang="postcss">
 	* {
@@ -72,9 +72,17 @@
 		color: #991b1b;
 	}
 	.gridName {
-		float: left;
+		/* float: left;
 		width: 33.33%;
-		padding: 10px;
+		padding: 10px; */
+        position: static;
+        margin-left: 12px;
+        display: grid;
+		grid-template-columns: 25% 25% 25% 25%;
+		align-items: center;
+        align-content: center;
+		cursor: pointer;
+
 	}
 	.gridDesc {
 		display: grid;
@@ -84,7 +92,11 @@
 	}
 	@media screen and (max-width: 600px) {
 		.gridName {
+            /* display: block; */
+            
+            grid-template-columns: 50% 50%;
 			width: 100%;
+            align-content: center;
 		}
 	}
 	:global(html) {
