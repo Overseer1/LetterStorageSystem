@@ -113,8 +113,12 @@
 	<!-- TM -->
 	<div class="gridName">
 		<h1 class="text-2xl mb-2 ml-5">Tourism Management</h1>
-		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
-			<img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
+	
+      <div class="gridDesc flex overflow-hidden mb-5">
+        <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
+      </div>
+			
+      <div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
 			<p class="text-xl ml-4">
 				3rd year <br /> TM-KC
 			</p>
@@ -199,15 +203,15 @@
 		color: #991b1b;
 	}
 	.gridName {
-		/* float: left;
+		float: left;
 		width: 33.33%;
-		padding: 10px; */
+		padding: 10px;
 	}
 	.gridDesc {
-		/* display: grid;
+		display: grid;
 		grid-template-columns: 50% 50%;
 		align-items: center;
-		cursor: pointer; */
+		cursor: pointer;
 	}
 	@media screen and (max-width: 600px) {
 		.gridName {
