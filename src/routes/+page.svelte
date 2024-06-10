@@ -141,12 +141,12 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-img-redundant-alt -->
-  <div>
+
    <h1 class="text-lg m-2 text-center"> Please select your Year/Course or work in the list below </h1>
     
       <!-- TM -->
-      <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1> 
-      <div class="gridName">
+      <div class="gridName"> 
+        <h1 class="text-2xl mb-2 ml-5">Tourism Management</h1> 
         <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => QKey = "KC"}> 
           <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg"/>
           <p class="text-xl ml-">
@@ -173,9 +173,8 @@
         </div>  
       </div>
       <!-- IT/CS -->
-      <h1 class="text-2xl mb-2">ICT</h1>
       <div class="gridName"> 
-        
+        <h1 class="text-2xl mb-2">ICT</h1>
         <div class="gridDesc flex overflow-hidden mb-5" on:click={() => QKey = "KJ"}> 
           <img src={EK} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg"/>
           <p class="text-xl ml-4">
@@ -212,7 +211,7 @@
         </div> 
       </div>
     
-  </div>
+  
   <Modal bind:showModal>
     <h2 slot="header" class="text-2xl text-center">
       Passphrase
@@ -235,11 +234,9 @@
       }
       .gridName
       {
-        /* float: left;
+        float: left;
         width: 33.33%;
-        padding: 10px; */
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        padding: 10px;
       }
       .gridDesc
       {
