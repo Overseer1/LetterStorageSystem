@@ -111,28 +111,28 @@
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1>
 	<!-- TM -->
 	<div class="gridName text-center">
-		<h1 class="text-2xl mb-2 ml-5">Tourism Management</h1>
+		<h1 class="text-2xl mb-2">Tourism Management</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
 			<!-- <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4">
+			<p class="text-xl">
 				3rd year | TM-KC
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5 " on:click={() => (QKey = 'MA')}>
 			<!-- <img src={CMA} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4 ">
+			<p class="text-xl">
 				1st year | TM-12
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'J')}>
 			<!-- <img src={MJ} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4">
+			<p class="text-xl">
 				1st year | TM-10
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'E')}>
 			<!-- <img src={PE} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4">
+			<p class="text-xl">
 				1st year | TM-26
 			</p>
 		</div>
@@ -140,16 +140,16 @@
 	<!-- IT/CS -->
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">ICT</h1>
-		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KJ')}>
+		<div class="gridDesc flex overflow-hidden mb-5 justify-center" on:click={() => (QKey = 'KJ')}>
 			<!-- <img src={EK} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4">
-				3rd year | IT <br /> IT-05
+			<p class="text-xl">
+				3rd year | IT | IT-05
 			</p>
 		</div>
-		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MK')}>
+		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (QKey = 'MK')}>
 			<!-- <img src={MM} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4">
-				2nd year | CS <br /> CS-15
+			<p class="text-xl">
+				2nd year | CS | CS-15
 			</p>
 		</div>
 	</div>
@@ -158,20 +158,20 @@
 		<h1 class="text-2xl mb-2">Non-Teaching Staff</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'Q')}>
 			<!-- <img src={GQ} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4">
-				Guidance Associate <br /> GA-15
+			<p class="text-xl">
+				Guidance Associate | GA-15
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SL-A')}>
 			<!-- <img src={RA} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4">
-				School Librarian <br /> SL-24
+			<p class="text-xl">
+				School Librarian | SL-24
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SN-A')}>
 			<!-- <img src={TA} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
-			<p class="text-xl ml-4">
-				School Nurse <br /> SN-19
+			<p class="text-xl">
+				School Nurse | SN-19
 			</p>
 		</div>
 	</div>
@@ -206,8 +206,9 @@
 		/* display: grid;
 		grid-template-columns: 50% 50%;
 		align-items: center; */
+		display: grid;
 		cursor: pointer;
-    justify-content: center;
+    	justify-content: center;
 	}
   .gridDesc:hover
   {
