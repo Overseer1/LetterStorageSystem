@@ -1,10 +1,10 @@
 <script>
 	import { base } from '$app/paths';
 
-	import CKC from '$lib/assets/TM/KC.jpg?url';
-	import CMA from '$lib/assets/TM/MA.jpg?url';
-	import MJ from '$lib/assets/TM/J.jpg?url';
-	import PE from '$lib/assets/TM/E.jpg?url';
+	// import CKC from '$lib/assets/TM/KC.jpg?url';
+	// import CMA from '$lib/assets/TM/MA.jpg?url';
+	// import MJ from '$lib/assets/TM/J.jpg?url';
+	// import PE from '$lib/assets/TM/E.jpg?url';
 
 	import EK from '$lib/assets/ITCS/KJ.jpg?url';
 	import MM from '$lib/assets/ITCS/MK.jpg?url';
@@ -109,69 +109,67 @@
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <div>
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1>
-
 	<!-- TM -->
-	<div class="gridName">
+	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2 ml-5">Tourism Management</h1>
-
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
-			
+			<!-- <img src={CKC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" /> -->
 			<p class="text-xl ml-4">
-				3rd year <br /> TM-KC
+				3rd year | TM-KC
 			</p>
 		</div>
-		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MA')}>
-			<img src={CMA} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
-			<p class="text-xl ml-4">
-				1st year <br /> TM-12
+		<div class="gridDesc flex overflow-hidden mb-5 " on:click={() => (QKey = 'MA')}>
+			<!-- <img src={CMA} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" /> -->
+			<p class="text-xl ml-4 ">
+				1st year | TM-12
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'J')}>
-			<img src={MJ} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
+			<!-- <img src={MJ} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" /> -->
 			<p class="text-xl ml-4">
-				1st year <br /> TM-10
+				1st year | TM-10
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'E')}>
-			<img src={PE} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
+			<!-- <img src={PE} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" /> -->
 			<p class="text-xl ml-4">
-				1st year <br /> TM-26
+				1st year | TM-26
 			</p>
 		</div>
 	</div>
 	<!-- IT/CS -->
-	<div class="gridName">
+	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">ICT</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KJ')}>
-			<img src={EK} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" />
+			<!-- <img src={EK} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
 			<p class="text-xl ml-4">
 				3rd year | IT <br /> IT-05
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MK')}>
-			<img src={MM} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" />
+			<!-- <img src={MM} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
 			<p class="text-xl ml-4">
 				2nd year | CS <br /> CS-15
 			</p>
 		</div>
 	</div>
 	<!-- NTS -->
-	<div class="gridName">
+	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">Non-Teaching Staff</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'Q')}>
-			<img src={GQ} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" />
+			<!-- <img src={GQ} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
 			<p class="text-xl ml-4">
 				Guidance Associate <br /> GA-15
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SL-A')}>
-			<img src={RA} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" />
+			<!-- <img src={RA} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
 			<p class="text-xl ml-4">
 				School Librarian <br /> SL-24
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SN-A')}>
-			<img src={TA} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" />
+			<!-- <img src={TA} alt="picture niya" class="object-cover h-[150px] w-[150px] rounded-lg" /> -->
 			<p class="text-xl ml-4">
 				School Nurse <br /> SN-19
 			</p>
@@ -205,11 +203,17 @@
 		padding: 10px;
 	}
 	.gridDesc {
-		display: grid;
+		/* display: grid;
 		grid-template-columns: 50% 50%;
-		align-items: center;
+		align-items: center; */
 		cursor: pointer;
+    justify-content: center;
 	}
+  .gridDesc:hover
+  {
+    text-decoration: underline;
+  }
+  
 	@media screen and (max-width: 600px) {
 		.gridName {
 			width: 100%;
