@@ -1,18 +1,5 @@
 <script>
 	import { base } from '$app/paths';
-
-	// import CKC from '$lib/assets/TM/KC.jpg?url';
-	// import CMA from '$lib/assets/TM/MA.jpg?url';
-	// import MJ from '$lib/assets/TM/J.jpg?url';
-	// import PE from '$lib/assets/TM/E.jpg?url';
-
-	import EK from '$lib/assets/ITCS/KJ.jpg?url';
-	import MM from '$lib/assets/ITCS/MK.jpg?url';
-
-	import GQ from '$lib/assets/NTS/GA-Q.jpg?url';
-	import RA from '$lib/assets/NTS/SL-A.jpg?url';
-	import TA from '$lib/assets/NTS/SN-A.jpg?url';
-
 	import Modal from './components/Modal.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
@@ -191,9 +178,6 @@
 </Modal>
 
 <style lang="postcss">
-	* {
-		box-sizing: border-box;
-	}
 	.textWarning {
 		color: #991b1b;
 	}

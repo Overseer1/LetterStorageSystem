@@ -1,43 +1,46 @@
 <script>
-  import RA from '$lib/assets/NTS/SL-A.jpg?url';
-	import { goto } from "$app/navigation";
-  import { onMount } from 'svelte';
-  import { base } from "$app/paths";
-$:{
-  let hasItem;
-  let valueCheck;
-onMount(async () => {
-  hasItem = localStorage.getItem('letterKey') !== null;
-  valueCheck = localStorage.getItem('letterKey')
-  // Conditional logic based on hasItem
-  if (hasItem && valueCheck == 'SL-24') 
-  {
-    
-  } 
-  else
-  {
-   goto(base + "/");
-  }
-});
-  }
+	import RA from '$lib/assets/NTS/SL-A.jpg?url';
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
+	import Icon from '@iconify/svelte';
+	$: {
+		let hasItem;
+		let valueCheck;
+		onMount(async () => {
+			hasItem = localStorage.getItem('letterKey') !== null;
+			valueCheck = localStorage.getItem('letterKey');
+			// Conditional logic based on hasItem
+			if (hasItem && valueCheck == 'SL-24') {
+			} else {
+				goto(base + '/');
+			}
+		});
+	}
 </script>
-  
+
 <div class="text-center m-5">Welcome, Mrs. Rosal, A.</div>
-<div class="cheatline text-center">
-  Letter finished: June XX, 2024
- </div>
- <header class="overflow-hidden mb-5 flex justify-center">
-   <img src={RA} alt="N/A" class="object-cover mt-10 h-[270px] w-[450px] rounded-lg"/>
- </header>
- <h1 class="text-center">*insert final letter here</h1>
+<div class="cheatline text-center">Letter finished: June XX, 2024 | Letter written: N/A</div>
+<header class="overflow-hidden mb-5 flex justify-center">
+	<img src={RA} alt="N/A" class="object-cover mt-10 h-[270px] w-[450px] rounded-lg" />
+</header>
+<h1 class="text-center">*insert final letter here</h1>
+<button class="m-10 float-end border rounded-lg p-2" on:click={() => goto(base + '/')}>
+	<Icon icon="ep:back" style="color: #dddddd" />
+</button>
+
 <style lang="postcss">
-   .cheatline
-  {
-    background-color: #6D28D9;
-    color:#f5f3f3;
-  }
-  :global(html) {
-      background-color: theme(colors.bgPurp);
-      color: #dddddd;
-    }
+	.cheatline {
+		background-color: #6d28d9;
+		color: #f5f3f3;
+	}
+	:global(html) {
+		background-color: theme(colors.bgPurp);
+		color: #dddddd;
+	}
+	@media screen and (max-width: 600px) {
+		img {
+			width: 77%;
+		}
+	}
 </style>

@@ -1,5 +1,5 @@
 <script>
-	import TA from '$lib/assets/NTS/SN-A.jpg?url';
+	import EKJ from '$lib/assets/ITCS/KJ.jpg?url';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
@@ -11,7 +11,7 @@
 			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
 			// Conditional logic based on hasItem
-			if (hasItem && valueCheck == 'SN-19') {
+			if (hasItem && valueCheck == 'IT-05') {
 			} else {
 				goto(base + '/');
 			}
@@ -19,10 +19,10 @@
 	}
 </script>
 
-<div class="text-center m-5">Welcome, Ms. Tabigne, A.</div>
+<div class="text-center m-5">Welcome, Estipona, K.</div>
 <div class="cheatline text-center">Letter finished: June XX, 2024 | Letter written: N/A</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={TA} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
+	<img src={EKJ} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" />
 </header>
 <h1 class="text-center">*insert final letter here</h1>
 <button class="m-10 float-end border rounded-lg p-2" on:click={() => goto(base + '/')}>
@@ -31,11 +31,11 @@
 
 <style lang="postcss">
 	.cheatline {
-		background-color: #8f011b;
-		color: #dddddd;
+		background-color: #059142;
+		color: #f5f3f3;
 	}
 	:global(html) {
-		background-color: theme(colors.bgMaroon);
+		background-color: theme(colors.bgGreen);
 		color: #dddddd;
 	}
 	@media screen and (max-width: 600px) {
