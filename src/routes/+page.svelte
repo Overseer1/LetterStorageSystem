@@ -1,7 +1,7 @@
 <script>
 	import { base } from '$app/paths';
 
-	import KC from '$lib/assets/TM/KC.jpg?url';
+	import CKC from '$lib/assets/TM/KC.jpg?url';
 	import CMA from '$lib/assets/TM/MA.jpg?url';
 	import MJ from '$lib/assets/TM/J.jpg?url';
 	import PE from '$lib/assets/TM/E.jpg?url';
@@ -113,9 +113,8 @@
 	<!-- TM -->
 	<div class="gridName">
 		<h1 class="text-2xl mb-2 ml-5">Tourism Management</h1>
-	
-		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
-			<img src={KC} alt="N/A" class="object-cover ml-5 h-[150px] w-[150px] rounded-lg" />
+		<div class="gridDesc flex mb-5" on:click={() => (QKey = 'KC')}>
+			<img src={CKC} alt="N/A" class=" ml-5 h-[150px] w-[150px] rounded-lg" />
 			<p class="text-xl ml-4">
 				3rd year <br /> TM-KC
 			</p>
