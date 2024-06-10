@@ -199,9 +199,9 @@
 		color: #991b1b;
 	}
 	.gridName {
-		float: left;
+		/* float: left;
 		width: 33.33%;
-		padding: 10px;
+		padding: 10px; */
 	}
 	.gridDesc {
 		/* display: grid;
