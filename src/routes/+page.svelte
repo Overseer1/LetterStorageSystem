@@ -204,10 +204,10 @@
 		padding: 10px;
 	}
 	.gridDesc {
-		display: grid;
+		/* display: grid;
 		grid-template-columns: 50% 50%;
 		align-items: center;
-		cursor: pointer;
+		cursor: pointer; */
 	}
 	@media screen and (max-width: 600px) {
 		.gridName {

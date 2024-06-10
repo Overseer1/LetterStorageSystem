@@ -75,12 +75,11 @@
 		/* float: left;
 		width: 33.33%;
 		padding: 10px; */
-        position: static;
         margin-left: 12px;
         /* display: grid;
-		grid-template-columns: 25% 25% 25% 25%; */
+		grid-template-columns: 25% 25% 25% 25%;
 		align-items: center;
-        align-content: center;
+        align-content: center; */
 		cursor: pointer;
 
 	}
