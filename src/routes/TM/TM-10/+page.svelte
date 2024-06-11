@@ -24,7 +24,15 @@
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={MJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
 </header>
-<h1 class="text-center">*insert final letter here</h1>
+<article class="m-10 mb-3">
+
+</article>
+<article class="m-10 mb-3">
+	
+</article>
+<article class="m-10 mb-3">
+	
+</article>
 <button class="m-10 float-end border rounded-lg p-2" on:click={() => goto(base + '/')}>
 	<Icon icon="ep:back" style="color: #dddddd" />
 </button>

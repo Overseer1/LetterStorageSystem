@@ -19,7 +19,7 @@
 	}
 </script>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
-<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: ongoing</div>
+<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 11, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={CKC} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
 </header>
