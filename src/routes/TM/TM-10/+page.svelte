@@ -33,10 +33,13 @@
 <article class="m-10 mb-3">
 	
 </article>
+<footer class="m-10 mr-18 text-end">
+	From your school father, photographer, and close friend, <br />
+	Hanz
+</footer>
 <button class="m-10 float-end border rounded-lg p-2" on:click={() => goto(base + '/')}>
 	<Icon icon="ep:back" style="color: #dddddd" />
 </button>
-
 <style lang="postcss">
 	.cheatline {
 		background-color: #b76e79;

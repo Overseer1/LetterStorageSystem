@@ -20,7 +20,7 @@
 </script>
 
 <div class="text-center m-5">Welcome, Ms. Gregorio, Q.</div>
-<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: ongoing</div>
+<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 13, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={GQ} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" />
 </header>
@@ -41,8 +41,8 @@
 </article>
 <article class="m-10">
 	Mamimiss q yung random photoshoots and rants mo ma'am. Ang dami din nangyari sa loob ng tatlong sem (advices about sa life, photoshoot hanggang mag sawa, kinalma aq dahil sa nangyari last May 30). 
-	Salamat sa ~15 months na kakulitan, counseling, and bonding ma'am!
-	Mamimiss kita ma'am! Love u ma'am! See u when I see u and thank u ulit!!!
+	Salamat sa ~15 months na kakulitan, counseling, and bonding ma'am! Kakamustahin kita every now and then.
+	Mamimiss kita ma'am! Love u ma'am! God bless u, see u when I see u, and thank u ulit!!!
 </article>
 
 <footer class="m-10 mr-18 text-end">

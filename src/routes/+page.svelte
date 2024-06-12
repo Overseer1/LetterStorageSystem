@@ -81,7 +81,7 @@
 		} else if (Answer == import.meta.env.VITE_SL_24_A1 || Answer == import.meta.env.VITE_SL_24_A2) {
 			localStorage.setItem('letterKey', 'SL-24');
 			goto(base + '/NTS/SL-24');
-		} else if (Answer == import.meta.env.VITE_SN_19_A) {
+		} else if (Answer == import.meta.env.VITE_SN_19_A1 || Answer == import.meta.env.VITE_SN_19_A2) {
 			localStorage.setItem('letterKey', 'SN-19');
 			goto(base + '/NTS/SN-19');
 		}

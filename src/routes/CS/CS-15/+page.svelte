@@ -25,6 +25,10 @@
 	<img src={MMK} alt="N/A" class="object-cover mt-10 h-[400px] w-[250px] rounded-lg" />
 </header>
 <h1 class="text-center">*insert final letter here</h1>
+<footer class="m-10 mr-18 text-end">
+	From your school twin brother, co-photographer, and close friend, <br />
+	Hanz
+</footer>
 <button class="m-10 float-end border rounded-lg p-2" on:click={() => goto(base + '/')}>
 	<Icon icon="ep:back" style="color: #dddddd" />
 </button>
