@@ -8,6 +8,7 @@
 	let QKey = '';
 	let Question = '';
 	let Answer = '';
+	let pHolder = 'USE PROPER CAPITALIZATION';
 	$: {
 		let hasItem;
 		onMount(async () => {
@@ -53,37 +54,41 @@
 
 	const answerCheck = () => {
 		//TM
-		if (Answer == import.meta.env.VITE_TM_KC_A1 || Answer == import.meta.env.VITE_TM_KC_A2) {
+		if (QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A1 || QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A2) {
 			localStorage.setItem('letterKey', 'TM-KC');
 			goto(base + '/TM/TM-KC');
-		} else if (Answer == import.meta.env.VITE_TM_12_A) {
+		} else if (QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A) {
 			localStorage.setItem('letterKey', 'TM-12');
 			goto(base + '/TM/TM-12');
-		} else if (Answer == import.meta.env.VITE_TM_10_A) {
+		} else if (QKey == 'J' && Answer == import.meta.env.VITE_TM_10_A) {
 			localStorage.setItem('letterKey', 'TM-10');
 			goto(base + '/TM/TM-10');
-		} else if (Answer == import.meta.env.VITE_TM_26_A) {
+		} else if (QKey == 'E' && Answer == import.meta.env.VITE_TM_26_A) {
 			localStorage.setItem('letterKey', 'TM-26');
 			goto(base + '/TM/TM-26');
 		}
 		//ITCS
-		else if (Answer == import.meta.env.VITE_IT_05_A1 || Answer == import.meta.env.VITE_IT_05_A2) {
+		else if (QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A1 || QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A2) {
 			localStorage.setItem('letterKey', 'IT-05');
 			goto(base + '/IT/IT-05');
-		} else if (Answer == import.meta.env.VITE_CS_15_A) {
+		} else if (QKey == 'MK' && Answer == import.meta.env.VITE_CS_15_A) {
 			localStorage.setItem('letterKey', 'CS-15');
 			goto(base + '/CS/CS-15');
 		}
 		//NTS
-		else if (Answer == import.meta.env.VITE_GA_15_A) {
+		else if (QKey == 'Q' && Answer == import.meta.env.VITE_GA_15_A) {
 			localStorage.setItem('letterKey', 'GA-15');
 			goto(base + '/NTS/GA-15');
-		} else if (Answer == import.meta.env.VITE_SL_24_A1 || Answer == import.meta.env.VITE_SL_24_A2) {
+		} else if (QKey == 'SL-A' && Answer == import.meta.env.VITE_SL_24_A1 || QKey == 'SL-A' && Answer == import.meta.env.VITE_SL_24_A2) {
 			localStorage.setItem('letterKey', 'SL-24');
 			goto(base + '/NTS/SL-24');
-		} else if (Answer == import.meta.env.VITE_SN_19_A1 || Answer == import.meta.env.VITE_SN_19_A2) {
+		} else if (QKey == 'SN-A' && Answer == import.meta.env.VITE_SN_19_A1 || QKey == 'SN-A' && Answer == import.meta.env.VITE_SN_19_A2) {
 			localStorage.setItem('letterKey', 'SN-19');
 			goto(base + '/NTS/SN-19');
+		}
+		else
+		{
+			pHolder = 'Try again';
 		}
 		Answer = '';
 	};
@@ -165,7 +170,7 @@
 </div>
 <Modal bind:showModal>
 	<h2 slot="header" class="text-2xl text-center">Passphrase</h2>
-	<p class="text-base text-center textWarning">USE PROPER CAPITALIZATION</p>
+	<p class="text-base text-center textWarning">{pHolder}</p>
 	<p class="text-base text-center">{Question}</p>
 	<form on:submit|preventDefault={answerCheck} class="text-center">
 		<input type="text" class="border-b-2 rounded-sm m-2" placeholder="Answer" bind:value={Answer} />
