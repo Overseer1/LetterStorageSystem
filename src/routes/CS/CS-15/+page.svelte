@@ -20,11 +20,19 @@
 </script>
 
 <div class="text-center m-5">Welcome, Marson, M. K.</div>
-<div class="cheatline text-center">Letter finished: June XX, 2024 | Letter written: N/A</div>
+<div class="cheatline text-center">Letter finished: June XX, 2024 | Letter written: June XX, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={MMK} alt="N/A" class="object-cover mt-10 h-[400px] w-[250px] rounded-lg" />
 </header>
-<h1 class="text-center">*insert final letter here</h1>
+<article class="m-10 mb-3">
+	
+</article>
+<article class="m-10 mb-3">
+	
+</article>
+<article class="m-10 mb-3">
+
+</article>
 <footer class="m-10 mr-18 text-end">
 	From your school twin brother, co-photographer, and close friend, <br />
 	Hanz

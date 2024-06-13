@@ -20,18 +20,31 @@
 </script>
 
 <div class="text-center m-5">Welcome, Pagulayan, E.</div>
-<div class="cheatline text-center">Letter finished: June XX, 2024 | Letter written: N/A</div>
+<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={PE} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
 </header>
 <article class="m-10 mb-3">
-	
+	Hai Fem, thank you sa mga memories and sa bondings natin. Oo, ang dami nating pinagsamahan (konti lang pero hey, at least meron).
+	So yun nga, fun fact, kung si Jovy yung main reason kung bakit ko kayo naging close, ikaw naman yung reason kung bakit ko naging close
+	si Kat at Ash. Ikaw ba naman kase closest friend sa kanila eh. Kaya thank u for that.
 </article>
 <article class="m-10 mb-3">
-	
+	Update about sa life ko kahit alam mo na,
+	wala ng gusto na babae (for now), inaatupag ang kalusugan ko dahil lumalala na ulit (alam mo naman na kung bakit), 
+	and naghahanap na trabaho. Yes nagpupuyat pa din pero di na masyado (well, pinagpuyatan ko tong pag draft ng letters).
+	Grabe din ha, ikaw yung naging bridge ko sa magkapatid then for some reason, naging close friends ko sila then soon after, kayo nila Jovy then
+	after that naman, nabuo na yung 2nd circle ko ulit. So dalawa kayo ni Jovy yung founding mothers ng new 2nd circle ko (Wao founding mothers damn).
+	Yung gusto ko sa atin is yung asaran eh. Napakarandom mo mang asar, tapos minsan ang mga biro mo, napakalaswa HSHAHA napakalala mo talagang bata ka.
+	Syempre na gustuhan mo yung regalo ko sayo nung birthday mo, which is yung photoshoot nga. Kita mo yung pic mo dito is galing doon.
+	Then syempre, grateful ako na nakilala kita, hindi kita makikilala kung hindi dahil ka Jovy and sa event last October which is yung Mental Health Week.
+	Buti na lang talaga beh.
 </article>
 <article class="m-10 mb-3">
-	
+	I'm so thankful na nakilala kita Fem, mamimiss ko talaga yung memories and bondings natin and thankful talaga ako sayo, dahil sa nakilala kita and sa nakilala ko ang magkapatid. 
+	Ang ganda ng pinagsamahan natin since last sem (mga random photoshoots, tamang asaran, tamang chismisan). 
+	So yun nga beh, thank you again sa mga memories, kakulitan, and bondings natin! Mahal na mahal kita Fem. Thank you for being the foundation ng 2nd circle! God bless u, 
+	ingat ka palagi, see u when I see u, and thank u ulit! To more memories with u!!!
 </article>
 <footer class="m-10 mr-18 text-end">
 	From your photographer and close friend, <br />

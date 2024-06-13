@@ -25,7 +25,7 @@
 </header>
 <article class="m-10 mb-3">
 	Hai Kat Kattt, mag thank u lang ako sa mga memories na nagawa natin together and sa kung saan pa.
-	Alam mo, mamimiss kita ng sobrasobra. Kase araw araw ako pumapasok tas araw araw din kita
+	Alam mo, mamimiss kita ng sobra sobra. Kase araw araw ako pumapasok tas araw araw din kita
 	nakikita. Tapos kung want mo magphotoshoot, ginagawa naman natin. Hindi lang dahil sa crush kita
 	and what not, dahil sa malapit kita na kaibigan and syempre, memories mo na din yon sa school pag
 	nakagraduate ka na. Thank you dahil sa naging inspiration and motivation kita! Alam mo naman na kung bakit kita nagustuhan eh.

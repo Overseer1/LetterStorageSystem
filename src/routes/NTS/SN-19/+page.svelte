@@ -41,7 +41,7 @@
 </article>
 <article class="m-10 mb-3">
 	Mamimiss q yung photoshoots, usapan, and paghihingi ng kung anong pagkain mo ma'am. Tsaka pala, thank you sa mga random na libre mo na foods. 
-	Babawi aq sayo ma'am. Salamat sa 3 semesters na kulitan, pag alaga, at bonding ma'am! Kakamustahin kita every now and then.
+	Babawi aq sayo ma'am. Salamat sa 2 semesters na kulitan, pag alaga, at bonding ma'am! Kakamustahin kita every now and then.
 	Mamimiss kita ma'am! Love u ma'am! Don't worry ma'am, aalagaan ko sarili ko. God bless u, see u when I see u and thank u ulit!!! 
 </article>
 <footer class="m-10 mr-18 text-end">
