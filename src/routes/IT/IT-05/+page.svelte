@@ -20,18 +20,28 @@
 </script>
 
 <div class="text-center m-5">Welcome, Estipona, K.</div>
-<div class="cheatline text-center">Letter finished: June XX, 2024 | Letter written: June XX, 2024</div>
+<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June XX, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={EKJ} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" />
 </header>
 <article class="m-10 mb-3">
-	
+	Hai Tin, thank u sa mga memories and bondings natin. Mamimiss q yung random pitch sales mo sa akin tsaka
+	yung minsanan na rant q sayo. Tas kung minsan, nag bibigay ka advice sa akin dahil sa mga pinaggagawa ko before
+	(attempted na ano sa life). Dahil dyan, bibigyan kita update sa life, wala ng gusto na babae (for now), inaatupag ang kalusugan ko dahil lumalala na ulit (alam mo naman na kung bakit), 
+	and naghahanap na trabaho.
 </article>
 <article class="m-10 mb-3">
-	
+	Yes nagpupuyat pa din pero di na masyado (well, pinagpuyatan ko tong pag draft ng letters) and rarely na nakakaisip ng no good pero no, I won't do it na kase na open na eyes ko sa mangyayari.
+	Thank u sa mga advices mo and yun nga, sa mga pitch sales mo. Yes, sinusunod ko naman advice mo (from time to time) and yes, natutuwa ako sa mga pitch sales mo minsan.
+	Kung iniisip mo kung ano yung pitch sales na tinutukoy ko, well yun yung times na sinasabi mo na bumili ako ng pagkain and/or drinks sayo (e.g. Mango Tapioca, Graham Balls).
+	Galing mo din eh, nacoconvince mo q na bumili kaya ayun, may maneh ka na at may food aq. Good trade naman yon. Tsaka eto pa, mamimiss q random photoshoots natin, kagaya ng nandito sa page ngayon at yung
+	1x1 mo para sa CV mo sa capstone docu (ata nakalimutan q na yon). Syempre thankful aq na nakilala at naging close friend kita. Kagaya nga ng sinabi ko kanina, naging advisor kita kaya ayun.
 </article>
 <article class="m-10 mb-3">
-	
+	I'm so thankful na nakilala kita Tin, mamimiss ko talaga yung memories and bondings natin and
+	Ang ganda ng pinagsamahan natin since last school year (mga random photoshoots, tamang asaran, tamang chismisan). 
+	So yun nga beh, thank you again sa mga memories, kakulitan, and bondings natin! Mahal na mahal kita Tin. God bless u, 
+	ingat ka palagi, see u when I see u, and thank u ulit! To more memories with u!!!
 </article>
 <footer class="m-10 mr-18 text-end">
 	From your photographer, customer, and close friend, <br />

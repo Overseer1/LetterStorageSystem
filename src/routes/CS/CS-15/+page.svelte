@@ -20,12 +20,12 @@
 </script>
 
 <div class="text-center m-5">Welcome, Marson, M. K.</div>
-<div class="cheatline text-center">Letter finished: June XX, 2024 | Letter written: June XX, 2024</div>
+<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June XX, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={MMK} alt="N/A" class="object-cover mt-10 h-[400px] w-[250px] rounded-lg" />
 </header>
 <article class="m-10 mb-3">
-	
+	Hai Marielle, so ano no, bakit kita ginagawan ng letter eh inaaway mo q palagi
 </article>
 <article class="m-10 mb-3">
 	
