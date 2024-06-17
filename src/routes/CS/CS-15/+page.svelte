@@ -37,7 +37,7 @@
 	Doon ko narealize kung gaano ko sila kaclose, kung gaano ko kayo kaclose, at kung anong klaseng pag aalaga ang binigay 
 	niyo sa akin that day. Dahil doon, magiging reason ko yon if ever na magisip ako na tapusin ang life ko. Hindi naman na mangyayari yon ever again. Thank you talaga.
 	Tsaka eto pa, buti ikaw yung co-photographer ko minsan. Enthusiastic ka kase pag may hawak ka na camera eh. Baka nga ikaw na maging photographer ng school eh
-	(kung want mo lang).
+	(kung want mo lang). Tsaka ang lupit mo din manggisa ah. Konting gisa pa, maaamoy ko na yung chopsuey eh. Baka nga masunog mo pa.
 </article>
 <article class="m-10 mb-3">
 	I'm so thankful na nakilala kita, mamimiss ko talaga yung memories and bondings natin and
