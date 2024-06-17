@@ -33,7 +33,8 @@
 </article>
 <article class="m-10 mb-3">
 	So yun nga, grabe pinagsamahan natin ah, lalo na yung nagpakitang gilas pa tayo nung intrams. Nahimatay ba naman tayo eh,
-	tas nadamay pa natin si Ashley. Well, at least okay na tayong tatlo. Tsaka alam ko na sinabi ko na sayo to before, pero sasabihin ko ulit.
+	tas nadamay pa natin si Ashley. Well, at least okay na tayong tatlo. Thankful ako kase tinulungan mo pa din ako kahit pagod ka na. 
+	I owe you for that. Tsaka alam ko na sinabi ko na sayo to before, pero sasabihin ko ulit.
 	Doon ko narealize kung gaano ko sila kaclose, kung gaano ko kayo kaclose, at kung anong klaseng pag aalaga ang binigay 
 	niyo sa akin that day. Dahil doon, magiging reason ko yon if ever na magisip ako na tapusin ang life ko. Hindi naman na mangyayari yon ever again. Thank you talaga.
 	Tsaka eto pa, buti ikaw yung co-photographer ko minsan. Enthusiastic ka kase pag may hawak ka na camera eh. Baka nga ikaw na maging photographer ng school eh
