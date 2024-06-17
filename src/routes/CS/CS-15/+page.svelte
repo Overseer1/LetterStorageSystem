@@ -42,7 +42,7 @@
 </article>
 <article class="m-10 mb-3">
 	I'm so thankful na nakilala kita, mamimiss ko talaga yung memories and bondings natin and
-	Ang ganda ng pinagsamahan natin since last school year (mga random photoshoots, tamang asaran, tamang chismisan). 
+	ang ganda ng pinagsamahan natin since last school year (mga random photoshoots, tamang asaran, tamang chismisan). 
 	So yun nga beh, thank you again sa mga memories, kakulitan, and bondings natin! Mahal na mahal kita. God bless u, 
 	ingat ka palagi, see u when I see u, and thank u ulit! To more memories with u!!!
 </article>
