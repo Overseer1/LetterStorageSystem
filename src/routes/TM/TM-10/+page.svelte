@@ -18,7 +18,7 @@
 		});
 	}
 </script>
-
+<title>TM/TM-10</title>
 <div class="text-center m-5">Welcome, Margate, J.</div>
 <div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">

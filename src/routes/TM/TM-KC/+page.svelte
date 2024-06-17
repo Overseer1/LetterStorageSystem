@@ -18,6 +18,7 @@
 		});
 	}
 </script>
+<title>TM/TM-KC</title>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
 <div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 11, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">

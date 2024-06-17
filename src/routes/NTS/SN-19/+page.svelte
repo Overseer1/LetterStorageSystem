@@ -18,7 +18,7 @@
 		});
 	}
 </script>
-
+<title>NTS/SN-19</title>
 <div class="text-center m-5">Welcome, Ms. Tabigne, A.</div>
 <div class="cheatline text-center">Letter finished: June 12, 2024 | Letter written: June 13, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">

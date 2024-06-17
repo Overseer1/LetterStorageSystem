@@ -18,9 +18,9 @@
 		});
 	}
 </script>
-
+<title>IT/IT-05</title>
 <div class="text-center m-5">Welcome, Estipona, K.</div>
-<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June XX, 2024</div>
+<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June 17, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={EKJ} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" />
 </header>

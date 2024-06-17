@@ -18,7 +18,7 @@
 		});
 	}
 </script>
-
+<title>TM/TM-26</title>
 <div class="text-center m-5">Welcome, Pagulayan, E.</div>
 <div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
