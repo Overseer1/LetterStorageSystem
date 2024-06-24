@@ -103,72 +103,65 @@
 	<!-- <h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1> -->
 	<!-- TM -->
 	<div class="gridName text-center">
-		<!-- <h1 class="text-2xl mb-2">Tourism Management</h1> -->
+		<h1 class="text-2xl mb-2">Tourism Management</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
 
 			<p class="text-xl">
-				<!-- 3rd year | TM-KC -->
+				3rd year | TM-KC
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5 " on:click={() => (QKey = 'MA')}>
 
 			<p class="text-xl">
-				<!-- 1st year | TM-12 -->
+				1st year | TM-12
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'J')}>
 			<p class="text-xl">
-				<!-- 1st year | TM-10 -->
+				1st year | TM-10
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'E')}>
 			<p class="text-xl">
-				<!-- 1st year | TM-26 -->
+				1st year | TM-26
 			</p>
 		</div>
 	</div>
 	<!-- IT/CS -->
 	<div class="gridName text-center">
-		<!-- <h1 class="text-2xl mb-2">ICT</h1> -->
-		<h1 class="text-2xl mb-2">Letters</h1>
+		<h1 class="text-2xl mb-2">ICT</h1>
 		<div class="gridDesc flex overflow-hidden mb-5 justify-center" on:click={() => (QKey = 'KJ')}>
 			
 			<p class="text-xl">
-				<!-- 3rd year | IT | IT-05 -->
+				3rd year | IT | IT-05
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (QKey = 'MK')}>
 			
 			<p class="text-xl">
-				<!-- 2nd year | CS | CS-15 -->
-			</p>
-		</div>
-		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto('SN/SN-F'))}>
-			
-			<p class="text-xl">
-				Final letter
+				2nd year | CS | CS-15
 			</p>
 		</div>
 	</div>
 	<!-- NTS -->
 	<div class="gridName text-center">
-		<!-- <h1 class="text-2xl mb-2">Non-Teaching Staff</h1> -->
+		<h1 class="text-2xl mb-2">Non-Teaching Staff</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'Q')}>
 			
 			<p class="text-xl">
-				<!-- Guidance Associate | GA-15 -->
+				Guidance Associate | GA-15
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SL-A')}>
 			
 			<p class="text-xl">
-				<!-- School Librarian | SL-24 -->
+				School Librarian | SL-24
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SN-A')}>
 			
 			<p class="text-xl">
-				<!-- School Nurse | SN-19 -->
+				School Nurse | SN-19
 			</p>
 		</div>
 	</div>
