@@ -1,9 +1,27 @@
 <script>
+// @ts-nocheck
+
 	import MJ from '$lib/assets/TM/J.jpg?url';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import Icon from '@iconify/svelte';
+	import emailjs from '@emailjs/browser';
+      const sendEmail = (/** @type {{ target: string | HTMLFormElement; }} */ e) => {
+        emailjs
+          .sendForm(import.meta.env.VITE_EmailJS_ServiceID, import.meta.env.VITE_EmailJS_TemplateIDFF, e.target, {
+            publicKey: import.meta.env.VITE_EmailJS_PublicKey,
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+			  alert("Message sent");
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
+      };
 	$: {
 		let hasItem;
 		let valueCheck;
@@ -20,7 +38,7 @@
 </script>
 <title>TM/TM-10</title>
 <div class="text-center m-5">Welcome, Margate, J.</div>
-<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024</div>
+<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024 | Letter updated: July 04, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={MJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
 </header>
@@ -49,6 +67,23 @@
 	From your school father, photographer, and close friend, <br />
 	Hanz
 </footer>
+<article class="m-10 mb-3">
+	P.S. Oo alam ko na aalis ka na soon kaya nilagay ko na dito yung leave a message. Ikaw na bahala kung gagamitin mo or not, pero please keep in touch ha? Yun lang naman, ingat ka
+	palagi and love u so mats!
+</article>
+
+<hr />
+    
+<div class="text-center mt-5">If you want, you may leave a message to the developer.</div>
+<form on:submit|preventDefault={sendEmail}>
+	<div class="flex justify-center">
+		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor">
+	</div>
+	<div class="flex justify-center">
+		 <textarea name="message" placeholder="Message" class="border rounded-lg inputColor p-1"></textarea>
+		 <button type="submit" value="Send" class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">send</button>
+	</div>
+</form>
 <button class="m-10 float-end border rounded-lg p-2" on:click={() => goto(base + '/')}>
 	<Icon icon="ep:back" style="color: #dddddd" />
 </button>
@@ -65,5 +100,22 @@
 		img {
 			width: 77%;
 		}
+		.buttonChange
+		{margin-right: 12px;}
+	}
+	.inputColor {
+		color: #313131;
+	}
+	textarea {
+  	width: 500px;
+  	height: 200px;
+	}
+	@media screen and (max-width: 500px) {
+		textarea {
+  		width: 500px;
+  		height: 200px;
+		margin: 15px;
+		}
+		
 	}
 </style>

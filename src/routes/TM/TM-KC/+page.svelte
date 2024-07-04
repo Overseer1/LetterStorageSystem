@@ -1,9 +1,27 @@
 <script>
+// @ts-nocheck
+
 	import CKC from '$lib/assets/TM/KC.jpg?url';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import Icon from '@iconify/svelte';
+	import emailjs from '@emailjs/browser';
+      const sendEmail = (/** @type {{ target: string | HTMLFormElement; }} */ e) => {
+        emailjs
+          .sendForm(import.meta.env.VITE_EmailJS_ServiceID, import.meta.env.VITE_EmailJS_TemplateIDFF, e.target, {
+            publicKey: import.meta.env.VITE_EmailJS_PublicKey,
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+			  alert("Message sent");
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
+      };
 	$: {
 		let hasItem;
 		let valueCheck;
@@ -30,7 +48,7 @@
 	nakikita. Tapos kung want mo magphotoshoot, ginagawa naman natin. Hindi lang dahil sa crush kita
 	and what not, dahil sa malapit kita na kaibigan and syempre, memories mo na din yon sa school pag
 	nakagraduate ka na. Thank you dahil sa naging inspiration and motivation kita! Alam mo naman na kung bakit kita nagustuhan eh.
-  Pero sabihin ko ulit, Maganda ka, mag ka-vibes tayo, same tayo ng music taste, hindi ka naninigarilyo, and syempre mabait ka.
+  	Pero sabihin ko ulit, Maganda ka, mag ka-vibes tayo, same tayo ng music taste, hindi ka naninigarilyo, and syempre mabait ka.
 </article>
 <article class="m-10">
 	Sana talaga maging Cum Laude graduate ka. I'm rooting for you beh. Palagi mo tandaan na nandito
@@ -42,19 +60,19 @@
 	kausapin if mag rant ako or chismis or what not. Sana ganon ka din in the future, pero if
 	sasabihin mo na busy ka, hindi naman kita pipilitin. Basta mailahad ko lang yung want ko sabihin,
 	masaya na ako. As long na nabasa mo. Tsaka next time, 'wag na kayong mag-away na magkapatid nang basta-basta.
-  Nahirapan ako na ikalma kayong pareho noon eh. Pero if ever na mangyari ulit yon, kahit ako ulit ang gawin niyong mediator.
-  Wala ako problem doon. Basta na ako lang ang mediator niyo.
+  	Nahirapan ako na ikalma kayong pareho noon eh. Pero if ever na mangyari ulit yon, kahit ako ulit ang gawin niyong mediator.
+  	Wala ako problem doon. Basta na ako lang ang mediator niyo.
 </article>
 <article class="m-10">
-  Sorry sa mga times na nagiging needy ako sa replies mo kahit alam ko na busy ka ng sobra and sa times na
-  hindi kita natutulungan sa schoolworks or sa pagbigay ng advice during rants mo kase nablangko utak ko. 
-  Tsaka pala, if need mo ng kausap about sa life or schoolworks
+  	Sorry sa mga times na nagiging needy ako sa replies mo kahit alam ko na busy ka ng sobra and sa times na
+  	hindi kita natutulungan sa schoolworks or sa pagbigay ng advice during rants mo kase nablangko utak ko. 
+  	Tsaka pala, if need mo ng kausap about sa life or schoolworks
 	or kung ano man yan, I'm here for you. Alam mo yan beh. Kahit na kausap ko kapatid mo about sa rants niya, kinakausap pa din kita about sa rants mo.
 	Tsaka yung sa photoshoots natin, ang saya din non. Why? kase ikaw yung una ko naging personal
 	model/subject sa mga photoshoots. Tsaka ang dami na din natin na photoshoots ah (3 or 5 na ata).
 	Hindi mo pa naman nasasakop ng pictures mo yung SD card kaya safe ka pa. If want mo mag photoshoot, sabihan mo lang ako, alam ko naman na want mo din eh.
-  Sasabihan naman kita kung free ako. Tsaka mag photoshoot/gala tayo minsan beh, pwedeng tayo lang dalawa or kasama si Asli, si Fem, or kung sino pa na want mo isama.
-  Tsaka eto, 'wag mo isipin problems mo sa life as much as possible. Mag focus ka sa studies mo pa. Tignan mo ilang semesters
+  	Sasabihan naman kita kung free ako. Tsaka mag photoshoot/gala tayo minsan beh, pwedeng tayo lang dalawa or kasama si Asli, si Fem, or kung sino pa na want mo isama.
+  	Tsaka eto, 'wag mo isipin problems mo sa life as much as possible. Mag focus ka sa studies mo pa. Tignan mo ilang semesters
 	na lang, tapos ka na. May latin honors pa. Sana talaga Kat na makatapos ka with latin honors. Like
 	I said kanina, I'm rooting for you and I'll support you every step of the way.
 </article>
@@ -68,6 +86,18 @@
 	From your personal photographer and close friend, <br />
 	Hanz
 </footer>
+<hr />
+    
+<div class="text-center mt-5">If you want, you may leave a message to the developer.</div>
+<form on:submit|preventDefault={sendEmail}>
+	<div class="flex justify-center">
+		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor">
+	</div>
+	<div class="flex justify-center">
+		 <textarea name="message" placeholder="Message" class="border rounded-lg inputColor p-1"></textarea>
+		 <button type="submit" value="Send" class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">send</button>
+	</div>
+</form>
 <button class="m-10 float-end border rounded-lg p-2" on:click={() => goto(base + '/')}>
 	<Icon icon="ep:back" style="color: #dddddd" />
 </button>
@@ -77,6 +107,9 @@
 		background-color: #6d28d9;
 		color: #f5f3f3;
 	}
+	.inputColor {
+		color: #313131;
+	}
 	:global(html) {
 		background-color: theme(colors.bgPurp);
 		color: #dddddd;
@@ -85,5 +118,19 @@
 		img {
 			width: 77%;
 		}
+		.buttonChange
+		{margin-right: 12px;}
+	}
+	textarea {
+  	width: 500px;
+  	height: 200px;
+	}
+	@media screen and (max-width: 500px) {
+		textarea {
+  		width: 500px;
+  		height: 200px;
+		margin: 15px;
+		}
+		
 	}
 </style>

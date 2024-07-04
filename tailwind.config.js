@@ -10,7 +10,7 @@ export default {
       'bgBlackWhite': '#474747',
       'bgGreen': '#174724',
       'bgMaroon': '#4f1817',
-      'bgBlue':'#325886'
+      'bgBlue':'#013174'
     },
     extend: {},
   },
