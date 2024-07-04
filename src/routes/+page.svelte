@@ -135,7 +135,6 @@
 	<!-- IT/CS -->
 	<div class="gridName text-center">
 		<!-- <h1 class="text-2xl mb-2">ICT</h1> -->
-		<h1 class="text-2xl mb-2">Graduation letters</h1>
 		<!-- <div class="gridDesc flex overflow-hidden mb-5 justify-center" on:click={() => (QKey = 'KJ')}>
 			<p class="text-xl">
 				3rd year | IT | IT-05
