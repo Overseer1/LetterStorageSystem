@@ -28,7 +28,7 @@
 	<!-- <img src={//! insert import variable here} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" /> -->
 </header>
 <article class="m-10 mb-3">
-	Hello, family and friends. Thank you for the support and guidance.
+	Hello, family and friends. Thank you for the support and guidance. 
 </article>
 <footer class="m-10 mr-18 text-end">
 	From your apo, pamangkin, pinsan, anak, and friend,<br />
@@ -42,10 +42,10 @@
 <div class="text-center mt-5">If you want, you may leave a message to the developer.</div>
 <form on:submit|preventDefault={sendEmail}>
     <div class="flex justify-center">
-		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor">
+		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor" required>
 	</div>
 	<div class="flex justify-center">
-		 <textarea name="message" placeholder="Message" class="border rounded-lg inputColor p-1"></textarea>
+		 <textarea name="message" placeholder="Message" class="border rounded-lg inputColor p-1" required></textarea>
 		 <button type="submit" value="Send" class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">send</button>
 	</div>
 </form>

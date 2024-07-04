@@ -106,11 +106,11 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <div>
-	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1>
-	<!-- <h1 class="text-lg m-2 text-center">Please click on the letter below</h1> -->
+	<!-- <h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1> -->
+	<h1 class="text-lg m-2 text-center">Please click on the letter below</h1>
 	<!-- TM -->
 	<div class="gridName text-center">
-		<h1 class="text-2xl mb-2">Tourism Management</h1>
+		<!-- <h1 class="text-2xl mb-2">Tourism Management</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
 			<p class="text-xl">
 				3rd year | TM-KC
@@ -130,13 +130,13 @@
 			<p class="text-xl">
 				1st year | TM-26
 			</p>
-		</div>
+		</div> -->
 	</div>
 	<!-- IT/CS -->
 	<div class="gridName text-center">
-		<h1 class="text-2xl mb-2">ICT</h1>
-		<!-- <h1 class="text-2xl mb-2">Graduation letters</h1> -->
-		<div class="gridDesc flex overflow-hidden mb-5 justify-center" on:click={() => (QKey = 'KJ')}>
+		<!-- <h1 class="text-2xl mb-2">ICT</h1> -->
+		<h1 class="text-2xl mb-2">Graduation letters</h1>
+		<!-- <div class="gridDesc flex overflow-hidden mb-5 justify-center" on:click={() => (QKey = 'KJ')}>
 			<p class="text-xl">
 				3rd year | IT | IT-05
 			</p>
@@ -150,13 +150,13 @@
 			<p class="text-xl">
 				4th year | IT | IT-2024-MP
 			</p>
-		</div>
-		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/STI'))}>
+		</div> -->
+		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/STI'))}>
 			<p class="text-xl">
-				STIers
+				Final letter
 			</p>
 		</div>
-		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/FF'))}>
+		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/FF'))}>
 			<p class="text-xl">
 				Family and friends
 			</p>
@@ -164,7 +164,7 @@
 	</div>
 	<!-- NTS -->
 	<div class="gridName text-center">
-		<h1 class="text-2xl mb-2">Non-Teaching Staff</h1>
+		<!-- <h1 class="text-2xl mb-2">Non-Teaching Staff</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'Q')}>
 			<p class="text-xl">
 				Guidance Associate | GA-15
@@ -179,7 +179,7 @@
 			<p class="text-xl">
 				School Nurse | SN-19
 			</p>
-		</div>
+		</div> -->
 	</div>
 </div>
 <Modal bind:showModal>
