@@ -38,7 +38,7 @@
 </script>
 <title>TM/TM-KC</title>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
-<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 11, 2024</div>
+<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 11, 2024 | Letter updated: July 16, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={CKC} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
 </header>
@@ -86,6 +86,11 @@
 	From your personal photographer and close friend, <br />
 	Hanz
 </footer>
+<article class="m-10">
+	P.S. Hindi ko makakalimutan yung time na nagmadali ako na umalis para lang kunin yung phone mo sa school. Umiiyak ka pa non tas pinapakalma pa kita habang nagmamadali aq magbike.
+	Mystery adventure ba naman eh. Pero hey, hindi naman ako nagalit nung time na yon and buti sinabihan mo agad ako noon. Alam ko naman na nag change ka na ng phone, pero still,
+	good memories yung nakuha ko noon.
+</article>
 <hr />
     
 <div class="text-center mt-5">If you want, you may leave a message to the developer.</div>

@@ -38,10 +38,25 @@
 </script>
 <title>CS/CS-15</title>
 <div class="text-center m-5">Welcome, Marson, M. K.</div>
-<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June 17, 2024</div>
+<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June 17, 2024 | Last updated: July 16, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={MMK} alt="N/A" class="object-cover mt-10 h-[400px] w-[250px] rounded-lg" />
 </header>
+<hr/>
+<h1 class="m-10 mb-3 text-center">Birthday letter</h1>
+<article class="m-10 mb-3">
+	Hai Marielle, Happy birthday sayo! So napaka konti lang naman ng mensahe q sau. Ikaw ay maging maayos sa last 2 years ng college life mo. Malapit ka na din mag research.
+	Hindi ko alam kung running ka for Cum Laude, pero galingan mo pa din ha? So yun nga, nasa letter naman na yung want ko sabihin sayo so ayun. God bless you and enjoy your day!!
+	Ay wait, kung need mo ng kausap, nandito aq at sila, oki? yun lang.
+</article>
+<footer class="m-10 mr-18 text-end">
+	From your school twin brother, co-photographer, and close friend, <br />
+	Hanz
+</footer>
+<!-- 2nd letter end -->
+<hr/>
+<!-- 1st letter start -->
+<h1 class="m-10 mb-3 text-center">Gratidute letter</h1>
 <article class="m-10 mb-3">
 	Hai Marielle, so ano no, bakit kita ginagawan ng letter eh inaaway mo q palagi. De ano, thank u sa mga memories and bondings
 	natin. Tsaka sa mga katarantaduhan since last school year. Ewan ko kung kanino mo nakuha yung ugali na yan pero oks lang, gago din kami eh.
@@ -49,7 +64,7 @@
 	wala ng gusto na babae (for now), inaatupag ang kalusugan ko dahil lumalala na ulit (alam mo naman na kung bakit), 
 	and naghahanap na trabaho. Yes nagpupuyat pa din pero di na masyado (well, pinagpuyatan ko tong pag draft ng letters).
 </article>
-<article class="m-10 mb-3">
+<article class="m-10 mb-3 ">
 	So yun nga, grabe pinagsamahan natin ah, lalo na yung nagpakitang gilas pa tayo nung intrams. Nahimatay ba naman tayo eh,
 	tas nadamay pa natin si Ashley. Well, at least okay na tayong tatlo. Thankful ako kase tinulungan mo pa din ako kahit pagod ka na. 
 	I owe you for that. Tsaka alam ko na sinabi ko na sayo to before, pero sasabihin ko ulit.
@@ -68,7 +83,6 @@
 	From your school twin brother, co-photographer, and close friend, <br />
 	Hanz
 </footer>
-
 <hr />
     
 <div class="text-center mt-5">If you want, you may leave a message to the developer.</div>

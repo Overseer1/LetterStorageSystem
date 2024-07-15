@@ -139,7 +139,7 @@
 				3rd year | IT | IT-05
 			</p>
 		</div>
-		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (QKey = 'MK')}>
+		<div class="gridDesc flex overflow-hidden mb-5 text-center " on:click={() => (QKey = 'MK')}>
 			<p class="text-xl">
 				2nd year | CS | CS-15
 			</p>
