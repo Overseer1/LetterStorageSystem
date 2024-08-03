@@ -99,7 +99,6 @@
 		Answer = '';
 	};
 </script>
-<!-- //!commented parts are title head and year and letterCode -->
 <title>Letter Storage System</title>
 <h1 class="text-3xl text-center m-9 mb-4">Welcome</h1>
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -112,41 +111,41 @@
 		<h1 class="text-2xl mb-2">Tourism Management</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
 			<p class="text-xl">
-				3rd year | TM-KC
+				4th year | TM-KC
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5 " on:click={() => (QKey = 'MA')}>
 			<p class="text-xl">
-				1st year | TM-12
+				2nd year | TM-12
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'J')}>
 			<p class="text-xl">
-				1st year | TM-10
+				2nd year | TM-10
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'E')}>
 			<p class="text-xl">
-				1st year | TM-26
+				2nd year | TM-26
 			</p>
 		</div>
 	</div>
 	<!-- IT/CS -->
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">ICT</h1>
-		<div class="gridDesc flex overflow-hidden mb-5 justify-center" on:click={() => (QKey = 'KJ')}>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KJ')}>
 			<p class="text-xl">
-				3rd year | IT | IT-05
+				4th year | IT | IT-05
 			</p>
 		</div>
-		<div class="gridDesc flex overflow-hidden mb-5 text-center " on:click={() => (QKey = 'MK')}>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MK')}>
 			<p class="text-xl">
-				2nd year | CS | CS-15
+				3rd year | CS | CS-15
 			</p>
 		</div>
-		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (QKey = 'MMP')}>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MMP')}>
 			<p class="text-xl">
-				4th year | IT | IT-2024-MP
+				Graduated | IT | IT-2024-MP
 			</p>
 		</div>
 		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/STI'))}>
@@ -159,13 +158,18 @@
 				Family and friends
 			</p>
 		</div> -->
+		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/BirthdayMessages'))}>
+			<p class="text-xl">
+				Send your greetings here
+			</p>
+		</div> -->
 	</div>
 	<!-- NTS -->
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">Non-Teaching Staff</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'Q')}>
 			<p class="text-xl">
-				Guidance Associate | GA-15
+				Former Guidance Associate | GA-15
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SL-A')}>

@@ -47,7 +47,7 @@
 <article class="m-10 mb-3">
 	Hai Marielle, Happy birthday sayo! So napaka konti lang naman ng mensahe q sau. Ikaw ay maging maayos sa last 2 years ng college life mo. Malapit ka na din mag research.
 	Hindi ko alam kung running ka for Cum Laude, pero galingan mo pa din ha? So yun nga, nasa letter naman na yung want ko sabihin sayo so ayun. God bless you and enjoy your day!!
-	Ay wait, kung need mo ng kausap, nandito aq at sila, oki? yun lang.
+	Ay wait, kung need mo ng kausap, nandito aq at sila, oki? oki, yun lang!
 </article>
 <footer class="m-10 mr-18 text-end">
 	From your school twin brother, co-photographer, and close friend, <br />
@@ -56,7 +56,7 @@
 <!-- 2nd letter end -->
 <hr/>
 <!-- 1st letter start -->
-<h1 class="m-10 mb-3 text-center">Gratidute letter</h1>
+<h1 class="m-10 mb-3 text-center">Gratitude letter</h1>
 <article class="m-10 mb-3">
 	Hai Marielle, so ano no, bakit kita ginagawan ng letter eh inaaway mo q palagi. De ano, thank u sa mga memories and bondings
 	natin. Tsaka sa mga katarantaduhan since last school year. Ewan ko kung kanino mo nakuha yung ugali na yan pero oks lang, gago din kami eh.
@@ -88,10 +88,10 @@
 <div class="text-center mt-5">If you want, you may leave a message to the developer.</div>
 <form on:submit|preventDefault={sendEmail}>
 	<div class="flex justify-center">
-		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor">
+		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor" required>
 	</div>
 	<div class="flex justify-center">
-		 <textarea name="message" placeholder="Message" class="border rounded-lg inputColor p-1"></textarea>
+		 <textarea name="message" placeholder="Message" class="border rounded-lg inputColor p-1" required></textarea>
 		 <button type="submit" value="Send" class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">send</button>
 	</div>
 </form>
