@@ -34,13 +34,17 @@
 		 <button type="submit" value="Send" class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">send</button>
 	</div>
 </form>
+
+<button class="m-10 float-end border rounded-lg p-2" on:click={() => goto(base + '/')}>
+	<Icon icon="ep:back" style="color: #dddddd" />
+</button>
 <style lang="postcss">
 	.cheatline {
 		background-color: #ffeb3b;
 		color: #313131;
 	}
 	:global(html) {
-		/* background-color: theme(colors.bgPink); */
+		background-color: theme(colors.bgBlue);
 		color: #dddddd;
 	}
 	@media screen and (max-width: 600px) {

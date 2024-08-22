@@ -157,10 +157,10 @@
 			<p class="text-xl">
 				Family and friends
 			</p>
-		</div> -->
-		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/BirthdayMessages'))}>
+		</div>
+		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/BirthdayMessages'))}>
 			<p class="text-xl">
-				Send your greetings here
+				Send your bithday greetings here
 			</p>
 		</div> -->
 	</div>
@@ -191,10 +191,9 @@
 	<form on:submit|preventDefault={answerCheck} class="text-center">
 		<input type="text" class="border-b-2 rounded-sm m-2" placeholder="Answer" bind:value={Answer} />
 		<hr />
-		<button
-			class="text-white inline-flex w-full justify-center font-medium text-sm px-5 py-2.5 text-center"
-			>Submit</button
-		>
+		<button class="text-white inline-flex w-full justify-center font-medium text-sm px-5 py-2.5 text-center">
+			Submit
+		</button>
 	</form>
 </Modal>
 
