@@ -48,9 +48,9 @@
 		color: #dddddd;
 	}
 	@media screen and (max-width: 600px) {
-		img {
+		/* img {
 			width: 77%;
-		}
+		} */
 		.buttonChange
 		{margin-right: 12px;}
 	}

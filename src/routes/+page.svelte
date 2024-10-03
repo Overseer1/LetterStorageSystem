@@ -30,6 +30,9 @@
 		} else if (QKey == 'E') {
 			Question = import.meta.env.VITE_TM_26_Q;
 			showModal = true;
+		} else if (QKey == 'LJ') {
+			Question = import.meta.env.VITE_TM_F_12_Q;
+			showModal = true;
 		}
 		//ITCS
 		else if (QKey == 'KJ') {
@@ -39,7 +42,10 @@
 			Question = import.meta.env.VITE_CS_15_Q;
 			showModal = true;
 		} else if (QKey == 'MMP') {
-			Question = import.meta.env.VITE_IT_MP_Q;
+			Question = import.meta.env.VITE_IT_12_Q;
+			showModal = true;
+		} else if (QKey == 'CF') {
+			Question = import.meta.env.VITE_IT_26_Q;
 			showModal = true;
 		}
 		//NTS
@@ -69,6 +75,9 @@
 		} else if (QKey == 'E' && Answer == import.meta.env.VITE_TM_26_A) {
 			localStorage.setItem('letterKey', 'TM-26');
 			goto(base + '/TM/TM-26');
+		}  else if (QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A1 || QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A2 || QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A3) {
+			localStorage.setItem('letterKey', 'TM-F-12');
+			goto(base + '/TM/TM-F-12');
 		} 
 		//ITCS
 		else if (QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A1 || QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A2) {
@@ -77,9 +86,12 @@
 		} else if (QKey == 'MK' && Answer == import.meta.env.VITE_CS_15_A) {
 			localStorage.setItem('letterKey', 'CS-15');
 			goto(base + '/CS/CS-15');
-		} else if (QKey == 'MMP' && Answer == import.meta.env.VITE_IT_MP_A) {
-			localStorage.setItem('letterKey', 'IT-2024-MP');
-			goto(base + '/IT/IT-MP');
+		} else if (QKey == 'MMP' && Answer == import.meta.env.VITE_IT_12_A) {
+			localStorage.setItem('letterKey', 'IT-2024-12');
+			goto(base + '/IT/IT-12');
+		} else if (QKey == 'CF' && Answer == import.meta.env.VITE_IT_26_A1 || QKey == 'CF' && Answer == import.meta.env.VITE_IT_26_A2) {
+			localStorage.setItem('letterKey', 'IT-F-26');
+			goto(base + '/IT/IT-F-26');
 		}
 		//NTS
 		else if (QKey == 'Q' && Answer == import.meta.env.VITE_GA_15_A) {
@@ -129,6 +141,11 @@
 				2nd year | TM-26
 			</p>
 		</div>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'LJ')}>
+			<p class="text-xl">
+				Faculty | TM-F-12
+			</p>
+		</div>
 	</div>
 	<!-- IT/CS -->
 	<div class="gridName text-center">
@@ -145,7 +162,12 @@
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MMP')}>
 			<p class="text-xl">
-				Graduated | IT | IT-2024-MP
+				Alumnus | IT | IT-2024-12
+			</p>
+		</div>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'CF')}>
+			<p class="text-xl">
+				Faculty | IT | IT-F-26
 			</p>
 		</div>
 		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/STI'))}>

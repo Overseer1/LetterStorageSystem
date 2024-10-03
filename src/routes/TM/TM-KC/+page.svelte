@@ -38,10 +38,23 @@
 </script>
 <title>TM/TM-KC</title>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
-<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 11, 2024 | Letter updated: July 16, 2024</div>
+<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 11, 2024 | Letter updated: July 16, 2024 | Page updated: October 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={CKC} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
 </header>
+<hr/>
+<h1 class="m-10 mb-3 text-center">Birthday letter</h1>
+<article class="m-10 mb-3">
+	Hai Kat Kattt, Happy birthday sayo! Wala pa ha? Test pa lang to.
+</article>
+<footer class="m-10 mr-18 text-end">
+	From your not related brother, personal photographer, and close friend, <br />
+	Hanz
+</footer>
+<!-- 2nd letter end -->
+<hr/>
+<!-- 1st letter start -->
+<h1 class="m-10 mb-3 text-center">Gratitude letter</h1>
 <article class="m-10 mb-3">
 	Hai Kat Kattt, mag thank u lang ako sa mga memories na nagawa natin together and sa kung saan pa.
 	Alam mo, mamimiss kita ng sobra sobra. Kase araw araw ako pumapasok tas araw araw din kita
@@ -93,10 +106,10 @@
 </article>
 <hr />
     
-<div class="text-center mt-5">If you want, you may leave a message to the developer.</div>
+<div class="text-center mt-5">If you want, you may leave a message to the developer. <br/> You may change your name in the text box below.</div>
 <form on:submit|preventDefault={sendEmail}>
 	<div class="flex justify-center">
-		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor" required>
+		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor" value="Katrina/Kat Kat" required>
 	</div>
 	<div class="flex justify-center">
 		 <textarea name="message" placeholder="Message" class="border rounded-lg inputColor p-1" required></textarea>
