@@ -22,19 +22,19 @@
                 },
               );
           };
-        // $: {
-        //     let hasItem;
-        //     let valueCheck;
-        //     onMount(async () => {
-        //         hasItem = localStorage.getItem('letterKey') !== null;
-        //         valueCheck = localStorage.getItem('letterKey');
-        //         // Conditional logic based on hasItem
-        //         if (hasItem && valueCheck == 'IT-F-26') {
-        //         } else {
-        //             goto(base + '/');
-        //         }
-        //     });
-        // }
+        $: {
+            let hasItem;
+            let valueCheck;
+            onMount(async () => {
+                hasItem = localStorage.getItem('letterKey') !== null;
+                valueCheck = localStorage.getItem('letterKey');
+                // Conditional logic based on hasItem
+                if (hasItem && valueCheck == 'IT-F-26') {
+                } else {
+                    goto(base + '/');
+                }
+            });
+        }
     </script>
     <title>IT/IT-F-26</title>
     <div class="text-center m-5">Welcome, Mr. Fajardo, C.</div>
