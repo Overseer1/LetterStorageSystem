@@ -38,10 +38,24 @@
 </script>
 <title>NTS/SL-24</title>
 <div class="text-center m-5">Welcome, Mrs. Rosal, A.</div>
-<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 13, 2024</div>
+<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 13, 2024 | Page updated: October 4, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={RA} alt="N/A" class="object-cover mt-10 h-[270px] w-[450px] rounded-lg" />
 </header>
+<hr/>
+<h1 class="m-10 mb-3 text-center">Teacher's day letter</h1>
+<article class="m-10 mb-3">
+		Haiii maaaaaaaaam! Happy teacher's day sayooooo!!! So nakita mo naman na gift q ma'am, oki naman na yon diba so di q na dadagdagan hehe, so ayun nga no,
+        Mabuti na seek mo na aq ma'am kase nag hide aq nung talent search HSHAHAHAHAHA, Sayang ma'am na hindi kita naging ka-workmate kase kung oo, baka nag chismisan na lang
+        tayo sa library ng matagal HSDHSHAHSHA so ayun lang naman ma'am. Happy teacher's day ulittt!!! To more memories with u maaaaaaaaam 🫶🏻🫶🏻🫶🏻
+</article>
+<footer class="m-10 mr-18 text-end">
+	From your volunteer S.A., photographer, and friend, <br />
+	Hanzyboy
+</footer>
+<!-- 2nd letter end -->
+<hr/>
+<!-- 1st letter start -->
 <article class="m-10 mb-3">
 	Hai pi ma'am, thank u sa mga memories sa library and sa mga advice sa life. Tas syempre, thank you sa pagiging
 	one of the second parents sa school. Ang dami ko din natutunan sayo ma'am (hindi sa pag aayos ng libro syempre).
