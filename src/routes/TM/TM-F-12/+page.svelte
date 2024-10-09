@@ -59,7 +59,7 @@
     <div class="text-center mt-5">If you want, you may leave a message to the developer. <br/> You may change your name in the text box below.</div>
     <form on:submit|preventDefault={sendEmail}>
         <div class="flex justify-center">
-            <input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor" value="Leslie" required>
+            <input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor" value="Ate Les" required>
         </div>
         <div class="flex justify-center">
              <textarea name="message" placeholder="Message" class="border rounded-lg inputColor p-1" required></textarea>

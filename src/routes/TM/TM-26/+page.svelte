@@ -38,10 +38,24 @@
 </script>
 <title>TM/TM-26</title>
 <div class="text-center m-5">Welcome, Pagulayan, E.</div>
-<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024</div>
+<div class="cheatline text-center">Page updated: October 9, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={PE} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
 </header>
+<hr/>
+<h1 class="m-5 mb-5 text-center">Hello, Fem.</h1>
+<div class="cheatline text-center">Letter finished: October 9, 2024</div>
+<article class="m-10 mb-3 text-center">
+	Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
+</article>
+<footer class="m-10 mr-18 text-center">
+	From the developer.
+</footer>
+<!-- placeholder letter end -->
+<hr/>
+<!-- First letter start -->
+<h1 class="m-5 mb-5 text-center">Gratitude letter</h1>
+<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024</div>
 <article class="m-10 mb-3">
 	Hai Fem, thank you sa mga memories and sa bondings natin. Oo, ang dami nating pinagsamahan (konti lang pero hey, at least meron).
 	So yun nga, fun fact, kung si Jovy yung main reason kung bakit ko kayo naging close, ikaw naman yung reason kung bakit ko naging close

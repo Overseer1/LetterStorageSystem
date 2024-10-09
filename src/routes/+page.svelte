@@ -3,14 +3,73 @@
 	import Modal from './components/Modal.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-
 	let showModal = false;
 	let QKey = '';
 	let Question = '';
 	let Answer = '';
-	let pHolder = 'USE PROPER CAPITALIZATION';
+	let pHolder = 'Use proper capitalization please.';
+	const answerCheck = () => {
+		//TM
+		if (QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A1 || QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A2) {
+			localStorage.setItem('letterKey', 'TM-KC');
+			goto(base + '/TM/TM-KC');
+		} else if (QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A) {
+			localStorage.setItem('letterKey', 'TM-12');
+			goto(base + '/TM/TM-12');
+		} else if (QKey == 'J' && Answer == import.meta.env.VITE_TM_10_A) {
+			localStorage.setItem('letterKey', 'TM-10');
+			goto(base + '/TM/TM-10');
+		} else if (QKey == 'E' && Answer == import.meta.env.VITE_TM_26_A) {
+			localStorage.setItem('letterKey', 'TM-26');
+			goto(base + '/TM/TM-26');
+		}  else if (QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A1 || QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A2 || QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A3) {
+			localStorage.setItem('letterKey', 'TM-F-12');
+			goto(base + '/TM/TM-F-12');
+		} 
+		//ITCS
+		else if (QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A1 || QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A2) {
+			localStorage.setItem('letterKey', 'IT-05');
+			goto(base + '/IT/IT-05');
+		} else if (QKey == 'MK' && Answer == import.meta.env.VITE_CS_15_A) {
+			localStorage.setItem('letterKey', 'CS-15');
+			goto(base + '/CS/CS-15');
+		} else if (QKey == 'MMP' && Answer == import.meta.env.VITE_IT_12_A) {
+			localStorage.setItem('letterKey', 'IT-2024-12');
+			goto(base + '/IT/IT-12');
+		} else if (QKey == 'CF' && Answer == import.meta.env.VITE_IT_26_A1 || QKey == 'CF' && Answer == import.meta.env.VITE_IT_26_A2) {
+			localStorage.setItem('letterKey', 'IT-F-26');
+			goto(base + '/IT/IT-F-26');
+		} else if (QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A1 || QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A2) {
+			// remove 46 and 47 once done
+			// localStorage.setItem('letterKey', 'IT-F-20');
+			// goto(base + '/IT/IT-F-20');
+			alert('This webpage is being constructed.');
+			QKey = '';
+		}
+		//NTS
+		else if (QKey == 'Q' && Answer == import.meta.env.VITE_GA_15_A) {
+			localStorage.setItem('letterKey', 'GA-15');
+			goto(base + '/NTS/GA-15');
+		} else if (QKey == 'SL-A' && Answer == import.meta.env.VITE_SL_24_A1 || QKey == 'SL-A' && Answer == import.meta.env.VITE_SL_24_A2) {
+			localStorage.setItem('letterKey', 'SL-24');
+			goto(base + '/NTS/SL-24');
+		} else if (QKey == 'SN-A' && Answer == import.meta.env.VITE_SN_19_A1 || QKey == 'SN-A' && Answer == import.meta.env.VITE_SN_19_A2) {
+			localStorage.setItem('letterKey', 'SN-19');
+			goto(base + '/NTS/SN-19');
+		}
+		else if (Answer == '')
+		{
+			pHolder = "Preferably with an answer.";
+		}
+		else
+		{
+			pHolder = 'Try again.';
+		}
+		Answer = '';
+	};
 	$: {
 		let hasItem;
+		pHolder = 'Use proper capitalization please.';
 		onMount(async () => {
 			hasItem = localStorage.getItem('letterKey') !== null;
 			if (hasItem) {
@@ -47,6 +106,9 @@
 		} else if (QKey == 'CF') {
 			Question = import.meta.env.VITE_IT_26_Q;
 			showModal = true;
+		} else if (QKey == 'JB') {
+			Question = import.meta.env.VITE_IT_20_Q;
+			showModal = true;
 		}
 		//NTS
 		else if (QKey == 'Q') {
@@ -60,56 +122,6 @@
 			showModal = true;
 		}
 	}
-
-	const answerCheck = () => {
-		//TM
-		if (QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A1 || QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A2) {
-			localStorage.setItem('letterKey', 'TM-KC');
-			goto(base + '/TM/TM-KC');
-		} else if (QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A) {
-			localStorage.setItem('letterKey', 'TM-12');
-			goto(base + '/TM/TM-12');
-		} else if (QKey == 'J' && Answer == import.meta.env.VITE_TM_10_A) {
-			localStorage.setItem('letterKey', 'TM-10');
-			goto(base + '/TM/TM-10');
-		} else if (QKey == 'E' && Answer == import.meta.env.VITE_TM_26_A) {
-			localStorage.setItem('letterKey', 'TM-26');
-			goto(base + '/TM/TM-26');
-		}  else if (QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A1 || QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A2 || QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A3) {
-			localStorage.setItem('letterKey', 'TM-F-12');
-			goto(base + '/TM/TM-F-12');
-		} 
-		//ITCS
-		else if (QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A1 || QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A2) {
-			localStorage.setItem('letterKey', 'IT-05');
-			goto(base + '/IT/IT-05');
-		} else if (QKey == 'MK' && Answer == import.meta.env.VITE_CS_15_A) {
-			localStorage.setItem('letterKey', 'CS-15');
-			goto(base + '/CS/CS-15');
-		} else if (QKey == 'MMP' && Answer == import.meta.env.VITE_IT_12_A) {
-			localStorage.setItem('letterKey', 'IT-2024-12');
-			goto(base + '/IT/IT-12');
-		} else if (QKey == 'CF' && Answer == import.meta.env.VITE_IT_26_A1 || QKey == 'CF' && Answer == import.meta.env.VITE_IT_26_A2) {
-			localStorage.setItem('letterKey', 'IT-F-26');
-			goto(base + '/IT/IT-F-26');
-		}
-		//NTS
-		else if (QKey == 'Q' && Answer == import.meta.env.VITE_GA_15_A) {
-			localStorage.setItem('letterKey', 'GA-15');
-			goto(base + '/NTS/GA-15');
-		} else if (QKey == 'SL-A' && Answer == import.meta.env.VITE_SL_24_A1 || QKey == 'SL-A' && Answer == import.meta.env.VITE_SL_24_A2) {
-			localStorage.setItem('letterKey', 'SL-24');
-			goto(base + '/NTS/SL-24');
-		} else if (QKey == 'SN-A' && Answer == import.meta.env.VITE_SN_19_A1 || QKey == 'SN-A' && Answer == import.meta.env.VITE_SN_19_A2) {
-			localStorage.setItem('letterKey', 'SN-19');
-			goto(base + '/NTS/SN-19');
-		}
-		else
-		{
-			pHolder = 'Try again';
-		}
-		Answer = '';
-	};
 </script>
 <title>Letter Storage System</title>
 <h1 class="text-3xl text-center m-9 mb-4">Welcome</h1>
@@ -118,6 +130,7 @@
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <div>
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1>
+	<h1 class="text-lg m-2 text-center">Note: letter/s in yellow are under development</h1>
 	<!-- TM -->
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">Tourism Management</h1>
@@ -170,6 +183,11 @@
 				Faculty | IT | IT-F-26
 			</p>
 		</div>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'JB')}>
+			<p class="text-xl text-[#eed202]">
+				Former faculty | IT | IT-F-20
+			</p>
+		</div>
 		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/STI'))}>
 			<p class="text-xl">
 				Final letter
@@ -206,9 +224,10 @@
 		</div>
 	</div>
 </div>
+{#if QKey}
 <Modal bind:showModal>
 	<h2 slot="header" class="text-2xl text-center">Passphrase</h2>
-	<p class="text-base text-center textWarning">{pHolder}</p>
+	<p class="text-base text-center text-[#991b1b]">{pHolder}</p>
 	<p class="text-base text-center">{Question}</p>
 	<form on:submit|preventDefault={answerCheck} class="text-center">
 		<input type="text" class="border-b-2 rounded-sm m-2" placeholder="Answer" bind:value={Answer} />
@@ -218,11 +237,8 @@
 		</button>
 	</form>
 </Modal>
-
+{/if}
 <style lang="postcss">
-	.textWarning {
-		color: #991b1b;
-	}
 	.gridName {
 		float: left;
 		width: 33.33%;

@@ -38,10 +38,24 @@
 </script>
 <title>IT/IT-05</title>
 <div class="text-center m-5">Welcome, Estipona, K.</div>
-<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June 17, 2024</div>
+<div class="cheatline text-center">Page updated: October 9, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={EKJ} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" />
 </header>
+<hr/>
+<h1 class="m-5 mb-5 text-center">Hello, Tin Tin.</h1>
+<div class="cheatline text-center">Letter finished: October 9, 2024</div>
+<article class="m-10 mb-3 text-center">
+	Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
+</article>
+<footer class="m-10 mr-18 text-center">
+	From the developer.
+</footer>
+<!-- placeholder letter end -->
+<hr/>
+<!-- First letter start -->
+<h1 class="m-5 mb-5 text-center">Gratitude letter</h1>
+<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June 17, 2024</div>
 <article class="m-10 mb-3">
 	Hai Tin, thank u sa mga memories and bondings natin. Mamimiss q yung random pitch sales mo sa akin tsaka
 	yung minsanan na rant q sayo. Tas kung minsan, nag bibigay ka advice sa akin dahil sa mga pinaggagawa ko before

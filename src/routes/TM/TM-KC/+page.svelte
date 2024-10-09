@@ -2,11 +2,41 @@
 // @ts-nocheck
 
 	import CKC from '$lib/assets/TM/KC.jpg?url';
+	import CKC1 from '$lib/assets/TM/KC1.jpg?url';
+	import CKC2 from '$lib/assets/TM/KC2.jpg?url';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import Icon from '@iconify/svelte';
 	import emailjs from '@emailjs/browser';
+	let DevAcc = '';
+	let DevPass = '';
+	let DevOpt = false;
+	let showImgs = false
+	  const developerSide = () =>
+	  {
+		if (DevPass == import.meta.env.VITE_DevPass)
+	  	{
+			DevOpt = true
+			alert('Welcome developer. Please turn off your screen sharing stream/s before proceeding.')
+	  	}
+		else if (DevPass == import.meta.env.VITE_DevPassImg)
+	  	{
+			showImgs = true
+			alert('Thank you. The changes you will only see are the pictures selected by the developer.')
+	  	}
+		else
+		{
+			alert('Wrong password.')
+		}
+	  }
+	  const LogOut = () =>
+	  {
+			DevAcc = false
+			DevPass = false
+			DevOpt = false
+			alert("Thank you. Progress has been saved.");
+	  }
       const sendEmail = (/** @type {{ target: string | HTMLFormElement; }} */ e) => {
         emailjs
           .sendForm(import.meta.env.VITE_EmailJS_ServiceID, import.meta.env.VITE_EmailJS_TemplateIDFF, e.target, {
@@ -38,14 +68,45 @@
 </script>
 <title>TM/TM-KC</title>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
-<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 11, 2024 | Letter updated: July 16, 2024 | Page updated: October 3, 2024</div>
+<div class="cheatline text-center">Page updated: October 9, 2024</div>
+{#if DevOpt == true || showImgs == true}
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={CKC} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
+	<!-- //! 3 pictures will be set, pictures can be changed or retained -->
+	<img src={CKC} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] mr-10 rounded-lg" />
+	<img src={CKC2} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] mr-10 rounded-lg" />
+	<img src={CKC1} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px]  rounded-lg" />
 </header>
+{:else}
+<header class="overflow-hidden mb-5 flex justify-center">
+	<!-- //! 3 pictures will be set, pictures can be changed or retained -->
+	<img src={CKC} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] mr-10 rounded-lg" />
+</header>
+{/if}
 <hr/>
-<h1 class="m-10 mb-3 text-center">Birthday letter</h1>
+
+<!-- //! birthday letter drafting will start by 2nd week of Oct. or Nov. Will be confidential once drafting starts. -->
+<!-- //! Letter to be written ~ 2 weeks before Dec. 9. Dates may change w/o notice -->
+{#if DevOpt == true}
+<h1 class="m-5 mb-5 text-center">Graduation letter</h1>
+<div class="cheatline text-center">Letter finished: | Letter written: </div>
 <article class="m-10 mb-3">
-	Hai Kat Kattt, Happy birthday sayo! Wala pa ha? Test pa lang to.
+	CONGRATULATIONS MY KAT KATTTT!!!! Wala pa ha? Test pa lang to.
+
+	Katrina Clarisse B. Cabrera | Batch 2025
+	Bachelor of Science in Tourism Management
+	Cum Laude
+</article>
+<footer class="m-10 mr-18 text-end">
+	From your not related brother, personal photographer, supporter, guide, teacher, and close friend, <br />
+	Hanz
+</footer>
+<!-- 3rd letter end -->
+<hr/>
+<!-- 2nd letter start -->
+<h1 class="m-5 mb-5 text-center">Birthday letter</h1>
+<div class="cheatline text-center">Letter finished:  Month DD, 2024 | Letter written: Month DD, 2024</div>
+<article class="m-10 mb-3">
+	Hai Kat Kattt, Happy 22nd birthday sayo! Wala pa ha? Test pa lang to.
 </article>
 <footer class="m-10 mr-18 text-end">
 	From your not related brother, personal photographer, and close friend, <br />
@@ -54,7 +115,20 @@
 <!-- 2nd letter end -->
 <hr/>
 <!-- 1st letter start -->
-<h1 class="m-10 mb-3 text-center">Gratitude letter</h1>
+{/if}
+<h1 class="m-5 mb-5 text-center">Hello, Kat Kat.</h1>
+<div class="cheatline text-center">Letter finished: October 9, 2024</div>
+<article class="m-10 mb-3 text-center">
+	Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
+</article>
+<footer class="m-10 mr-18 text-center">
+	From the developer.
+</footer>
+<!-- placeholder letter end -->
+<hr/>
+<!-- 1st letter start -->
+<h1 class="m-5 mb-5 text-center">Gratitude letter</h1>
+<div class="cheatline text-center">Letter finished: June 10, 2024 | Letter written: June 11, 2024 | Letter updated: July 16, 2024</div>
 <article class="m-10 mb-3">
 	Hai Kat Kattt, mag thank u lang ako sa mga memories na nagawa natin together and sa kung saan pa.
 	Alam mo, mamimiss kita ng sobra sobra. Kase araw araw ako pumapasok tas araw araw din kita
@@ -107,6 +181,21 @@
 <hr />
     
 <div class="text-center mt-5">If you want, you may leave a message to the developer. <br/> You may change your name in the text box below.</div>
+<div class="flex justify-center">
+	<input type="checkbox" bind:checked={DevAcc} hidden={DevOpt}/>
+	<!-- svelte-ignore a11y-label-has-associated-control -->
+	<label hidden={DevAcc}>Dev access only</label>
+	<form on:submit|preventDefault={developerSide} hidden={!DevAcc}>
+		{#if DevOpt == false}
+		<input type="password" placeholder="Developer's password" class=" border rounded-lg text-black m-4 p-1 inputColor" bind:value={DevPass}>
+		<button type="submit" value="Send" class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">Access</button>
+		{/if}
+	</form>
+	{#if DevOpt == true}
+	<button on:click={LogOut} class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">Log out</button>
+	{/if}
+</div>
+
 <form on:submit|preventDefault={sendEmail}>
 	<div class="flex justify-center">
 		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor" value="Katrina/Kat Kat" required>
@@ -132,12 +221,20 @@
 		background-color: theme(colors.bgPurp);
 		color: #dddddd;
 	}
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 700px) {
 		img {
 			width: 77%;
 		}
 		.buttonChange
 		{margin-right: 12px;}
+		/* partial implementation only */
+		header
+		{
+			display: block;
+			height: auto;
+			width: auto;
+			margin-left:120px;
+		}
 	}
 	textarea {
   	width: 500px;

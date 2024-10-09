@@ -38,12 +38,23 @@
 </script>
 <title>CS/CS-15</title>
 <div class="text-center m-5">Welcome, Marson, M. K.</div>
-<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June 17, 2024 | Letter updated: July 16, 2024</div>
+<div class="cheatline text-center">Page updated: October 9, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={MMK} alt="N/A" class="object-cover mt-10 h-[400px] w-[250px] rounded-lg" />
 </header>
 <hr/>
-<h1 class="m-10 mb-3 text-center">Birthday letter</h1>
+<h1 class="m-5 mb-5 text-center">Hello, Marielle.</h1>
+<div class="cheatline text-center">Letter finished: October 9, 2024</div>
+<article class="m-10 mb-3 text-center">
+	Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
+</article>
+<footer class="m-10 mr-18 text-center">
+	From the developer.
+</footer>
+<!-- placeholder letter end -->
+<hr/>
+<h1 class="m-5 mb-5 text-center">Birthday letter</h1>
+<div class="cheatline text-center">Letter finished: July 16, 2024</div>
 <article class="m-10 mb-3">
 	Hai Marielle, Happy birthday sayo! So napaka konti lang naman ng mensahe q sau. Ikaw ay maging maayos sa last 2 years ng college life mo. Malapit ka na din mag research.
 	Hindi ko alam kung running ka for Cum Laude, pero galingan mo pa din ha? So yun nga, nasa letter naman na yung want ko sabihin sayo so ayun. God bless you and enjoy your day!!
@@ -56,7 +67,8 @@
 <!-- 2nd letter end -->
 <hr/>
 <!-- 1st letter start -->
-<h1 class="m-10 mb-3 text-center">Gratitude letter</h1>
+<h1 class="m-5 mb-5 text-center">Gratitude letter</h1>
+<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June 17, 2024</div>
 <article class="m-10 mb-3">
 	Hai Marielle, so ano no, bakit kita ginagawan ng letter eh inaaway mo q palagi. De ano, thank u sa mga memories and bondings
 	natin. Tsaka sa mga katarantaduhan since last school year. Ewan ko kung kanino mo nakuha yung ugali na yan pero oks lang, gago din kami eh.

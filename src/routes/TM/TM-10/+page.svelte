@@ -38,10 +38,24 @@
 </script>
 <title>TM/TM-10</title>
 <div class="text-center m-5">Welcome, Margate, J.</div>
-<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024 | Letter updated: July 04, 2024</div>
+<div class="cheatline text-center">Page updated: October 9, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={MJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
 </header>
+<hr/>
+<h1 class="m-5 mb-5 text-center">Hello, Anakis.</h1>
+<div class="cheatline text-center">Letter finished: October 9, 2024</div>
+<article class="m-10 mb-3 text-center">
+	Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
+</article>
+<footer class="m-10 mr-18 text-center">
+	From the developer.
+</footer>
+<!-- placeholder letter end -->
+<hr/>
+<!-- First letter start -->
+<h1 class="m-5 mb-5 text-center">Gratitude letter</h1>
+<div class="cheatline text-center">Letter finished: June 13, 2024 | Letter written: June 14, 2024 | Letter updated: July 04, 2024</div>
 <article class="m-10 mb-3">
 	Hai Jovy/Anakis, thank u for the memories and bonding sa life and sa school. Mamimiss q yon and yung mga random photoshoots natin.
 	Oo, kaya pa ng camera ko pagmumukha mo kase sabi ko. Himala nga na kaya pa eh.

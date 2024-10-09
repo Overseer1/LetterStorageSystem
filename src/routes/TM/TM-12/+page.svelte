@@ -2,11 +2,40 @@
 // @ts-nocheck
 
 	import CMA from '$lib/assets/TM/MA.jpg?url';
+	import CMA1 from '$lib/assets/TM/MA1.jpg?url';
+	import CMA2 from '$lib/assets/TM/MA2.jpg?url';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import Icon from '@iconify/svelte';
 	import emailjs from '@emailjs/browser';
+	let DevAcc = '';
+	let DevPass = '';
+	let DevOpt = false;
+	let showImgs = false;
+	  const developerSide = () =>
+	  {
+		if (DevPass == import.meta.env.VITE_DevPass)
+	  	{
+			DevOpt = true
+			alert('Welcome developer. Please turn off your screen sharing stream/s before proceeding.')
+	  	}
+		else if (DevPass == import.meta.env.VITE_DevPassImg)
+	  	{
+			showImgs = true
+			alert('Thank you. The changes you will only see are the pictures selected by the developer.')
+	  	}
+		else
+		{
+			alert('Wrong password.')
+		}
+	  }
+	  const LogOut = () =>
+	  {
+			DevAcc = false
+			DevOpt = false
+			alert("Thank you. Progress has been saved.");
+	  }
       const sendEmail = (/** @type {{ target: string | HTMLFormElement; }} */ e) => {
         emailjs
           .sendForm(import.meta.env.VITE_EmailJS_ServiceID, import.meta.env.VITE_EmailJS_TemplateIDFF, e.target, {
@@ -38,14 +67,27 @@
 </script>
 <title>TM/TM-12</title>
 <div class="text-center m-5">Welcome, Cabrera, M. A.</div>
-<div class="cheatline text-center">Letter finished: June 11, 2024 | Letter written: June 11, 2024 | Page updated: Octoer 3, 2024</div>
+<div class="cheatline text-center">Page updated: Octoer 3, 2024</div>
+{#if DevOpt == true || showImgs == true}
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={CMA} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
+	<!-- //! 3 pictures will be set, pictures can be changed or retained -->
+	<img src={CMA} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] mr-10 rounded-lg" />
+	<img src={CMA1} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] mr-10 rounded-lg" />
+	<img src={CMA2} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] rounded-lg" />
 </header>
+{:else}
+<header class="overflow-hidden mb-5 flex justify-center">
+	<!-- //! 3 pictures will be set, pictures can be changed or retained -->
+	<img src={CMA} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] rounded-lg" />
+</header>
+{/if}
 <hr/>
-<h1 class="m-10 mb-3 text-center">Birthday letter</h1>
+<!-- //! draft start by 2nd week of Oct. or Nov. Will be confidential once drafting starts. Letter to be written ~ 2 weeks before Dec. 9. Dates may change w/o notice-->
+{#if DevOpt == true}
+<h1 class="m-5 mb-5 text-center">Birthday letter</h1>
+<div class="cheatline text-center">Letter finished: Month DD, 2024 | Letter written: Month DD, 2024</div>
 <article class="m-10 mb-3">
-	Hai Asliii, Happy birthday sayo! Wala pa ha? Test pa lang to.
+	Hai Asliii, Happy 22nd birthday sayo! Wala pa ha? Test pa lang to.
 </article>
 <footer class="m-10 mr-18 text-end">
 	From your not related brother, personal photographer, and close friend, <br />
@@ -54,7 +96,28 @@
 <!-- 2nd letter end -->
 <hr/>
 <!-- 1st letter start -->
-<h1 class="m-10 mb-3 text-center">Gratitude letter</h1>
+{/if}
+<h1 class="m-5 mb-5 text-center">Hello, Asli.</h1>
+<div class="cheatline text-center">Letter finished: October 9, 2024</div>
+<article class="m-10 mb-3 text-center">
+	Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
+</article>
+<footer class="m-10 mr-18 text-center">
+	From the developer.
+</footer>
+<!-- <h1 class="m-5 mb-5 text-center">Letter type</h1>
+<div class="cheatline text-center">Dates</div>
+<article class="m-10 mb-3">
+	This letter will be shown within the last week of Nov. to the first week of Dec.
+</article>
+<footer class="m-10 mr-18 text-end">
+	Footer looks like this
+</footer> -->
+<!-- placeholder letter end -->
+<hr/>
+<!-- 1st letter start -->
+<h1 class="m-5 mb-5 text-center">Gratitude letter</h1>
+<div class="cheatline text-center">Letter finished: June 11, 2024 | Letter written: June 11, 2024</div>
 <article class="m-10 mb-3">
 	Hai Asliii,  Thank u sa lahat ng memories and sa kung saan pa! Alam mo, nahihirapan ako gumawa ng letter para sayo, kase ang dami neto eh.  
 	Grabe yung first natin na pagkikilala, shy type ka ba naman eh HSAHAHAHAH tapos nagpapic ka before and during mental health week tas after 7+ months, close friend na kita.
@@ -92,6 +155,20 @@
 <hr />
     
 <div class="text-center mt-5">If you want, you may leave a message to the developer. <br/> You may change your name in the text box below.</div>
+<div class="flex justify-center">
+	<input type="checkbox" bind:checked={DevAcc} hidden={DevOpt}/>
+	<!-- svelte-ignore a11y-label-has-associated-control -->
+	<label hidden={DevAcc}>Dev access only</label>
+	<form on:submit|preventDefault={developerSide} hidden={!DevAcc}>
+		{#if DevOpt == false}
+		<input type="password" placeholder="Developer's password" class=" border rounded-lg text-black m-4 p-1 inputColor" bind:value={DevPass}>
+		<button type="submit" value="Send" class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">Access</button>
+		{/if}
+	</form>
+	{#if DevOpt == true}
+	<button on:click={LogOut} value="Send" class="border rounded-lg p-2 mt-auto mb-auto ml-5 buttonChange">Log out</button>
+	{/if}
+</div>
 <form on:submit|preventDefault={sendEmail}>
 	<div class="flex justify-center">
 		<input type="text" placeholder="Name" name="from_name" class=" border rounded-lg text-black m-4 p-1 inputColor" value="Ashley/Asli" required>
@@ -114,12 +191,20 @@
 		background-color: theme(colors.bgPink);
 		color: #dddddd;
 	}
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 700px) {
 		img {
 			width: 77%;
 		}
 		.buttonChange
 		{margin-right: 12px;}
+		/* partial implementation only */
+		header
+		{
+			display: block;
+			height: auto;
+			width: auto;
+			margin-left:120px;
+		}
 	}
 	.inputColor {
 		color: #313131;
