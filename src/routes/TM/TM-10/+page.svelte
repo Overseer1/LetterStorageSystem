@@ -2,6 +2,7 @@
 // @ts-nocheck
 
 	import MJ from '$lib/assets/TM/J.jpg?url';
+	import MJB from '$lib/assets/TM/J1.webp?url';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
@@ -29,7 +30,7 @@
 			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
 			// Conditional logic based on hasItem
-			if (hasItem && valueCheck == 'TM-10') {
+			if (hasItem && valueCheck == import.meta.env.VITE_TM_10_T) {
 			} else {
 				goto(base + '/');
 			}
@@ -38,20 +39,31 @@
 </script>
 <title>TM/TM-10</title>
 <div class="text-center m-5">Welcome, Margate, J.</div>
-<div class="cheatline text-center">Page updated: October 9, 2024</div>
+<div class="cheatline text-center">Page updated: October 15, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={MJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
+	<img src={MJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg imgHead" />
 </header>
 <hr/>
-<h1 class="m-5 mb-5 text-center">Hello, Anakis.</h1>
-<div class="cheatline text-center">Letter finished: October 9, 2024</div>
-<article class="m-10 mb-3 text-center">
-	Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
+<h1 class="m-5 mb-5 text-center">Birthday letter</h1>
+<div class="cheatline text-center">Letter finished: October 15, 2024</div>
+<div class="overflow-hidden mb-5 flex justify-center">
+	<img src={MJB} alt="N/A" class="object-cover mt-10 h-[500px] w-[275px] rounded-lg" />
+</div>
+<article class="m-10 mb-3">
+	Hai Jovy, HAPPY 20TH BIRTHDAY SAYO MI ANAKISSS!!! or HAPPY 20TH BIRTHDAY SAYO MY FOUNDING MOTHER!!! Sorry kung eto lang regalo ko, yung picture naman na naka layout is gawa ko naman kaya ayan lang muna ha? Anw, dahil ikaw ay 20 na, dapat maging maayos ang decisions and/or choices mo sa life and of course, nandito lang kami for you.
+	Tandaan mo palagi yon ha? Nandito lang ako, si Kat Kat, si Asli, si Marielle, at kung sino pa para supportahan, samahan, tulungan, at pakinggan ka. Oki? Ano pa ba, well namimiss ko na random photoshoots natin. 
+	Aminin natin na mas madami photoshoots ni Kat Kat at ni Asli, pero kulang pics mo dito aba. Dapat madami to eh, so dapat makapag photoshoot tayo soon. Feel ko need mo malaman to kahit alam na alam mo na to, so eto,
+	mahal na mahal ka namin, as in. Kahit alam mo na yan, sabihin mo na lang na reminder lang yon. So ayun. Sana nasa mabuting kalagayan ka ngayon and mag ingat ka palagi ha? Miss na miss ka na namin or should I say, 
+	MISS NA MISS NA KITA!!! Sana talaga magkita tayo soon. Of course, sorry kung minsan napapaoverthink kita and sa kung ano pang bad things. I'm really sorry anak. I wish you all the best girl, do your best lang ha? Proud na proud ako sayo kahit malayo ako sayo. Uulitin ko, nandito lang ako/kami for you ha?
+	I love you so fucking much Jovy, Alam mo yon. I'm so thankful for you mi hija. Ikaw nag link sa amin ni Kat Kat at Asli, naging founding mother (wao) ng 2nd circle ko, and syempre, naging kaibigan kita, tas malapit pa. It's beautiful. 
+	Nakakamiss ka sobra. Baka maiyak pa tayong dalawa pag nagkita tayo ulit. Do me a favor, grumaduate ka ng may Latin Honors. Si Kat Kat ang unang kaibigan natin na magiging Cum Laude, dapat ikaw din at yung iba ay Cum Laude. Okay lang kung hindi, at least ginawa niyo best niyo. I know that and I'm proud of you for doing your best. 
+	See u soonest, God bless you, and to more memories with you!!!
 </article>
-<footer class="m-10 mr-18 text-center">
-	From the developer.
+<footer class="m-10 mr-18 text-end">
+	From your school father, photographer, and close friend, <br />
+	Hanz
 </footer>
-<!-- placeholder letter end -->
+<!-- Second letter end -->
 <hr/>
 <!-- First letter start -->
 <h1 class="m-5 mb-5 text-center">Gratitude letter</h1>
@@ -111,7 +123,7 @@
 		color: #dddddd;
 	}
 	@media screen and (max-width: 600px) {
-		img {
+		.imgHead {
 			width: 77%;
 		}
 		.buttonChange

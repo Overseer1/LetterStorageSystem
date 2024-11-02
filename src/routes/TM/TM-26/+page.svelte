@@ -29,7 +29,7 @@
 			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
 			// Conditional logic based on hasItem
-			if (hasItem && valueCheck == 'TM-26') {
+			if (hasItem && valueCheck == import.meta.env.VITE_TM_26_T) {
 			} else {
 				goto(base + '/');
 			}

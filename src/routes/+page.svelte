@@ -3,6 +3,7 @@
 	import Modal from './components/Modal.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import { Card, Button, Label, Input, Checkbox } from 'flowbite-svelte';
 	let showModal = false;
 	let QKey = '';
 	let Question = '';
@@ -11,50 +12,53 @@
 	const answerCheck = () => {
 		//TM
 		if (QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A1 || QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A2) {
-			localStorage.setItem('letterKey', 'TM-KC');
+			localStorage.setItem('letterKey', import.meta.env.VITE_TM_KC_T);
 			goto(base + '/TM/TM-KC');
 		} else if (QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A) {
-			localStorage.setItem('letterKey', 'TM-12');
+			localStorage.setItem('letterKey', import.meta.env.VITE_TM_12_T);
 			goto(base + '/TM/TM-12');
 		} else if (QKey == 'J' && Answer == import.meta.env.VITE_TM_10_A) {
-			localStorage.setItem('letterKey', 'TM-10');
+			localStorage.setItem('letterKey', import.meta.env.VITE_TM_10_T);
 			goto(base + '/TM/TM-10');
 		} else if (QKey == 'E' && Answer == import.meta.env.VITE_TM_26_A) {
-			localStorage.setItem('letterKey', 'TM-26');
+			localStorage.setItem('letterKey', import.meta.env.VITE_TM_26_T);
 			goto(base + '/TM/TM-26');
 		}  else if (QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A1 || QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A2 || QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A3) {
-			localStorage.setItem('letterKey', 'TM-F-12');
+			localStorage.setItem('letterKey', import.meta.env.VITE_TM_F_12_T);
 			goto(base + '/TM/TM-F-12');
-		} 
+		}
 		//ITCS
 		else if (QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A1 || QKey == 'KJ' && Answer == import.meta.env.VITE_IT_05_A2) {
-			localStorage.setItem('letterKey', 'IT-05');
+			localStorage.setItem('letterKey', import.meta.env.VITE_IT_05_T);
 			goto(base + '/IT/IT-05');
 		} else if (QKey == 'MK' && Answer == import.meta.env.VITE_CS_15_A) {
-			localStorage.setItem('letterKey', 'CS-15');
+			localStorage.setItem('letterKey', import.meta.env.VITE_CS_15_T);
 			goto(base + '/CS/CS-15');
 		} else if (QKey == 'MMP' && Answer == import.meta.env.VITE_IT_12_A) {
-			localStorage.setItem('letterKey', 'IT-2024-12');
+			localStorage.setItem('letterKey', import.meta.env.VITE_IT_12_T);
 			goto(base + '/IT/IT-12');
 		} else if (QKey == 'CF' && Answer == import.meta.env.VITE_IT_26_A1 || QKey == 'CF' && Answer == import.meta.env.VITE_IT_26_A2) {
-			localStorage.setItem('letterKey', 'IT-F-26');
+			localStorage.setItem('letterKey', import.meta.env.VITE_IT_26_T);
 			goto(base + '/IT/IT-F-26');
+		} else if (QKey == 'SA/WD' && Answer == import.meta.env.VITE_DevPass) {
+			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
+			goto(base + '/IT/IT-00');
 		} else if (QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A1 || QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A2) {
-			// remove 46 and 47 once done
-			// localStorage.setItem('letterKey', 'IT-F-20');
+			// remove 48 and 49 once done
+			// localStorage.setItem('letterKey', import.meta.env.VITE_IT_20_T);
 			// goto(base + '/IT/IT-F-20');
 			alert('This webpage is being constructed.');
 			QKey = '';
 		}
 		//NTS
 		else if (QKey == 'Q' && Answer == import.meta.env.VITE_GA_15_A) {
-			localStorage.setItem('letterKey', 'GA-15');
+			localStorage.setItem('letterKey', import.meta.env.VITE_GA_15_T);
 			goto(base + '/NTS/GA-15');
 		} else if (QKey == 'SL-A' && Answer == import.meta.env.VITE_SL_24_A1 || QKey == 'SL-A' && Answer == import.meta.env.VITE_SL_24_A2) {
-			localStorage.setItem('letterKey', 'SL-24');
+			localStorage.setItem('letterKey', import.meta.env.VITE_SL_24_T);
 			goto(base + '/NTS/SL-24');
 		} else if (QKey == 'SN-A' && Answer == import.meta.env.VITE_SN_19_A1 || QKey == 'SN-A' && Answer == import.meta.env.VITE_SN_19_A2) {
-			localStorage.setItem('letterKey', 'SN-19');
+			localStorage.setItem('letterKey', import.meta.env.VITE_SN_19_T);
 			goto(base + '/NTS/SN-19');
 		}
 		else if (Answer == '')
@@ -91,6 +95,9 @@
 			showModal = true;
 		} else if (QKey == 'LJ') {
 			Question = import.meta.env.VITE_TM_F_12_Q;
+			showModal = true;
+		} else if (QKey == 'SA/WD') {
+			Question = "Your password please.";
 			showModal = true;
 		}
 		//ITCS
@@ -130,22 +137,22 @@
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <div>
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1>
-	<h1 class="text-lg m-2 text-center">Note: letter/s in yellow are under development</h1>
+	<h1 class="text-lg m-2 text-center">Note: <span class="text-[#eed202]">Yellow coded </span>= under development | <span class="text-green-400">light green coded</span> = under UI reconstruction, but can be accessed.</h1>
 	<!-- TM -->
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">Tourism Management</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KC')}>
-			<p class="text-xl">
+			<p class="text-xl text-green-400">
 				4th year | TM-KC
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5 " on:click={() => (QKey = 'MA')}>
-			<p class="text-xl">
+			<p class="text-xl text-green-400">
 				2nd year | TM-12
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'J')}>
-			<p class="text-xl">
+			<p class="text-xl text-green-400">
 				2nd year | TM-10
 			</p>
 		</div>
@@ -169,7 +176,7 @@
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MK')}>
-			<p class="text-xl">
+			<p class="text-xl text-green-400">
 				3rd year | CS | CS-15
 			</p>
 		</div>
@@ -181,6 +188,11 @@
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'CF')}>
 			<p class="text-xl">
 				Faculty | IT | IT-F-26
+			</p>
+		</div>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SA/WD')}>
+			<p class="text-xl">
+				Alumnus | IT-2020-2024-05
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'JB')}>
@@ -213,7 +225,7 @@
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SL-A')}>
-			<p class="text-xl">
+			<p class="text-xl text-green-400">
 				School Librarian | SL-24
 			</p>
 		</div>
@@ -226,13 +238,13 @@
 </div>
 {#if QKey}
 <Modal bind:showModal>
-	<h2 slot="header" class="text-2xl text-center">Passphrase</h2>
+	<h2 slot="header" class="text-2xl text-center border-b-2 border-bgBlack">Passphrase</h2>
 	<p class="text-base text-center text-[#991b1b]">{pHolder}</p>
 	<p class="text-base text-center">{Question}</p>
 	<form on:submit|preventDefault={answerCheck} class="text-center">
-		<input type="text" class="border-b-2 rounded-sm m-2" placeholder="Answer" bind:value={Answer} />
+		<input type="text" class="border-b-2 rounded-sm my-2" placeholder="Answer" bind:value={Answer} />
 		<hr />
-		<button class="text-white inline-flex w-full justify-center font-medium text-sm px-5 py-2.5 text-center">
+		<button class="inline-flex w-full justify-center border-t-2 border-b-2 border-bgBlack font-medium text-sm px-5 py-2.5 text-center">
 			Submit
 		</button>
 	</form>

@@ -4,9 +4,10 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
+	import { page } from '$app/stores';
 	import Icon from '@iconify/svelte';
 	import emailjs from '@emailjs/browser';
-	const circleSelection = ['TA/1C', 'TG/2C'];
+	const circleSelection = ['TA/1C', 'TS/2C'];
 	let CircleType, UserName, ShowLetter, Question, Passkey, firstKey, addKeys;
 	let Attempts = 5;
 	let showModal = false;
@@ -158,13 +159,27 @@
 		} else if (CircleType == circleSelection[1]) {
 			Question = import.meta.env.VITE_SC_Q;
 		}
+		let queryParams = $page.url.searchParams.get('accessToken');
+		onMount(async () => {
+			hasItem = localStorage.getItem('letterKey') !== null;
+			valueCheck = localStorage.getItem('letterKey');
+			// Conditional logic based on hasItem
+			if (hasItem == valueCheck || queryParams == import.meta.env.VITE_DevPass || queryParams == import.meta.env.VITE_VDPass) 
+			{
+
+			} 
+			else 
+			{
+				goto(base + '/');
+			}
+		});
 	}
 </script>
 
 <title>Hello</title>
 {#if UserName}
 	<div class="text-center m-5">Welcome, {UserName}</div>
-	<div class="cheatline text-center">Letter finished: October 9, 2024 | No, this is not a suicide letter</div>
+	<div class="cheatline text-center">Letter finished: October 9, 2024 | No, this is not a suicide letter.</div>
 {:else}
 	<div class="text-center m-5 text-2xl">
 		Welcome, please select your circle and identify yourself.
@@ -186,7 +201,7 @@
 		</div>
 		<div
 			class="overflow-hidden mb-5 cursor-pointer hover:underline"
-			on:click={() => ((CircleType = 'TG/2C'), (showModal = true))}
+			on:click={() => ((CircleType = 'TS/2C'), (showModal = true))}
 		>
 			<p class="text-xl">2nd circle / The Starlights</p>
 		</div>
@@ -220,7 +235,7 @@
 	<!-- First circle letter end -->
 	<!-- Second circle letter start -->
 {:else if ShowLetter == 'secondCircle'}
-	<article class="m-10 mb-3">To my second circle</article>
+	<article class="m-10 mb-3">To my second circle / The Starlights</article>
 	<article class="m-10">
 		Hello guys, salamat sa inyo. Sa mga memories, bondings, random photoshoots, kagaguhan, at kung saan pa. Nakakatuwa at kayo pa yung naging 2nd circle ko, Kayo pa yung pumalit sa dati ko na circle na pinilit ko sarili ko doon 
 		and to be honest, happy na ako sa current 2nd circle ko. Kinaibigan niyo ako hindi dahil sa isang bagay, kinaibigan niyo ako kase ako yon at tinanggap niyo ako whole-heartedly. Ginawa ko tong letter na ito for a reason.
@@ -229,26 +244,27 @@
 	</article>
 	<article class="m-10">
 		I can't comprehend yung mga scenarios na iyon. Ang sakit sa puso. Thankful ako sa inyo kase niligtas
-		niyo ako. Especially sa times na napapansin niyo na hindi ko na kaya. Nagsasabi naman ako sa inyo if kaya ko ikwento sa inyo. Thankful ako kay God dahil kayo yung naging kaibigan ko, kahit may ups and downs, kahit 2+ years to less than
+		niyo ako. Especially sa times na napapansin niyo na hindi ko na kaya. Nagsasabi naman ako sa inyo if kaya ko ikwento sa inyo. I'm sorry sa times na hindi ako nakikinig sa inyo, sa pagiging needy, irritable, and sa pagiging shunga ko. Thankful ako kay God dahil kayo yung naging kaibigan ko, kahit may ups and downs, kahit 2+ years to less than
 		a year pa lang ang pagsasama natin, magkaibigan pa din tayo. Yung tipong nagkaroon na ako ng school daughters at school sisters dahil doon. Hindi ako nagrereklamo, ang saya ko nga eh. Dumagdag pa legacy ko sa school and sa inyo.
 		Sana soon, makumpleto tayo ulit. Kase mas masaya kung magkasama tayong lahat. At least nagbibigay saya kayo sa akin nang hindi niyo alam. Mahal na mahal ko kayo. Thank you sa 1 year worth ng bondings, memories, kagaguhan, supporta and especially, thank you for saving my life. May God have mercy on our souls.
 	</article>
 	{#if addKeys == 'TM-KC'}
-		<article class="m-10">
+	<article class="m-10">
 			Kat Kat, Ikaw lang makakakita neto. Kung hindi mo alam, ikaw lang ang pinagsasabihan ko (unless kung kaya kong sabihin sa iba) kapag feeling down ako.
 			Kase ikaw yung favorite person ko, and I am so thankful to God na nakilala kita. Out of all the persons in this circle, ikaw lang yung nagpapafeel sa akin na safe ako sayo, yung mga secrets ko and what not. I don't
 			know why, maybe dahil sa ikaw lang yung close friend ko na chill lang or dahil sa gusto pa kita. Pero whatever that may be, I hope na you accept that.
 			Aaminin ko beh, gusto pa din kita, pero ginagawa ko best ko na idisipate yung feelings kase ayokong ma-bali wala yung mga pinagsamahan natin just because na gusto kita
-			and hindi mo ako gusto pabalik. I can control it naman, don't worry. 
-		</article>
-		<article class="m-10">
-			Eto pa Kat Kat, I don't want na masira friendship natin. Why? Marami akong reasons for that, like, 
+			and hindi mo ako gusto pabalik. I can control it naman, don't worry. Eto pa Kat Kat, I don't want na masira friendship natin. Why? Marami akong reasons for that, like, 
 			Niligtas mo na ako before, I owe you for that, yung bondings natin, the times na nandyan ka para sa akin and also the times na nandito ako para sayo, cinomfort natin ang 
-			isa't isa, and a lot more pa. Remember Kat Kat, I'm here for you. Every step of the way. If you're always there for me, then I'll be there for you. Oki? kahit na ayaw mo pag usapan yan, I'll still be here for you. 
+			isa't isa, and a lot more pa. 
+	</article>
+	<article class="m-10">
+			Remember Kat Kat, I'm here for you. Every step of the way. If you're always there for me, then I'll be there for you. Oki? kahit na ayaw mo pag usapan yan, I'll still be here for you. 
 			And beh, I always include you in my prayers. Not just you,
-			but also our circle, my circle, my family, and kung sino pa. Thank you for being there for me Kat Kat, for comforting me, for being a sweetheart, for the memories, and especially, for saving my life. I love you so much Kat Kat. I know you know that. Dagdag ko lang to, gustong gusto ko na sabihin to.
+			but also our circle, my circle, my family, and kung sino pa. I'm sorry Kat Kat kung minsan ay nagiging irritable ako, sa times na hindi kita pinapakinggan about sa advices, and sa times na nagiging needy ako. I know na meron tayong sariling problems sa life pero nakakalimutan ko yon minsan, dumating pa ata sa point na ginugulo na kita sa personal time mo eh, and I'm truly sorry for that Kat Kat.
+			Thank you for being there for me Kat Kat, for comforting me, for being a sweetheart, for the memories, and especially, for saving my life. I love you so much Kat Kat. I know you know that. Dagdag ko lang to, gustong gusto ko na sabihin to.
 			To all the Starlights in this circle, You are my favorite as you shine the brightest, and of course, you light up darkest nights when you're around. Thank you so much for everything. God bless you and ingat ka palagi.
-		</article>
+	</article>
 	{:else if addKeys == 'TM-10'}
 		<article class="m-10">
 			Ikaw naman anakis, kalma lang sa life ha? kaya mo yan. Nandito lang naman ako sa side mo eh. Kung ano man problems mo, nandito ang school father mo ha? Icocomfort kita. Sana soon makita na kita ulit.
@@ -268,7 +284,7 @@
 {/if}
 <!-- Second circle letter end -->
 {#if ShowLetter}
-	<div class="text-center mt-5">If you want, please leave a message to the developer.</div>
+	<div class="text-center m-5">If you want, please leave a message to the developer.</div>
 	<form on:submit|preventDefault={sendEmail}>
 		<div class="flex justify-center">
 			<input
