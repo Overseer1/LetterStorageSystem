@@ -49,7 +49,7 @@
 </script>
 <title>CS/CS-15</title>
 <div class="text-center m-5">Welcome, Marson, M. K.</div>
-<div class="cheatline text-center">Page updated: October 9, 2024</div>
+<div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={MMK} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>

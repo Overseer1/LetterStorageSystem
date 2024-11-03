@@ -50,7 +50,7 @@
 </script>
 <title>NTS/SL-24</title>
 <div class="text-center m-5">Welcome, Mrs. Rosal, A.</div>
-<div class="cheatline text-center">Page updated: October 4, 2024</div>
+<div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={RA} alt="N/A" class="object-cover mt-5 h-[270px] w-[450px] rounded-lg" />
 </header>

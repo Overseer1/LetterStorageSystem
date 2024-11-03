@@ -49,7 +49,7 @@
 </script>
 <title>IT/IT-05</title>
 <div class="text-center m-5">Welcome, Estipona, K.</div>
-<div class="cheatline text-center">Page updated: October 9, 2024</div>
+<div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
 	<img src={EKJ2} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>
