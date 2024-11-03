@@ -18,6 +18,9 @@
 		letterContent = contentSelect;
 		showModal = true;
 	}
+	function scrollToSection() {
+    	targetScroll.scrollIntoView({ behavior: "smooth" });
+    }
 	  const developerSide = () =>
 	  {
 		if (DevPass == import.meta.env.VITE_DevPass)

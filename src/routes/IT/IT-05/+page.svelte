@@ -2,11 +2,22 @@
 // @ts-nocheck
 
 	import EKJ from '$lib/assets/ITCS/KJ.jpg?url';
+	import EKJ2 from '$lib/assets/ITCS/KJ2.jpg?url';
+	import EKJ3 from '$lib/assets/ITCS/KJ3.jpg?url';
+	import EKJ4 from '$lib/assets/ITCS/KJ4.jpg?url';
+	import Modal from '../../components/LetterModal.svelte';
+	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import Icon from '@iconify/svelte';
 	import emailjs from '@emailjs/browser';
+	let showModal = false;
+	let letterContent = '';
+	function letterShow(contentSelect){
+		letterContent = contentSelect;
+		showModal = true;
+	}
       const sendEmail = (/** @type {{ target: string | HTMLFormElement; }} */ e) => {
         emailjs
           .sendForm(import.meta.env.VITE_EmailJS_ServiceID, import.meta.env.VITE_EmailJS_TemplateIDFF, e.target, {
@@ -40,45 +51,81 @@
 <div class="text-center m-5">Welcome, Estipona, K.</div>
 <div class="cheatline text-center">Page updated: October 9, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={EKJ} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" />
+	<img src={EKJ2} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>
 <hr/>
-<h1 class="m-5 mb-5 text-center">Hello, Tin Tin.</h1>
-<div class="cheatline text-center">Letter finished: October 9, 2024</div>
-<article class="m-10 mb-3 text-center">
-	Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
-</article>
-<footer class="m-10 mr-18 text-center">
-	From the developer.
-</footer>
-<!-- placeholder letter end -->
+<header class="overflow-hidden flex justify-center cheatline my-5">
+	<p class="text-lg">
+		Please select the letter that you want to read.
+	</p>
+</header>
+<div class="flex justify-center max-sm:block">
+	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
+		<Card img={EKJ} reverse={false} class="bg-current text-[#f5f3f3]">
+		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Gratitude letter</h5>
+		  <p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
+		  <Button class="bg-bgGreen border border-[#059142] hover:bg-[#059142]" on:click={()=>(letterShow('Gratitude'))}>
+			Open letter
+		  </Button>
+		</Card>
+	</div>
+	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
+		<Card img={EKJ3} reverse={false} class="bg-current text-[#f5f3f3]">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
+			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
+		  <Button class="bg-bgGreen border border-[#059142] hover:bg-[#059142]" on:click={()=>(letterShow('Reminder'))}>
+			Open letter
+		  </Button>
+		</Card>
+	</div>
+</div>
 <hr/>
-<!-- First letter start -->
-<h1 class="m-5 mb-5 text-center">Gratitude letter</h1>
-<div class="cheatline text-center">Letter finished: June 17, 2024 | Letter written: June 17, 2024</div>
-<article class="m-10 mb-3">
-	Hai Tin, thank u sa mga memories and bondings natin. Mamimiss q yung random pitch sales mo sa akin tsaka
-	yung minsanan na rant q sayo. Tas kung minsan, nag bibigay ka advice sa akin dahil sa mga pinaggagawa ko before
-	(attempted na ano sa life). Dahil dyan, bibigyan kita update sa life, wala ng gusto na babae (for now), inaatupag ang kalusugan ko dahil lumalala na ulit (alam mo naman na kung bakit), 
-	and naghahanap na trabaho.
-</article>
-<article class="m-10 mb-3">
-	Yes nagpupuyat pa din pero di na masyado (well, pinagpuyatan ko tong pag draft ng letters) and rarely na nakakaisip ng no good pero no, I won't do it na kase na open na eyes ko sa mangyayari.
-	Thank u sa mga advices mo and yun nga, sa mga pitch sales mo. Yes, sinusunod ko naman advice mo (from time to time) and yes, natutuwa ako sa mga pitch sales mo minsan.
-	Kung iniisip mo kung ano yung pitch sales na tinutukoy ko, well yun yung times na sinasabi mo na bumili ako ng pagkain and/or drinks sayo (e.g. Mango Tapioca, Graham Balls).
-	Galing mo din eh, nacoconvince mo q na bumili kaya ayun, may maneh ka na at may food aq. Good trade naman yon. Tsaka eto pa, mamimiss q random photoshoots natin, kagaya ng nandito sa page ngayon at yung
-	1x1 mo para sa CV mo sa capstone docu (ata nakalimutan q na yon). Syempre thankful aq na nakilala at naging close friend kita. Kagaya nga ng sinabi ko kanina, naging advisor kita kaya ayun.
-</article>
-<article class="m-10 mb-3">
-	I'm so thankful na nakilala kita Tin, mamimiss ko talaga yung memories and bondings natin and
-	ang ganda ng pinagsamahan natin since last school year (mga random photoshoots, tamang asaran, tamang chismisan). 
-	So yun nga beh, thank you again sa mga memories, kakulitan, and bondings natin! Mahal na mahal kita Tin. God bless u, 
-	ingat ka palagi, see u when I see u, and thank u ulit! To more memories with u!!!
-</article>
-<footer class="m-10 mr-18 text-end">
-	From your photographer, customer, and close friend, <br />
-	Hanzyboy
-</footer>
+{#if letterContent === 'Gratitude'}
+	<Modal bind:showModal>
+		<h2 slot="letterType" class="text-white text-xl cheatline text-center">Gratitude letter</h2>
+		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: June 17, 2024 | Letter written: June 17, 2024</p>
+		<div class="text-[#f5f3f3]">
+			<!-- //* you may add carousel or images in between -->
+			<article class="m-5">
+				Hai Tin, thank u sa mga memories and bondings natin. Mamimiss q yung random pitch sales mo sa akin tsaka
+				yung minsanan na rant q sayo. Tas kung minsan, nag bibigay ka advice sa akin dahil sa mga pinaggagawa ko before
+				(attempted na ano sa life). Dahil dyan, bibigyan kita update sa life, wala ng gusto na babae (for now), inaatupag ang kalusugan ko dahil lumalala na ulit (alam mo naman na kung bakit), 
+				and naghahanap na trabaho.
+			</article>
+			<article class="m-5">
+				Yes nagpupuyat pa din pero di na masyado (well, pinagpuyatan ko tong pag draft ng letters) and rarely na nakakaisip ng no good pero no, I won't do it na kase na open na eyes ko sa mangyayari.
+				Thank u sa mga advices mo and yun nga, sa mga pitch sales mo. Yes, sinusunod ko naman advice mo (from time to time) and yes, natutuwa ako sa mga pitch sales mo minsan.
+				Kung iniisip mo kung ano yung pitch sales na tinutukoy ko, well yun yung times na sinasabi mo na bumili ako ng pagkain and/or drinks sayo (e.g. Mango Tapioca, Graham Balls).
+				Galing mo din eh, nacoconvince mo q na bumili kaya ayun, may maneh ka na at may food aq. Good trade naman yon. Tsaka eto pa, mamimiss q random photoshoots natin, kagaya ng nandito sa page ngayon at yung
+				1x1 mo para sa CV mo sa capstone docu (ata nakalimutan q na yon). Syempre thankful aq na nakilala at naging close friend kita. Kagaya nga ng sinabi ko kanina, naging advisor kita kaya ayun.
+			</article>
+			<article class="m-5">
+				I'm so thankful na nakilala kita Tin, mamimiss ko talaga yung memories and bondings natin and
+				ang ganda ng pinagsamahan natin since last school year (mga random photoshoots, tamang asaran, tamang chismisan). 
+				So yun nga beh, thank you again sa mga memories, kakulitan, and bondings natin! Mahal na mahal kita Tin. God bless u, 
+				ingat ka palagi, see u when I see u, and thank u ulit! To more memories with u!!!
+			</article>
+			<footer class="m-5 text-end">
+				From your photographer, customer, and close friend, <br />
+				Hanzyboy
+			</footer>
+			
+		</div>
+	</Modal>
+{:else if letterContent === 'Reminder'}
+<Modal bind:showModal>
+	<h2 slot="letterType" class="text-white text-xl cheatline text-center">To my 2nd circle</h2>
+	<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: October 9, 2024</h3>
+	<div class="text-[#f5f3f3]">
+		<article class="m-5">
+			Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
+		</article>
+		<footer class="m-5 text-end">
+			From the developer.
+		</footer>
+	</div>
+</Modal>
+{/if}
 
 <hr />
     

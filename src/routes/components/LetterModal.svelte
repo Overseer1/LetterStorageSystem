@@ -17,16 +17,16 @@
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
-	class="bg-transparent backdrop-blur-3xl snap-start"
+	class="bg-transparent backdrop-blur-3xl"
 >
 	<!-- //TODO have the bg color dynamic for the whole modal. -->
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation class="snap-start" tabindex="-1">
+	<div on:click|stopPropagation tabindex="0">
 		<slot name="letterType" />
         <slot name="dateOfLetter" />
 		<slot />
 		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()} class="text-white inline-flex w-full justify-center text-lg px-5 py-2.5 inset-x-0 bottom-0 text-center border-t-[1px] mt-2">Close</button>
+		<button on:click={() => dialog.close()} class="text-white inline-flex w-full justify-center text-lg px-5 py-2.5 inset-x-0 bottom-0 text-center border-t-[1px] mt-2">Close</button>
 	</div>
 </dialog>
 
@@ -42,7 +42,6 @@
 		dialog{
 			margin-right: 20px;
 			margin-left: 20px;
-			height: 600px;
 		}
 	}
 	dialog::backdrop {

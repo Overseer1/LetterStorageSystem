@@ -1,6 +1,10 @@
+<script context="module">
+    export const prerender = false;
+</script>
 <script>
 	// @ts-nocheck
 	import Modal from '../components/Modal.svelte';
+	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
@@ -8,6 +12,7 @@
 	import Icon from '@iconify/svelte';
 	import emailjs from '@emailjs/browser';
 	const circleSelection = ['TA/1C', 'TS/2C'];
+	const tokenFinder = [import.meta.env.VITE_TM_KC_T, import.meta.env.VITE_TM_12_T, import.meta.env.VITE_TM_10_T, import.meta.env.VITE_TM_26_T, import.meta.env.VITE_IT_05_T, import.meta.env.VITE_CS_15_T];
 	let CircleType, UserName, ShowLetter, Question, Passkey, firstKey, addKeys;
 	let Attempts = 5;
 	let showModal = false;
@@ -101,7 +106,7 @@
 			} else if (import.meta.env.VITE_SC_A4.includes(Passkey) || import.meta.env.VITE_SC_A4_N.includes(Passkey)) {
 				UserName = 'Margate, J.';
 				ShowLetter = 'secondCircle';
-				if (localStorage.getItem('letterKey') == 'TM-10')
+				if (localStorage.getItem('letterKey') == import.meta.env.VITE_TM_10_T)
 				{
 					addKeys = 'TM-10';
 				}
@@ -151,7 +156,6 @@
 		}
 	}
 	$: {
-		let hasItem;
 		let valueCheck;
 		pHolder = 'Use proper capitalization please.';
 		if (CircleType == circleSelection[0]) {
@@ -159,23 +163,23 @@
 		} else if (CircleType == circleSelection[1]) {
 			Question = import.meta.env.VITE_SC_Q;
 		}
-		let queryParams = $page.url.searchParams.get('accessToken');
+		// let queryParams = $page.url.searchParams.get('accessToken');
 		onMount(async () => {
-			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
-			// Conditional logic based on hasItem
-			if (hasItem == valueCheck || queryParams == import.meta.env.VITE_DevPass || queryParams == import.meta.env.VITE_VDPass) 
-			{
+			//  || queryParams == import.meta.env.VITE_DevPass || queryParams == import.meta.env.VITE_VDPass
+			for (let index = 0; index > tokenFinder.length; index++) {
+				if (valueCheck == tokenFinder[index]) 
+				{
 
-			} 
-			else 
-			{
-				goto(base + '/');
+				} 
+				else 
+				{
+					goto(base + '/');
+				}
 			}
 		});
 	}
 </script>
-
 <title>Hello</title>
 {#if UserName}
 	<div class="text-center m-5">Welcome, {UserName}</div>
@@ -187,30 +191,35 @@
 	<!-- <div class="cheatline text-center">‎</div> -->
 	<div class="cheatline text-center">Each person may or may not have an additional paragraph to the general letter.</div>
 {/if}
-<!-- svelte-ignore missing-declaration -->
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="text-center m-5">
-	{#if !ShowLetter}
-		<p class="text-2xl bold mb-6">From what circle are you?</p>
-		<div
-			class="overflow-hidden mb-5 cursor-pointer hover:underline"
-			on:click={() => ((CircleType = 'TA/1C'), (showModal = true))}
-		>
-			<p class="text-xl">1st circle / The Alumnis</p>
+{#if !ShowLetter}
+	<p class="text-2xl bold text-center m-5">From what circle are you?</p>
+	<div class="flex justify-center max-sm:block">
+		<div class="overflow-hidden mb-5 flex justify-center mx-5">
+			<Card class="bg-current text-[#f5f3f3]">
+				<h5 class="mb-2 text-2xl font-bold tracking-tight ">1st circle / The Alumnis</h5>
+				<p class="mb-3 font-normal leading-tight">Since SHS.</p>
+				<Button class="bg-bgBlackWhite border border-[#dddddd] hover:bg-[#dddddd] hover:text-[#313131]" on:click={()=>((CircleType = 'TA/1C'), (showModal = true))}>
+				Open letter
+				</Button>
+			</Card>
 		</div>
-		<div
-			class="overflow-hidden mb-5 cursor-pointer hover:underline"
-			on:click={() => ((CircleType = 'TS/2C'), (showModal = true))}
-		>
-			<p class="text-xl">2nd circle / The Starlights</p>
+		<div class="overflow-hidden mb-5 flex justify-center mx-5">
+			<Card class="bg-current text-[#f5f3f3]">
+				<h5 class="mb-2 text-2xl font-bold ">2nd circle / The Starlights</h5>
+				<p class="mb-3 font-normal leading-tight">Since 3Y2 and 4Y2.</p>
+				<Button class="bg-bgBlackWhite border border-[#dddddd] hover:bg-[#dddddd] hover:text-[#313131]" on:click={()=>((CircleType = 'TS/2C'), (showModal = true))}>
+					Open letter
+				</Button>
+			</Card>
 		</div>
-	{/if}
-</div>
+	</div>
+{/if}
+
 <!-- First circle letter start -->
 {#if ShowLetter == 'firstCircle'}
 	<article class="m-10 mb-3">To my first circle / The Alumnis</article>
-	<article class="m-10">Hello guys, salamat sa inyo. Bakit ako nag papasalamat? lately, narealize ko kung ano yung mangyayari if tinuloy ko. 
+	<article class="m-10">
+		Hello guys, salamat sa inyo. Bakit ako nag papasalamat? lately, narealize ko kung ano yung mangyayari if tinuloy ko. 
 		Paano? May nakita akong <a class="cursor-pointer underline" href="https://www.tiktok.com/@chickenbangshardasf/photo/7403949446108663072?is_from_webapp=1&sender_device=pc&web_id=7363649119540495888">slideshow sa TikTok,</a> 
 		Dahil doon, salamat sa inyo kase buhay pa ako. Tinanggap niyo ako kahit na ako ay nagiging gago pa minsan-minsan. Nakakaproud nga kayo eh, parang dati, ako yung nagtuturo sa inyo.
 		Ngayon naman, kayo na ang nagtuturo sa akin. Tapos ang bondings pa natin na minsan biglaan or sa times na ako ay may ginagawang kagaguhan. Kahit minsan lang tayo mag bondinng in person,
@@ -317,7 +326,7 @@
 {/if}
 {#if !UserName}
 	<Modal bind:showModal>
-		<h2 slot="header" class="text-2xl text-center">Passphrase</h2>
+		<h2 slot="header" class="text-2xl text-center border-b-2 border-bgBlack">Passphrase</h2>
 		<p class="text-base text-center">{showAttempts}</p>
 		<p class="text-base text-center text-[#991b1b]">{pHolder}</p>
 		<p class="text-base text-center">{Question}</p>
@@ -330,7 +339,7 @@
 			/>
 			<hr />
 			<button
-				class="text-white inline-flex w-full justify-center font-medium text-sm px-5 py-2.5 text-center"
+				class="inline-flex w-full justify-center border-t-2 border-b-2 border-bgBlack font-medium text-sm px-5 py-2.5 text-center"
 			>
 				Submit
 			</button>

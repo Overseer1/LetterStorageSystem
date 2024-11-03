@@ -137,7 +137,7 @@
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <div>
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1>
-	<h1 class="text-lg m-2 text-center">Note: <span class="text-[#eed202]">Yellow coded </span>= under development | <span class="text-green-400">light green coded</span> = under UI reconstruction, but can be accessed.</h1>
+	<h1 class="text-lg m-2 text-center">Note: <span class="text-[#eed202]">Yellow coded </span>= under development | <span class="text-green-400">Light Green coded</span> = Updated UI, can be accessed.</h1>
 	<!-- TM -->
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">Tourism Management</h1>
@@ -157,7 +157,7 @@
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'E')}>
-			<p class="text-xl">
+			<p class="text-xl text-green-400">
 				2nd year | TM-26
 			</p>
 		</div>
@@ -171,7 +171,7 @@
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">ICT</h1>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'KJ')}>
-			<p class="text-xl">
+			<p class="text-xl text-green-400">
 				4th year | IT | IT-05
 			</p>
 		</div>
@@ -192,7 +192,7 @@
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SA/WD')}>
 			<p class="text-xl">
-				Alumnus | IT-2020-2024-05
+				Alumnus | IT | IT-2020-2024-05
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'JB')}>
