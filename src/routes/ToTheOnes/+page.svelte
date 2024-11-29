@@ -1,6 +1,3 @@
-<script context="module">
-    export const prerender = false;
-</script>
 <script>
 	// @ts-nocheck
 	import Modal from '../components/Modal.svelte';
@@ -183,7 +180,7 @@
 <title>Hello</title>
 {#if UserName}
 	<div class="text-center m-5">Welcome, {UserName}</div>
-	<div class="cheatline text-center">Letter finished: October 9, 2024 | No, this is not a suicide letter.</div>
+	<div class="cheatline text-center">Letter finished: October 9, 2024</div>
 {:else}
 	<div class="text-center m-5 text-2xl">
 		Welcome, please select your circle and identify yourself.

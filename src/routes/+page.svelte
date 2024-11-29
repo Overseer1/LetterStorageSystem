@@ -14,7 +14,7 @@
 		if (QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A1 || QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A2) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_KC_T);
 			goto(base + '/TM/TM-KC');
-		} else if (QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A) {
+		} else if (QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A1 || QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A2) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_12_T);
 			goto(base + '/TM/TM-12');
 		} else if (QKey == 'J' && Answer == import.meta.env.VITE_TM_10_A) {

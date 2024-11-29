@@ -25,7 +25,6 @@
 		<slot name="letterType" />
         <slot name="dateOfLetter" />
 		<slot />
-		<!-- svelte-ignore a11y-autofocus -->
 		<button on:click={() => dialog.close()} class="text-white inline-flex w-full justify-center text-lg px-5 py-2.5 inset-x-0 bottom-0 text-center border-t-[1px] mt-2">Close</button>
 	</div>
 </dialog>

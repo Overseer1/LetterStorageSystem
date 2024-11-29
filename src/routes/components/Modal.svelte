@@ -24,8 +24,7 @@
 		<hr/>
 		<slot />
         <hr />
-		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()} class="inline-flex w-full justify-center border-b-2 border-bgBlack font-medium text-sm px-5 py-2.5 text-center">Close</button>
+		<button on:click={() => dialog.close()} class="inline-flex w-full justify-center border-b-2 border-bgBlack font-medium text-sm px-5 py-2.5 text-center">Close</button>
 	</div>
 </dialog>
 
