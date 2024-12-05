@@ -6,6 +6,7 @@
 	import CMA2 from '$lib/assets/TM/MA2.jpg?url';
 	import CMA3 from '$lib/assets/TM/MA3.jpg?url';
 	import CMA4 from '$lib/assets/TM/MA4.jpg?url';
+	import CMA5 from '$lib/assets/TM/MA5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -54,11 +55,10 @@
 	}
 </script>
 
-<title>TM/TM-12</title>
+<title>Hai, Asliiii</title>
 <div class="text-center m-5">Welcome, Cabrera, M. A.</div>
-<div class="cheatline text-center">Page updated: November 26, 2024</div>
+<div class="cheatline text-center">Page updated: December 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<!-- //! 3 pictures will be set, pictures can be changed or retained -->
 	<img src={CMA4} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>
 <hr />
@@ -94,15 +94,29 @@
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
 		<Card img={CMA2} reverse={false} class="bg-current text-[#f5f3f3]">
-			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
-			<p class="mb-3 font-normal leading-tight">Draft is hidden as per my decision.</p>
-			<h5 class="mb-2 text-2xl font-bold tracking-tight hidden">Birthday letter</h5>
-			<p class="mb-3 font-normal leading-tight hidden">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
+			<p class="mb-3 font-normal leading-tight blur-md">
 				Happy 22nd birthday mi hermana, bff, and model!!!
 			</p>
 			<Button
 				class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]"
 				on:click={() => letterShow('Birthday')}
+			>
+				Open letter
+			</Button>
+		</Card>
+	</div>
+
+	<!-- //* for graduation | 2027 -->
+	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
+		<Card img={CMA5} reverse={false} class="bg-current text-[#f5f3f3]">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
+			<p class="mb-3 font-normal leading-tight">
+				Draft is hidden as per my decision.
+			</p>
+			<Button
+				class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]"
+				on:click={() => letterShow('Graduation')}
 			>
 				Open letter
 			</Button>
@@ -188,67 +202,117 @@
 			</div>
 		</Modal>
 	{:else if letterContent === 'Birthday'}
-		<!-- //! birthday letter drafting will start by 2nd week of Oct. or Nov. Will be confidential once drafting starts. -->
-		<!-- //! Letter to be written ~ 2 weeks before Dec. 9. Dates may change w/o notice -->
 		<Modal bind:showModal>
-			<h2 slot="letterType" class="text-white text-xl cheatline text-center blur-sm">
-				Birthday letter
-			</h2>
+			<h2 slot="letterType" class="text-white text-xl cheatline text-center">Birthday letter</h2>
 			<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-				Letter finished: December X, 2024 | Letter written: December X, 2024
+				Letter finished: December 3, 2024 | Letter written: December 5/6, 2024
 			</p>
 			<div class="text-[#f5f3f3]">
-				<article class="m-5 text-center">
-				Wala pa chill lang, dinadraft ko siya as of writing (November 26, 2024 | 6:33 AM) <br/>
-				Napakaganda mo talaga doon sa pic na naka black ka na sando (oo maganda ka talaga, alam ko. Sadyang nagandahan ako sa pic mo na yon, and I love it!)
+				<article class="m-5">
+					anw tapos ko na yung letter pero baka may idagdag pa ako (December 3, 2024 | 3:05 AM) so
+					nakatago pa yung letter. Chinecheck ko yung haba ng letter pa so naka blur siya para no
+					spoilers. Ipapakita ko na siya by December 7 (or by Dec 6 | ~ 9:30 - 10:00 PM)<br />
+				</article>
+				<article class="m-5">
+					Nga pala, Napakaganda mo talaga doon sa pic na naka black ka na sando (oo maganda ka talaga,
+					alam ko. Sadyang nagandahan ako sa pic mo na yon, and I love it!)
 				</article>
 				<article class="m-5"></article>
-				<article class="m-5"></article>
-				<div class="hidden">
+				<div class="blur-lg">
 					<article class="m-5">
-						<!-- //* you may add something more here. -->
-						Hai Asliiii, Happy 22nd birthday sayooooo!!! We both know na hindi lang ito ang gift ko
+						Hai Asliiii, HAPPY 22ND BIRTHDAY SAYOOOOO!!! We both know na hindi lang ito ang gift ko
 						sayo, may photoshoot ka and syempre, yung prescence ko sa birthday mo or better yet, sa
 						life mo. Anyways, I know na babasahin mo to sa birthday mo mismo, whether it be yung
-						written version ng letter or eto. Grabe no, 1 year na ang pagkakaibigan natin pero sobrang
-						close na natin. Tamang bardagulan and whatever na want mo na gawin na kasama ako/kami,
-						naging comfy ka ba naman eh. At least happy ka diba? yan ang importante. Keep yourself
-						happy lang my Asli ha?
+						written version ng letter or eto. Grabe no, 1 year na ang pagkakaibigan natin pero
+						sobrang close na natin. Tamang bardagulan and whatever na want mo na gawin na kasama
+						ako/kami, naging comfy ka ba naman eh. At least happy ka diba? yan ang importante. Keep
+						yourself happy lang my Asli ha? Bago ko ilahad ang history natin from first chat to
+						present, Ang wish ko for you is for you to be successful in life and be happy, stay
+						beautiful and awesome, have your dreams come true, and of course, you become the best
+						version of you that you've always wanted.
 					</article>
 					<article class="m-5">
-						<!-- //! reorganize -->
 						Ilalahad ko history ng pagkakaibigan natin mula sa first chat mo. Nung nagchat ako sayo
 						nung Mental health week nung A.Y. 2023-2024, yung sinend ko sayo yung pictures mo nung
 						event. Tapos sinabi mo pa sa akin na may trabaho ka tas yun pala naglalaro ka lang nung
-						cooking game. Akala ko talaga working student ka HAHAHAHA! Tapos after non  
-						//continue to convo history, search parameter "drive"
-						
-						
-						
-						ka sa akin
-						ng "Papitik nga" nung intrams kase kilala mo ako bilang student photographer nung school
-						tapos akala ko pa nga nandun ka sa school non so hinanap kita pero syempre, nag send ako 
-						ng pic ko noon na ipipitik kita (literal) tapos dare-daretso na tayo sa pag chat. Naging 
-						close tayo during OJT ko, yung kapag may free time tayong dalawa, mag uusap tayo hanggang 
-						sa maging busy tayo. Buti nga nakakapagrant ako sayo nung mga times na nabbwisit ako sa 
-						OJT noon, tas ikaw naman nagrarant din about sa schoolworks or anything about sa school.
-						Minsan tinutulungan kita sa schoolworks mo kapag nahihirapan ka, like yung sa entrep and
-						Euthenics mo (yung nilagyan ko ng "taga gawa ng fakeshit" yung résumé mo). Ang saya nga 
-						kase nasasabi ko sa sarili ko na, "Natutulungan ko yung tinutulungan ako." [before na, 
-						"Natutulungan ko yung crush ko", ngayon naman ang sinasabi ko is, "Natutulungan ko yung 
-						kapatid ko".] Then next, is yung mga photoshoots mo. Ang dami natin naset, seven or eight 
-						na ata eh, kasama na yung photoshoot natin sa Parqal.
+						cooking game. Akala ko talaga working student ka HAHAHAHA! Tapos after non dare-daretso
+						na tayo sa pag chat. Naging close tayo over time, kahit bago ako mag OJT nagbabardagulan
+						na tayo eh. Tapos nung nag EK tayo, nag hide and seek pa tayo. Kaso ang na seek ko ay si
+						Kat Kat at ikaw naman ay tinaguan ko. Sorry talaga doon beh, akala ko talaga makikita
+						kita ulit noon, pero bumabawi naman na ako sayo thru photoshoots eh. Tapos during OJT
+						naman, nakakapagrant ako sayo nung mga times na nabbwisit ako sa OJT, Kahit din ikaw
+						nagrarant din about sa schoolworks, problems sa life, or kapag may chismis ka about
+						something, sasabihin mo sa akin. Minsan nga, nagpapatulong ka sa akin sa schoolworks mo
+						kahit may OJT ako eh. Okay lang naman, madali naman yung mga schoolworks mo eh. Ang saya
+						din naman kase natutulungan kita and nakakapagchismisan tayo sa isa't isa, I can say na
+						nag bigay saya ka sa akin during internship ko and nakakaproud ka for that Asli. Then
+						next, is yung mga photoshoots mo. Ang dami natin naset, eight or nine na ata eh, kasama
+						na yung photoshoot natin sa Parqal. It's obvious naman na una kitang na kilala at naging
+						close bago ko makilala si Kat Kat, kaya mas marami yung sayo.
 					</article>
-					<article class="m-5">//Third body, personal matters, her rants, and/or struggle for herself</article>
 					<article class="m-5">
-						I hoped that you enjoyed your birthday Ash. We're here for you, especially me.
-						Susupportahan ka namin no matter what, hindi ako mapapagod na tulungan ka, turuan ka,
-						supportahan ka Ash, I mean that. I love you so much Ashleyyyyy. I wish you all the
-						best mi hermana. Alagaan and ingatan mo sarili mo Asli. Again, I will always be here 
-						for you. Remember that beh. Happy birthday ulit Asliiii!!!
+						Elaborate ko pa yung sa rants mo, unahin ko yung sa times na nag ooverthink ka sa mga
+						grades mo. Sabi ko nga sayo na kaya mo yan, hindi mo need mag alala kase matataas naman
+						ang scores mo sa activities. Nagagawa mo nga yung mga school stuffs mo ng maayos eh.
+						Kaya don't worry about sa grades mo, You're doing your best naman and I'm always proud
+						of you. Always. Kahit hindi ka na pasok sa Cum Laude, I'm still proud of you Ash. Huwag
+						mo panghinaan loob mo dahil lang sa may mababa ka na grade. Mababawi yan. Tiwala lang.
+						Yung next naman is about sa life, yung mga problems mo and what not. I will be here to
+						listen and help you. Aayusin natin yan beh, matagal man yan or hindi. I don't know kung
+						kailan mo want pero I'll be here waiting for you. Daig ko pa magiging partner mo eh no?
+						Keep doing your best ha? May mga pagsubok ka na dadaanan sa mga susunod na semesters,
+						OJT, and after graduation. Makakaraos ka doon if you believe in yourself. Nakakaraos ka
+						nga sa mga schoolworks and other problems mo with ease eh. Well not immediately pero at
+						least nakakaraos. Oh diba? Kung kinaya mo yon, Kakayanin mo yung ibang pagsubok. Kaya mo
+						yan Asli, I know you can, Ikaw yan eh. I'm so grateful to God kase nakilala kita Ash,
+						nandiyan ka palagi for me, nakakapagrant tayo sa isa't isa para mapakalma natin ang
+						sarili natin, nakakapagshare tayo ng kanta or memes, or anything na want natin, and
+						syempre, magkavibes pa tayo.
+					</article>
+					<article class="m-5">
+						I hoped that you enjoyed your birthday Ash. Susupportahan kita no matter what, hindi ako
+						mapapagod na tulungan ka, turuan ka, supportahan ka, at samahan ka sa mga endeavors mo
+						Ash, I mean that. I love you so much Ashleyyyyy. I wish you all the best mi hermana.
+						Alagaan and ingatan mo sarili mo Asli. Again, I will always be here for you. Remember
+						that beh. God bless u and ingat ka palagi! Happy birthday ulit Asliiii!!! To more
+						kagaguhan and beautiful memories with u!!!
 					</article>
 					<footer class="m-5 text-end">
-						From your not related brother, personal photographer, English teacher, and close friend, <br />
+						From your not related brother, personal photographer, English teacher, and close friend, <br
+						/>
+						Hanz
+					</footer>
+				</div>
+			</div>
+		</Modal>
+	{:else if letterContent === 'Graduation'}
+		<Modal bind:showModal>
+			<h2 slot="letterType" class="text-white text-xl cheatline text-center blur-md">
+				Graduation letter
+			</h2>
+			<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
+				Letter finished: 2026/2027 | Letter written: 2027
+			</h3>
+			<div class="text-[#f5f3f3]">
+				<article class="m-5">Hai Asliiii, bat ka nandito eh wala pang laman to</article>
+				<article class="m-5">
+					Matagal pa to bago ako magdraft dito so galingan mo sa school and sa life ikaw oki?
+				</article>
+				<div class="hidden">
+					<article class="m-5">
+						CONGRATULATIONS MY ASLIIII!!!! //multiple additionals for letter | helping,
+						supporting, and teaching her<br />
+					</article>
+					<article class="m-5"></article>
+					<article class="m-5">
+						Marykate Ashley B. Cabrera | Batch 2027 <br />
+						Bachelor of Science in Tourism Management <br />
+						School Spirit Awardee <br />
+						Cum Laude
+					</article>
+					<footer class="m-5 text-end">
+						From your not related brother, personal photographer, supporter, guide, teacher, and
+						close friend, <br />
 						Hanz
 					</footer>
 				</div>

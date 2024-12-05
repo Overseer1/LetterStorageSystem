@@ -2,8 +2,8 @@
 // @ts-nocheck
 
 	import CKC from '$lib/assets/TM/KC.jpg?url';
+	import CMA from '$lib/assets/TM/MA1.jpg?url';
 	import CKC1 from '$lib/assets/TM/KC1.jpg?url';
-	import CKC2 from '$lib/assets/TM/KC2.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
@@ -84,7 +84,7 @@
 		<Card img={CKC} reverse={vCard} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Letter type</h5>
 		  <p class="mb-3 font-normal leading-tight">Letter summarization.</p>
-		  <Button class="bg-bgPurp hover:bg-[#6d28d9]" on:click={()=>(letterShow('Graduation'))}>
+		  <Button class="bg-bgBlue hover:bg-[#ffeb3b] hover:text-[#313131]" on:click={()=>(letterShow('Graduation'))}>
 			Read more
 		  </Button>
 		</Card>
@@ -92,10 +92,10 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CKC2} reverse={vCard} class="bg-current text-[#f5f3f3]">
+		<Card img={CMA} reverse={vCard} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Letter type</h5>
 		  <p class="mb-3 font-normal leading-tight">Letter summarization.</p>
-		  <Button class="bg-bgPurp hover:bg-[#6d28d9]" on:click={()=>(letterShow('Birthday'))}>
+		  <Button class="bg-bgBlue hover:bg-[#ffeb3b] hover:text-[#313131]" on:click={()=>(letterShow('Birthday'))}>
 			Read more
 		  </Button>
 		</Card>
@@ -106,7 +106,7 @@
 		<Card img={CKC1} reverse={vCard} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Letter type</h5>
 		  <p class="mb-3 font-normal leading-tight">Letter summarization.</p>
-		  <Button class="bg-bgPurp hover:bg-[#6d28d9]" on:click={()=>(letterShow('Gratitude'))}>
+		  <Button class="bg-bgBlue hover:bg-[#ffeb3b] hover:text-[#313131]" on:click={()=>(letterShow('Gratitude'))}>
 			Read more
 		  </Button>
 		</Card>
@@ -114,7 +114,7 @@
 	</div>
 	{#if letterContent === 'Graduation'}
 	<Modal bind:showModal>
-		<h2 slot="letterType" class="text-white text-xl cheatline text-center">Letter type</h2>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Letter type</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: | Letter written: </p>
 		<div class="">
 			<!-- //* you may add carousel or images in between -->
@@ -165,7 +165,7 @@
 	</Modal>
 	{:else if letterContent === 'Birthday'}
 	<Modal bind:showModal>
-		<h2 slot="letterType" class="text-white text-xl cheatline text-center">Letter type</h2>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Letter type</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: | Letter written: </p>
 		<div class="overflow-y-auto">
 			<p class="text-white text-base text-center mt-2">Cillum enim cupidatat labore culpa sint. Nostrud nostrud iruredeserunt ut pariatur. Quis mollit Lorem ex fugiat laborum mollitipsum minim Lorem pariatur occaecat exercitation. 
@@ -181,7 +181,7 @@
 	</Modal>
 	{:else if letterContent === 'Gratitude'}
 	<Modal bind:showModal>
-		<h2 slot="letterType" class="text-white text-xl cheatline text-center">Gratitude letter</h2>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Gratitude letter</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: | Letter written: </p>
 		<p class="text-white text-base text-center mt-2">Cillum enim cupidatat labore culpa sint. Nostrud nostrud iruredeserunt ut pariatur. Quis mollit Lorem ex fugiat laborum mollitipsum minim Lorem pariatur occaecat exercitation. 
 		Et suntreprehenderit minim ullamco elit culpa duis enim anim utincididunt. Voluptate excepteur ipsum officia cillum sint laborumtempor sint adipisicing ullamco cupidatat veniam ullamco deserunt.
@@ -213,20 +213,20 @@
 
 <style lang="postcss">
 	.cheatline {
-		background-color: #6d28d9;
+		background-color: #ffeb3b;
 		color: #f5f3f3;
 	}
 	.inputColor {
 		color: #313131;
 	}
 	:global(html) {
-		background-color: theme(colors.bgPurp);
+		background-color: theme(colors.bgBlue);
 		color: #dddddd;
 	}
 	@media screen and (max-width: 700px) {
-		img {
+		/* img {
 			width: 77%;
-		}
+		} */
 		.buttonChange
 		{margin-right: 12px;}
 		/* partial implementation only */

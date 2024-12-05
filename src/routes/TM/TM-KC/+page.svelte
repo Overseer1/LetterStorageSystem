@@ -7,6 +7,7 @@
 	import CKC3 from '$lib/assets/TM/KC3.jpg?url';
 	import CKC4 from '$lib/assets/TM/KC4.jpg?url';
 	import CKC5 from '$lib/assets/TM/KC5.jpg?url';
+	import CKC6 from '$lib/assets/TM/KC6.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle, Spinner } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -54,9 +55,9 @@
 	}
 </script>
 
-<title>TM/TM-KC</title>
+<title>Henlo, Kat Kattttt</title>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
-<div class="cheatline text-center">Page updated: November 26, 2024</div>
+<div class="cheatline text-center">Page updated: December 3, 2024</div>
 <header class="mb-5 flex justify-center">
 	<img src={CKC3} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>
@@ -94,10 +95,8 @@
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
 		<Card img={CKC2} reverse={false} class="bg-current text-[#f5f3f3]">
-			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
-			<p class="mb-3 font-normal leading-tight">Draft is hidden as per your request and mine.</p>
-			<h5 class="mb-2 text-2xl font-bold tracking-tight hidden">Birthday letter</h5>
-			<p class="mb-3 font-normal leading-tight hidden">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
+			<p class="mb-3 font-normal leading-tight blur-md">
 				Happy 22nd birthday mi hermana, bff, and model!!!
 			</p>
 			<Button
@@ -110,13 +109,12 @@
 	</div>
 
 	<!-- //* for graduation letter -->
-	<!-- //! unhide button once birthday letter is finished -->
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CKC1} reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CKC6} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
 			<p class="mb-3 font-normal leading-tight">Draft is hidden as per your request and mine.</p>
 			<Button
-				class="bg-bgPurp border border-[#6d28d9] hover:bg-[#6d28d9] hidden"
+				class="bg-bgPurp border border-[#6d28d9] hover:bg-[#6d28d9]"
 				on:click={() => letterShow('Graduation')}
 			>
 				Open letter
@@ -211,31 +209,29 @@
 			</div>
 		</Modal>
 	{:else if letterContent === 'Birthday'}
-		<!-- //! birthday letter drafting will start by 2nd week of Oct. or Nov. Will be confidential once drafting starts. -->
-		<!-- //! Letter to be written ~ 2 weeks before Dec. 9. Dates may change w/o notice -->
 		<Modal bind:showModal>
-			<h2 slot="letterType" class="text-white text-xl cheatline text-center blur-sm">
-				Birthday letter
-			</h2>
+			<h2 slot="letterType" class="text-white text-xl cheatline text-center">Birthday letter</h2>
 			<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-				Letter finished: November XX, 2024 | Letter written: December X, 2024
+				Letter finished: December 1, 2024 | Letter written: December 5/6, 2024
 			</h3>
 			<div class="text-[#f5f3f3]">
 				<!-- <header class="mb-5 flex justify-center max-sm:block">
 					<img src={CKC5} alt="N/A" class="object-cover mt-5 h-[550px] w-[250px] ml-11 rounded-lg" />
 				</header> -->
-				<article class="m-5 text-center">
+				<article class="m-5">
 					<!-- HSHAAHSHSAHAHHASHSAHASHASHASH SUNDALONG HAPON AAAAAAAAAAAAAAAAAAAAAAAAAAAAA HGSADHGHASHASHSAHASHAS -->
 					CONGRATS KAT KATTTTT!!! I'M SO PROUD OF U MI KAT KATTTTT!!!
 				</article>
-				<article class="m-5 text-center">
-					anw dinadraft ko siya as of now (November 30, 2024 | 3:25 AM) <br />
+				<article class="m-5">
+					anw tapos ko na yung letter pero baka may idagdag pa ako (December 1, 2024 | 3:15 AM) so
+					nakatago pa yung letter. Chinecheck ko yung haba ng letter pa so naka blur siya para no
+					spoilers. Ipapakita ko na siya by December 7 (or by Dec 6 | ~ 9:30 - 10:00 PM)<br />
 					I hope na suot mo yung bracelet na binigay ko sayo sa birthday mo and sa photoshoot
 				</article>
 				<article class="m-5"></article>
-				<div class="hidden">
+				<div class="blur-lg">
 					<article class="m-5">
-						Hai Kat Kattttt, Happy 22nd birthday sayooooo!!! We both know na hindi lang ito ang gift
+						Hai Kat Kattttt, HAPPY 22ND BIRTHDAY SAYOOOOO!!! We both know na hindi lang ito ang gift
 						ko sayo, may photoshoot ka and syempre, yung prescence ko sa birthday mo or better yet,
 						sa life mo. Anyways, I know na babasahin mo to sa birthday mo mismo, whether it be yung
 						written version ng letter or eto. By the way, you can say na yung binigay ko sayo na
@@ -245,13 +241,15 @@
 						minsan. Grabe no, wala pang 1 year pagkakaibigan natin pero close na close na tayo.
 						Tamang bardagulan and whatever na want mo na gawin na kasama ako/kami, naging comfy ka
 						ba naman eh. At least happy ka diba? yan ang importante. Keep yourself happy lang my Kat
-						Kat ha?
+						Kat ha? Bago ko ilahad ang history natin from first chat to present, Ang wish ko for you
+						is for you to be successful in life, stay beautiful and awesome, and of course, have
+						your dreams come true.
 					</article>
 					<article class="m-5">
-						Ilalahad ko history ng pagkakaibigan natin mula sa first chat mo. Nung nagchat ka sa
-						akin ng "Papitik nga" nung intrams kase kilala mo ako bilang student photographer nung
-						school tapos akala ko pa nga nandun ka sa school non so hinanap kita pero syempre, nag
-						send ako ng pic ko noon na ipipitik kita (literal) tapos dare-daretso na tayo sa pag
+						Now, ilalahad ko history ng pagkakaibigan natin mula sa first chat mo. Nung nagchat ka
+						sa akin ng "Papitik nga" nung intrams kase kilala mo ako bilang student photographer
+						nung school tapos akala ko pa nga nandun ka sa school non so hinanap kita pero syempre,
+						nag send ako ng pic ko noon na ipipitik kita (literal) tapos dare-daretso na tayo sa pag
 						chat. Naging close tayo during OJT ko, yung kapag may free time tayong dalawa, mag uusap
 						tayo hanggang sa maging busy tayo. Buti nga nakakapagrant ako sayo nung mga times na
 						nabbwisit ako sa OJT noon, tas ikaw naman nagrarant din about sa schoolworks or anything
@@ -259,28 +257,37 @@
 						yung sa entrep and Euthenics mo (yung nilagyan ko ng "taga gawa ng fakeshit" yung résumé
 						mo). Ang saya nga kase nasasabi ko sa sarili ko na, "Natutulungan ko yung tinutulungan
 						ako." or "Natutulungan ko yung kapatid ko". Before kase, "Natutulungan ko yung crush
-						ko". Then next, is yung mga photoshoots mo. Ang dami natin naset, seven or eight na ata
-						eh, kasama na yung photoshoot natin sa Parqal.
+						ko". Tsaka nakakapagchismisan tayo sa isa't isa. It's obvious na nag bigay saya ka sa
+						akin during internship ko and nakakaproud ka for that Kat Kat. Then next, is yung mga
+						photoshoots mo. Ang dami natin naset, seven or eight na ata eh, kasama na yung
+						photoshoot natin sa Parqal.
 					</article>
 					<article class="m-5">
-						<!-- add gratitude here or on fourth body (footer) -->
-						Elaborate ko pa yung sa rants mo, especially yung sa times na nag ooverthink ka sa mga grades
-						mo. Sabi ko nga sayo na kaya mo yan, hindi mo need mag alala kase matataas naman ang scores
-						mo sa activities. Nagagawa mo nga yung mga school stuffs mo ng maayos eh, pasok ka niyan
-						sa Cum Laude Kat Kat, I promise you that. Kaya don't worry about sa grades mo, You're doing
-						your best naman and I'm always proud of you. Always. Keep doing your best ha? Not just in
-						school, but sa life din. May mga pagsubok ka na dadaanan sa OJT and after graduation, and
-						makakaraos ka doon if you believe in yourself. Nakakaraos ka nga sa mga schoolworks and other
-						problems mo with ease eh. May technique ka pa nga minsan para doon, "Walang pakialam sa paligid".
-						At least may ways ka. Oh diba? Kung kinaya mo yon, Kakayanin mo yung ibang pagsubok. Kaya
-						mo yan Kat Kat, I know you can, Ikaw yan eh.
+						Elaborate ko pa yung sa rants mo, especially yung sa times na nag ooverthink ka sa mga
+						grades mo. Sabi ko nga sayo na kaya mo yan, hindi mo need mag alala kase matataas naman
+						ang scores mo sa activities. Nagagawa mo nga yung mga school stuffs mo ng maayos eh,
+						pasok ka niyan sa Cum Laude Kat Kat, I promise you that. Kaya don't worry about sa
+						grades mo, You're doing your best naman and I'm always proud of you. Always. Keep doing
+						your best ha? Not just in school, but sa life din. May mga pagsubok ka na dadaanan sa
+						OJT and after graduation, and makakaraos ka doon if you believe in yourself. Nakakaraos
+						ka nga sa mga schoolworks and other problems mo with ease eh. May technique ka pa nga
+						minsan para doon, "Walang pakialam sa paligid". At least may ways ka. Oh diba? Kung
+						kinaya mo yon, Kakayanin mo yung ibang pagsubok. Kaya mo yan Kat Kat, I know you can,
+						Ikaw yan eh. If may times na hindi mo kaya, I will be here to listen to you and samahan
+						ka. Kagaya nga ng sinasabi mo sa akin during deep talks natin, Hindi rin ako magiging
+						available palagi, pero I'll still listen to you kahit late ako mag reply. Basta ichat mo
+						lang yan, babasahin ko naman yan oki? I'm so grateful to God kase nakilala kita Kat Kat,
+						nandiyan ka palagi for me, nakakapagrant tayo sa isa't isa para mapakalma natin ang
+						sarili natin, nakakapagshare tayo ng kanta or memes, or anything na want natin, and
+						syempre, magkavibes pa tayo.
 					</article>
 					<article class="m-5">
-						I hoped that you enjoyed your birthday Kat Kat. I'm here for you. Susupportahan kita no
-						matter what, hindi ako mapapagod na tulungan ka, turuan ka, supportahan ka Kat Kat, I
-						mean that. I love you so much Katrinaaaaa. I wish you all the best mi hermana. Alagaan
-						and ingatan mo sarili mo Kat Kat. Again, I will always be here for you. Remember that
-						beh. Happy birthday ulit Kat Kattttt!!! To more beautiful memories with u!!!
+						I hoped that you enjoyed your birthday Kat Kat. Susuportahan kita no matter what, hindi
+						ako mapapagod na tulungan ka, turuan ka, supportahan ka, at samahan ka sa mga endeavors
+						mo Kat Kat, I mean that. I love you so much Katrinaaaaa. I wish you all the best mi
+						hermana. Alagaan and ingatan mo sarili mo Kat Kat. Again, I will always be here for you.
+						Remember that beh. God bless u and ingat ka palagi! Happy birthday ulit Kat Kattttt!!!
+						To more kagaguhan and beautiful memories with u!!!
 					</article>
 					<footer class="m-5 text-end">
 						From your not related brother, US Boi, personal photographer, English teacher, and close
@@ -292,25 +299,35 @@
 		</Modal>
 	{:else if letterContent === 'Graduation'}
 		<Modal bind:showModal>
-			<h2 slot="letterType" class="text-white text-xl cheatline text-center">Graduation letter</h2>
+			<h2 slot="letterType" class="text-white text-xl cheatline text-center blur-md">
+				Graduation letter
+			</h2>
 			<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-				Letter finished: Month DD, 2025 | Letter written: Month DD, 2025
+				Letter finished: 2025 | Letter written: 2025
 			</h3>
 			<div class="text-[#f5f3f3]">
+				<article class="m-5">Hai Kat Kattttt, bat ka nandito eh wala pang laman to</article>
 				<article class="m-5">
-					CONGRATULATIONS MY KAT KATTTT!!!! //multiple additionals for letter | helping, supporting,
-					and teaching her<br />
+					May draft ako pero konting konti pa lang kaya balik ka na lang soon dito and galingan mo
+				 	sa school or internship (kung 2nd sem mo na to binabasa) and sa life ikaw oki? oki
 				</article>
-				<article class="m-5">
-					Katrina Clarisse B. Cabrera | Batch 2025 <br />
-					Bachelor of Science in Tourism Management <br />
-					Cum Laude
-				</article>
-				<footer class="m-5 text-end">
-					From your not related brother, personal photographer, supporter, guide, teacher, and close
-					friend, <br />
-					Hanz
-				</footer>
+				<div class="hidden">
+					<article class="m-5">
+						CONGRATULATIONS MY KAT KATTTT!!!! //multiple additionals for letter | helping,
+						supporting, and teaching her<br />
+					</article>
+					<article class="m-5"></article>
+					<article class="m-5">
+						Katrina Clarisse B. Cabrera | Batch 2025 <br />
+						Bachelor of Science in Tourism Management <br />
+						Cum Laude
+					</article>
+					<footer class="m-5 text-end">
+						From your not related brother, personal photographer, supporter, guide, teacher, and
+						close friend, <br />
+						Hanz
+					</footer>
+				</div>
 			</div>
 		</Modal>
 	{/if}
