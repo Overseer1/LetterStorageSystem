@@ -111,9 +111,7 @@
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
 		<Card img={CMA5} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
-			<p class="mb-3 font-normal leading-tight">
-				Draft is hidden as per my decision.
-			</p>
+			<p class="mb-3 font-normal leading-tight">Draft is hidden as per my decision.</p>
 			<Button
 				class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]"
 				on:click={() => letterShow('Graduation')}
@@ -207,82 +205,73 @@
 			<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
 				Letter finished: December 3, 2024 | Letter written: December 5/6, 2024
 			</p>
-			<div class="text-[#f5f3f3]">
+			<h3 class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
+				Letter to be shown by 10:00 PM of December 6.
+			</h3>
+			<div class="text-[#f5f3f3] blur-lg">
 				<article class="m-5">
-					anw tapos ko na yung letter pero baka may idagdag pa ako (December 3, 2024 | 3:05 AM) so
-					nakatago pa yung letter. Chinecheck ko yung haba ng letter pa so naka blur siya para no
-					spoilers. Ipapakita ko na siya by December 7 (or by Dec 6 | ~ 9:30 - 10:00 PM)<br />
+					Hai Asliiii, HAPPY 22ND BIRTHDAY SAYOOOOO!!! We both know na hindi lang ito ang gift ko
+					sayo, may photoshoot ka and syempre, yung prescence ko sa birthday mo or better yet, sa
+					life mo. Anyways, I know na babasahin mo to sa birthday mo mismo, whether it be yung
+					written version ng letter or eto. Grabe no, more than 1 year na ang pagkakaibigan natin
+					pero sobrang close na natin. Tamang bardagulan and whatever na want mo na gawin na kasama
+					ako/kami, naging comfy ka ba naman eh. At least happy ka diba? yan ang importante. Keep
+					yourself happy lang my Asli ha? Bago ko ilahad ang history natin from first chat to
+					present, Ang wish ko for you is for you to be successful in life and be happy, stay
+					beautiful and awesome, have your dreams come true, and of course, you become the best
+					version of you that you've always wanted.
 				</article>
 				<article class="m-5">
-					Nga pala, Napakaganda mo talaga doon sa pic na naka black ka na sando (oo maganda ka talaga,
-					alam ko. Sadyang nagandahan ako sa pic mo na yon, and I love it!)
+					Ilalahad ko history ng pagkakaibigan natin mula sa first chat mo. Nung nagchat ako sayo
+					nung Mental health week nung A.Y. 2023-2024, yung sinend ko sayo yung pictures mo nung
+					event. Tapos sinabi mo pa sa akin na may trabaho ka tas yun pala naglalaro ka lang nung
+					cooking game. Akala ko talaga working student ka HAHAHAHA! Tapos after non dare-daretso na
+					tayo sa pag chat. Naging close tayo over time, kahit bago ako mag OJT nagbabardagulan na
+					tayo eh. Tapos nung nag EK tayo, nag hide and seek pa tayo. Kaso ang na seek ko ay si Kat
+					Kat at ikaw naman ay tinaguan ko. Sorry talaga doon beh, akala ko talaga makikita kita
+					ulit noon, pero bumabawi naman na ako sayo thru photoshoots eh. Tapos during OJT naman,
+					nakakapagrant ako sayo nung mga times na nabbwisit ako sa OJT, Kahit din ikaw nagrarant
+					din about sa schoolworks, problems sa life, or kapag may chismis ka about something,
+					sasabihin mo sa akin. Minsan nga, nagpapatulong ka sa akin sa schoolworks mo kahit may OJT
+					ako eh. Okay lang naman, madali naman yung mga schoolworks mo eh. Ang saya din naman kase
+					natutulungan kita and nakakapagchismisan tayo sa isa't isa, I can say na nag bigay saya ka
+					sa akin during internship ko and nakakaproud ka for that Asli. Then next, is yung mga
+					photoshoots mo. Ang dami natin naset, eight or nine na ata eh, kasama na yung photoshoot
+					natin sa Parqal. It's obvious naman na una kitang na kilala at naging close bago ko
+					makilala si Kat Kat, kaya mas marami yung sayo.
 				</article>
-				<article class="m-5"></article>
-				<div class="blur-lg">
-					<article class="m-5">
-						Hai Asliiii, HAPPY 22ND BIRTHDAY SAYOOOOO!!! We both know na hindi lang ito ang gift ko
-						sayo, may photoshoot ka and syempre, yung prescence ko sa birthday mo or better yet, sa
-						life mo. Anyways, I know na babasahin mo to sa birthday mo mismo, whether it be yung
-						written version ng letter or eto. Grabe no, 1 year na ang pagkakaibigan natin pero
-						sobrang close na natin. Tamang bardagulan and whatever na want mo na gawin na kasama
-						ako/kami, naging comfy ka ba naman eh. At least happy ka diba? yan ang importante. Keep
-						yourself happy lang my Asli ha? Bago ko ilahad ang history natin from first chat to
-						present, Ang wish ko for you is for you to be successful in life and be happy, stay
-						beautiful and awesome, have your dreams come true, and of course, you become the best
-						version of you that you've always wanted.
-					</article>
-					<article class="m-5">
-						Ilalahad ko history ng pagkakaibigan natin mula sa first chat mo. Nung nagchat ako sayo
-						nung Mental health week nung A.Y. 2023-2024, yung sinend ko sayo yung pictures mo nung
-						event. Tapos sinabi mo pa sa akin na may trabaho ka tas yun pala naglalaro ka lang nung
-						cooking game. Akala ko talaga working student ka HAHAHAHA! Tapos after non dare-daretso
-						na tayo sa pag chat. Naging close tayo over time, kahit bago ako mag OJT nagbabardagulan
-						na tayo eh. Tapos nung nag EK tayo, nag hide and seek pa tayo. Kaso ang na seek ko ay si
-						Kat Kat at ikaw naman ay tinaguan ko. Sorry talaga doon beh, akala ko talaga makikita
-						kita ulit noon, pero bumabawi naman na ako sayo thru photoshoots eh. Tapos during OJT
-						naman, nakakapagrant ako sayo nung mga times na nabbwisit ako sa OJT, Kahit din ikaw
-						nagrarant din about sa schoolworks, problems sa life, or kapag may chismis ka about
-						something, sasabihin mo sa akin. Minsan nga, nagpapatulong ka sa akin sa schoolworks mo
-						kahit may OJT ako eh. Okay lang naman, madali naman yung mga schoolworks mo eh. Ang saya
-						din naman kase natutulungan kita and nakakapagchismisan tayo sa isa't isa, I can say na
-						nag bigay saya ka sa akin during internship ko and nakakaproud ka for that Asli. Then
-						next, is yung mga photoshoots mo. Ang dami natin naset, eight or nine na ata eh, kasama
-						na yung photoshoot natin sa Parqal. It's obvious naman na una kitang na kilala at naging
-						close bago ko makilala si Kat Kat, kaya mas marami yung sayo.
-					</article>
-					<article class="m-5">
-						Elaborate ko pa yung sa rants mo, unahin ko yung sa times na nag ooverthink ka sa mga
-						grades mo. Sabi ko nga sayo na kaya mo yan, hindi mo need mag alala kase matataas naman
-						ang scores mo sa activities. Nagagawa mo nga yung mga school stuffs mo ng maayos eh.
-						Kaya don't worry about sa grades mo, You're doing your best naman and I'm always proud
-						of you. Always. Kahit hindi ka na pasok sa Cum Laude, I'm still proud of you Ash. Huwag
-						mo panghinaan loob mo dahil lang sa may mababa ka na grade. Mababawi yan. Tiwala lang.
-						Yung next naman is about sa life, yung mga problems mo and what not. I will be here to
-						listen and help you. Aayusin natin yan beh, matagal man yan or hindi. I don't know kung
-						kailan mo want pero I'll be here waiting for you. Daig ko pa magiging partner mo eh no?
-						Keep doing your best ha? May mga pagsubok ka na dadaanan sa mga susunod na semesters,
-						OJT, and after graduation. Makakaraos ka doon if you believe in yourself. Nakakaraos ka
-						nga sa mga schoolworks and other problems mo with ease eh. Well not immediately pero at
-						least nakakaraos. Oh diba? Kung kinaya mo yon, Kakayanin mo yung ibang pagsubok. Kaya mo
-						yan Asli, I know you can, Ikaw yan eh. I'm so grateful to God kase nakilala kita Ash,
-						nandiyan ka palagi for me, nakakapagrant tayo sa isa't isa para mapakalma natin ang
-						sarili natin, nakakapagshare tayo ng kanta or memes, or anything na want natin, and
-						syempre, magkavibes pa tayo.
-					</article>
-					<article class="m-5">
-						I hoped that you enjoyed your birthday Ash. Susupportahan kita no matter what, hindi ako
-						mapapagod na tulungan ka, turuan ka, supportahan ka, at samahan ka sa mga endeavors mo
-						Ash, I mean that. I love you so much Ashleyyyyy. I wish you all the best mi hermana.
-						Alagaan and ingatan mo sarili mo Asli. Again, I will always be here for you. Remember
-						that beh. God bless u and ingat ka palagi! Happy birthday ulit Asliiii!!! To more
-						kagaguhan and beautiful memories with u!!!
-					</article>
-					<footer class="m-5 text-end">
-						From your not related brother, personal photographer, English teacher, and close friend, <br
-						/>
-						Hanz
-					</footer>
-				</div>
+				<article class="m-5">
+					Elaborate ko pa yung sa rants mo, unahin ko yung sa times na nag ooverthink ka sa mga
+					grades mo. Sabi ko nga sayo na kaya mo yan, hindi mo need mag alala kase matataas naman
+					ang scores mo sa activities. Nagagawa mo nga yung mga school stuffs mo ng maayos eh. Kaya
+					don't worry about sa grades mo, You're doing your best naman and I'm always proud of you.
+					Always. Kahit hindi ka na pasok sa Cum Laude, I'm still proud of you Ash. Huwag mo
+					panghinaan loob mo dahil lang sa may mababa ka na grade. Mababawi yan. Tiwala lang. Yung
+					next naman is about sa life, yung mga problems mo and what not. I will be here to listen
+					and help you. Aayusin natin yan beh, matagal man yan or hindi. I don't know kung kailan mo
+					want pero I'll be here waiting for you. Daig ko pa magiging partner mo eh no? Keep doing
+					your best ha? May mga pagsubok ka na dadaanan sa mga susunod na semesters, OJT, and after
+					graduation. Makakaraos ka doon if you believe in yourself. Nakakaraos ka nga sa mga
+					schoolworks and other problems mo with ease eh. Well not immediately pero at least
+					nakakaraos. Oh diba? Kung kinaya mo yon, Kakayanin mo yung ibang pagsubok. Kaya mo yan
+					Asli, I know you can, Ikaw yan eh. I'm so grateful to God kase nakilala kita Ash, nandiyan
+					ka palagi for me, nakakapagrant tayo sa isa't isa para mapakalma natin ang sarili natin,
+					nakakapagshare tayo ng kanta or memes, or anything na want natin, and syempre, magkavibes
+					pa tayo.
+				</article>
+				<article class="m-5">
+					I hoped that you enjoyed your birthday Ash. Susupportahan kita no matter what, hindi ako
+					mapapagod na tulungan ka, turuan ka, supportahan ka, at samahan ka sa mga endeavors mo
+					Ash, I mean that. I love you so much Ashleyyyyy. I wish you all the best mi hermana.
+					Alagaan and ingatan mo sarili mo Asli. Again, I will always be here for you. Remember
+					that beh. God bless u and ingat ka palagi! Happy birthday ulit Asliiii!!! To more
+					kagaguhan and beautiful memories with u!!!
+				</article>
+				<footer class="m-5 text-end">
+					From your not related brother, personal photographer, English teacher, supporter, and close friend, <br
+					/>
+					Hanz
+				</footer>
 			</div>
 		</Modal>
 	{:else if letterContent === 'Graduation'}
@@ -300,8 +289,8 @@
 				</article>
 				<div class="hidden">
 					<article class="m-5">
-						CONGRATULATIONS MY ASLIIII!!!! //multiple additionals for letter | helping,
-						supporting, and teaching her<br />
+						CONGRATULATIONS MY ASLIIII!!!! //multiple additionals for letter | helping, supporting,
+						and teaching her<br />
 					</article>
 					<article class="m-5"></article>
 					<article class="m-5">

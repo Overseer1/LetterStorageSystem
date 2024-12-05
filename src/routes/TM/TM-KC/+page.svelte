@@ -96,7 +96,7 @@
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
 		<Card img={CKC2} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
-			<p class="mb-3 font-normal leading-tight blur-md">
+			<p class="mb-3 font-normal leading-tight blur-sm">
 				Happy 22nd birthday mi hermana, bff, and model!!!
 			</p>
 			<Button
@@ -214,87 +214,72 @@
 			<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
 				Letter finished: December 1, 2024 | Letter written: December 5/6, 2024
 			</h3>
-			<div class="text-[#f5f3f3]">
-				<!-- <header class="mb-5 flex justify-center max-sm:block">
-					<img src={CKC5} alt="N/A" class="object-cover mt-5 h-[550px] w-[250px] ml-11 rounded-lg" />
-				</header> -->
+			<h3 class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
+				Letter to be shown by 10:00 PM of December 6.
+			</h3>
+			<div class="text-[#f5f3f3] blur-lg">
 				<article class="m-5">
-					<!-- HSHAAHSHSAHAHHASHSAHASHASHASH SUNDALONG HAPON AAAAAAAAAAAAAAAAAAAAAAAAAAAAA HGSADHGHASHASHSAHASHAS -->
-					CONGRATS KAT KATTTTT!!! I'M SO PROUD OF U MI KAT KATTTTT!!!
+					Hai Kat Kattttt, HAPPY 22ND BIRTHDAY SAYOOOOO!!! We both know na hindi lang ito ang gift
+					ko sayo, may photoshoot ka and syempre, yung prescence ko sa birthday mo or better yet, sa
+					life mo. Anyways, I know na babasahin mo to sa birthday mo mismo, whether it be yung
+					written version ng letter or eto. By the way, you can say na yung binigay ko sayo na
+					bracelet is regalo ko na sayo for your birthday, Kahit na sobrang early ko binigay sayo
+					yon (around May ata yon or June eh). Huwag mo iwala yon Kat Kat, friendship bracelet natin
+					'yon (Suot man natin yan or hindi). I'll be grateful kung makita ko na suot mo yon minsan.
+					Grabe no, almost 1 year na ang pagkakaibigan natin pero close na close na tayo. Tamang
+					bardagulan lang and whatever na want mo na gawin na kasama ako/kami, naging comfy ka ba
+					naman eh. At least happy ka diba? ayan ang importante. Keep yourself happy lang my Kat Kat
+					ha? Bago ko ilahad ang history natin from first chat to present, Ang wish ko for you is
+					for you to be successful in life, stay beautiful, stay awesome, and of course, have your
+					dreams come true, lalo na yung pagiging Cum Laude mo.
 				</article>
 				<article class="m-5">
-					anw tapos ko na yung letter pero baka may idagdag pa ako (December 1, 2024 | 3:15 AM) so
-					nakatago pa yung letter. Chinecheck ko yung haba ng letter pa so naka blur siya para no
-					spoilers. Ipapakita ko na siya by December 7 (or by Dec 6 | ~ 9:30 - 10:00 PM)<br />
-					I hope na suot mo yung bracelet na binigay ko sayo sa birthday mo and sa photoshoot
+					Now, ilalahad ko history ng pagkakaibigan natin mula sa first chat mo. Nung nagchat ka sa
+					akin ng "Papitik nga" nung intrams kase kilala mo ako bilang student photographer nung
+					school tapos akala ko pa nga nandun ka sa school non so hinanap kita pero syempre, nag
+					send ako ng pic ko noon na ipipitik kita (literal) tapos dare-daretso na tayo sa pag chat.
+					Naging close tayo during OJT ko, yung kapag may free time tayong dalawa, mag uusap tayo
+					hanggang sa maging busy tayo. Buti nga nakakapagrant ako sayo nung mga times na nabbwisit
+					ako sa OJT noon, tas ikaw naman nagrarant din about sa schoolworks or anything about sa
+					school or life. Minsan tinutulungan kita sa schoolworks mo kapag nahihirapan ka, like yung
+					sa entrep and Euthenics mo (yung nilagyan ko ng "taga gawa ng fakeshit" yung résumé mo).
+					Ang saya nga kase nasasabi ko sa sarili ko na, "Natutulungan ko yung tinutulungan ako." or
+					"Natutulungan ko yung kapatid ko". Before kase, "Natutulungan ko yung crush ko". Tsaka
+					nakakapagchismisan tayo sa isa't isa. It's obvious na nag bigay saya ka sa akin during
+					internship ko and nakakaproud ka for that Kat Kat. Then next, is yung mga photoshoots mo.
+					Ang dami natin naset, seven or eight na ata eh, kasama na yung photoshoot natin sa Parqal.
 				</article>
-				<article class="m-5"></article>
-				<div class="blur-lg">
-					<article class="m-5">
-						Hai Kat Kattttt, HAPPY 22ND BIRTHDAY SAYOOOOO!!! We both know na hindi lang ito ang gift
-						ko sayo, may photoshoot ka and syempre, yung prescence ko sa birthday mo or better yet,
-						sa life mo. Anyways, I know na babasahin mo to sa birthday mo mismo, whether it be yung
-						written version ng letter or eto. By the way, you can say na yung binigay ko sayo na
-						bracelet is regalo ko na sayo for your birthday, Kahit na sobrang early ko binigay sayo
-						yon (around May ata yon or June eh). Huwag mo iwala yon Kat Kat, friendship bracelet
-						natin 'yon (Suot man natin yan or hindi). I'll be grateful kung makita ko na suot mo yon
-						minsan. Grabe no, wala pang 1 year pagkakaibigan natin pero close na close na tayo.
-						Tamang bardagulan and whatever na want mo na gawin na kasama ako/kami, naging comfy ka
-						ba naman eh. At least happy ka diba? yan ang importante. Keep yourself happy lang my Kat
-						Kat ha? Bago ko ilahad ang history natin from first chat to present, Ang wish ko for you
-						is for you to be successful in life, stay beautiful and awesome, and of course, have
-						your dreams come true.
-					</article>
-					<article class="m-5">
-						Now, ilalahad ko history ng pagkakaibigan natin mula sa first chat mo. Nung nagchat ka
-						sa akin ng "Papitik nga" nung intrams kase kilala mo ako bilang student photographer
-						nung school tapos akala ko pa nga nandun ka sa school non so hinanap kita pero syempre,
-						nag send ako ng pic ko noon na ipipitik kita (literal) tapos dare-daretso na tayo sa pag
-						chat. Naging close tayo during OJT ko, yung kapag may free time tayong dalawa, mag uusap
-						tayo hanggang sa maging busy tayo. Buti nga nakakapagrant ako sayo nung mga times na
-						nabbwisit ako sa OJT noon, tas ikaw naman nagrarant din about sa schoolworks or anything
-						about sa school. Minsan tinutulungan kita sa schoolworks mo kapag nahihirapan ka, like
-						yung sa entrep and Euthenics mo (yung nilagyan ko ng "taga gawa ng fakeshit" yung résumé
-						mo). Ang saya nga kase nasasabi ko sa sarili ko na, "Natutulungan ko yung tinutulungan
-						ako." or "Natutulungan ko yung kapatid ko". Before kase, "Natutulungan ko yung crush
-						ko". Tsaka nakakapagchismisan tayo sa isa't isa. It's obvious na nag bigay saya ka sa
-						akin during internship ko and nakakaproud ka for that Kat Kat. Then next, is yung mga
-						photoshoots mo. Ang dami natin naset, seven or eight na ata eh, kasama na yung
-						photoshoot natin sa Parqal.
-					</article>
-					<article class="m-5">
-						Elaborate ko pa yung sa rants mo, especially yung sa times na nag ooverthink ka sa mga
-						grades mo. Sabi ko nga sayo na kaya mo yan, hindi mo need mag alala kase matataas naman
-						ang scores mo sa activities. Nagagawa mo nga yung mga school stuffs mo ng maayos eh,
-						pasok ka niyan sa Cum Laude Kat Kat, I promise you that. Kaya don't worry about sa
-						grades mo, You're doing your best naman and I'm always proud of you. Always. Keep doing
-						your best ha? Not just in school, but sa life din. May mga pagsubok ka na dadaanan sa
-						OJT and after graduation, and makakaraos ka doon if you believe in yourself. Nakakaraos
-						ka nga sa mga schoolworks and other problems mo with ease eh. May technique ka pa nga
-						minsan para doon, "Walang pakialam sa paligid". At least may ways ka. Oh diba? Kung
-						kinaya mo yon, Kakayanin mo yung ibang pagsubok. Kaya mo yan Kat Kat, I know you can,
-						Ikaw yan eh. If may times na hindi mo kaya, I will be here to listen to you and samahan
-						ka. Kagaya nga ng sinasabi mo sa akin during deep talks natin, Hindi rin ako magiging
-						available palagi, pero I'll still listen to you kahit late ako mag reply. Basta ichat mo
-						lang yan, babasahin ko naman yan oki? I'm so grateful to God kase nakilala kita Kat Kat,
-						nandiyan ka palagi for me, nakakapagrant tayo sa isa't isa para mapakalma natin ang
-						sarili natin, nakakapagshare tayo ng kanta or memes, or anything na want natin, and
-						syempre, magkavibes pa tayo.
-					</article>
-					<article class="m-5">
-						I hoped that you enjoyed your birthday Kat Kat. Susuportahan kita no matter what, hindi
-						ako mapapagod na tulungan ka, turuan ka, supportahan ka, at samahan ka sa mga endeavors
-						mo Kat Kat, I mean that. I love you so much Katrinaaaaa. I wish you all the best mi
-						hermana. Alagaan and ingatan mo sarili mo Kat Kat. Again, I will always be here for you.
-						Remember that beh. God bless u and ingat ka palagi! Happy birthday ulit Kat Kattttt!!!
-						To more kagaguhan and beautiful memories with u!!!
-					</article>
-					<footer class="m-5 text-end">
-						From your not related brother, US Boi, personal photographer, English teacher, and close
-						friend, <br />
-						Hanz
-					</footer>
-				</div>
+				<article class="m-5">
+					Elaborate ko pa yung sa rants mo, especially yung sa times na nag ooverthink ka sa mga
+					grades mo. Sabi ko nga sayo na kaya mo yan, hindi mo need mag alala kase matataas naman
+					ang scores mo sa activities and TPs. Nagagawa mo nga yung mga school stuffs mo ng maayos
+					eh, pasok ka niyan sa Cum Laude Kat Kat, I promise you that. Kaya don't worry about sa
+					grades mo, You're doing your best naman and I'm always proud of you. Always. Keep doing
+					your best ha? Not just in school, but sa life din. May mga pagsubok ka na dadaanan sa OJT
+					and after graduation, and makakaraos ka doon if you believe in yourself. Nakakaraos ka nga
+					sa mga schoolworks and other problems mo with ease eh. May technique ka pa nga minsan para
+					doon, "Walang pakialam sa paligid". At least may ways ka. Oh diba? Kung kinaya mo yon,
+					Kakayanin mo yung ibang pagsubok. Kaya mo yan Kat Kat, I know you can, Ikaw yan eh. If may
+					times na hindi mo kaya, I will be here to listen to you and samahan ka. Kagaya nga ng
+					sinasabi mo sa akin during deep talks natin, Hindi rin ako magiging available palagi, pero
+					I'll still listen to you kahit late ako mag reply. Basta ichat mo lang yan, babasahin ko
+					naman yan oki? I'm so grateful to God kase nakilala kita Kat Kat, nandiyan ka palagi for
+					me, nakakapagrant tayo sa isa't isa para mapakalma natin ang sarili natin, nakakapagshare
+					tayo ng kanta or memes, or anything na want natin, and syempre, magkavibes pa tayo.
+				</article>
+				<article class="m-5">
+					I hoped that you enjoyed your birthday Kat Kat. Susuportahan kita no matter what, hindi
+					ako mapapagod na tulungan ka, turuan ka, supportahan ka, at samahan ka sa mga endeavors mo
+					or sa kung ano man Kat Kat, I mean that. I love you so much Katrinaaaaa. I wish you all
+					the best mi hermana. Alagaan and ingatan mo sarili mo Kat Kat. Again, I will always be
+					here for you. Remember that beh. God bless u and ingat ka palagi! Happy birthday ulit Kat
+					Kattttt!!! To more kagaguhan and beautiful memories with u!!!
+				</article>
+				<footer class="m-5 text-end">
+					From your not related brother, US Boi, personal photographer, English teacher, supporter,
+					and close friend, <br />
+					Hanz
+				</footer>
 			</div>
 		</Modal>
 	{:else if letterContent === 'Graduation'}
@@ -309,7 +294,7 @@
 				<article class="m-5">Hai Kat Kattttt, bat ka nandito eh wala pang laman to</article>
 				<article class="m-5">
 					May draft ako pero konting konti pa lang kaya balik ka na lang soon dito and galingan mo
-				 	sa school or internship (kung 2nd sem mo na to binabasa) and sa life ikaw oki? oki
+					sa school or internship (kung 2nd sem mo na to binabasa) and sa life oki? oki
 				</article>
 				<div class="hidden">
 					<article class="m-5">
