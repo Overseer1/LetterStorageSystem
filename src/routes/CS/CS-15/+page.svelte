@@ -123,7 +123,7 @@
 			</footer>
 		</div>
 	</Modal>
-	{:else if letterContent === 'Birthday'}
+{:else if letterContent === 'Birthday'}
 	<Modal bind:showModal>
 		<h2 slot="letterType" class="text-white text-xl cheatline text-center">Birthday letter</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: July 16, 2024</p>

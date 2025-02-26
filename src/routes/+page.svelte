@@ -44,11 +44,8 @@
 			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/IT/IT-00');
 		} else if (QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A1 || QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A2) {
-			// remove 48 and 49 once done
-			// localStorage.setItem('letterKey', import.meta.env.VITE_IT_20_T);
-			// goto(base + '/IT/IT-F-20');
-			alert('This webpage is being constructed.');
-			QKey = '';
+			localStorage.setItem('letterKey', import.meta.env.VITE_IT_20_T);
+			goto(base + '/IT/IT-F-20');
 		}
 		//NTS
 		else if (QKey == 'Q' && Answer == import.meta.env.VITE_GA_15_A) {
@@ -137,7 +134,7 @@
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <div>
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1>
-	<h1 class="text-lg m-2 text-center">Note: <span class="text-[#eed202]">Yellow coded </span>= under development | <span class="text-green-400">Light Green coded</span> = Updated UI, can be accessed.</h1>
+	<h1 class="text-lg m-2 text-center">Note: <span class="text-[#eed202]">Yellow coded </span>= under development | <span class="text-green-400">Light Green coded</span> = New UI</h1>
 	<!-- TM -->
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">Tourism Management</h1>
@@ -190,14 +187,14 @@
 				Faculty | IT | IT-F-26
 			</p>
 		</div>
-		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SA/WD')}>
-			<p class="text-xl">
-				Alumnus | IT | IT-2020-2024-05
-			</p>
-		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'JB')}>
 			<p class="text-xl text-[#eed202]">
 				Former faculty | IT | IT-F-20
+			</p>
+		</div>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SA/WD')}>
+			<p class="text-xl">
+				Alumnus | IT | IT-2020-2024-05
 			</p>
 		</div>
 		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/STI'))}>

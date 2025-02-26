@@ -4,10 +4,14 @@
 	import CKC from '$lib/assets/TM/KC.jpg?url';
 	import CKC1 from '$lib/assets/TM/KC1.jpg?url';
 	import CKC2 from '$lib/assets/TM/KC2.jpg?url';
-	import CKC3 from '$lib/assets/TM/KC3.jpg?url';
+	import CKC3 from '$lib/assets/TM/KC3.jpg?url'; //unused
 	import CKC4 from '$lib/assets/TM/KC4.jpg?url';
-	import CKC5 from '$lib/assets/TM/KC5.jpg?url';
+	import CKC5 from '$lib/assets/TM/KC5.jpg?url'; //unused
 	import CKC6 from '$lib/assets/TM/KC6.jpg?url';
+	import CKC7 from '$lib/assets/TM/KC7.jpg?url'; //unused
+	import CKC8 from '$lib/assets/TM/KC8.jpg?url';
+	import CKC9 from '$lib/assets/TM/KC9.jpg?url';
+	import CKC10 from '$lib/assets/TM/KC10.webp?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle, Spinner } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -55,11 +59,17 @@
 	}
 </script>
 
+
+
+<!-- //! change image cards to the latest pictures, if necessary. -->
+
+
+
 <title>Henlo, Kat Kattttt</title>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
-<div class="cheatline text-center">Page updated: December 3, 2024</div>
+<div class="cheatline text-center">Page updated: December 8, 2024</div>
 <header class="mb-5 flex justify-center">
-	<img src={CKC3} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
+	<img src={CKC9} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>
 <hr />
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -94,9 +104,9 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CKC2} reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CKC8} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
-			<p class="mb-3 font-normal leading-tight blur-sm">
+			<p class="mb-3 font-normal leading-tight">
 				Happy 22nd birthday mi hermana, bff, and model!!!
 			</p>
 			<Button
@@ -212,12 +222,12 @@
 		<Modal bind:showModal>
 			<h2 slot="letterType" class="text-white text-xl cheatline text-center">Birthday letter</h2>
 			<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-				Letter finished: December 1, 2024 | Letter written: December 5/6, 2024
+				Letter finished: December 1, 2024 | Letter written: December 8, 2024
 			</h3>
-			<h3 class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-				Letter to be shown by 10:00 PM of December 6.
-			</h3>
-			<div class="text-[#f5f3f3] blur-lg">
+			<div class="flex justify-center">
+				<img src={CKC10} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
+			</div>
+			<div class="text-[#f5f3f3]">
 				<article class="m-5">
 					Hai Kat Kattttt, HAPPY 22ND BIRTHDAY SAYOOOOO!!! We both know na hindi lang ito ang gift
 					ko sayo, may photoshoot ka and syempre, yung prescence ko sa birthday mo or better yet, sa
@@ -262,10 +272,12 @@
 					Kakayanin mo yung ibang pagsubok. Kaya mo yan Kat Kat, I know you can, Ikaw yan eh. If may
 					times na hindi mo kaya, I will be here to listen to you and samahan ka. Kagaya nga ng
 					sinasabi mo sa akin during deep talks natin, Hindi rin ako magiging available palagi, pero
-					I'll still listen to you kahit late ako mag reply. Basta ichat mo lang yan, babasahin ko
-					naman yan oki? I'm so grateful to God kase nakilala kita Kat Kat, nandiyan ka palagi for
-					me, nakakapagrant tayo sa isa't isa para mapakalma natin ang sarili natin, nakakapagshare
-					tayo ng kanta or memes, or anything na want natin, and syempre, magkavibes pa tayo.
+					I'll still listen to you kahit na minsan ay late ako mag reply. Basta ichat mo lang yan,
+					babasahin ko naman yan oki? I'm so grateful to God kase nakilala kita Kat Kat, nandiyan ka
+					palagi for me, nakakapagrant tayo sa isa't isa para mapakalma natin ang sarili natin,
+					nakakapagshare tayo ng kanta or memes, or anything na want natin, and syempre, magkavibes
+					pa tayo. Sorry sa mga times na naging needy ako sayo and sa times na nainis ka sa akin. I
+					hope na mapatawad mo ako.
 				</article>
 				<article class="m-5">
 					I hoped that you enjoyed your birthday Kat Kat. Susuportahan kita no matter what, hindi
@@ -280,6 +292,14 @@
 					and close friend, <br />
 					Hanz
 				</footer>
+				<article class="m-5">
+					P.S. I'm really grateful for you being in my life Kat Kat. I know na sinabi ko na yon sa
+					letter pero listen, sana magtagal ang friendship natin kase tinuturing na talaga kitang
+					kapatid. Nafefeel ko yung love na binibigay mo sa akin, and it feels so nice, that
+					sisterly love. You know naman na only child lang ako pero grabe, nafeel ko na may kapatid
+					ako dahil sayo. I'm so thankful for you. I'll protect and support you like a brother. I'll
+					cherish our friendship forever, mi hermana. I love you so much!
+				</article>
 			</div>
 		</Modal>
 	{:else if letterContent === 'Graduation'}
@@ -288,7 +308,7 @@
 				Graduation letter
 			</h2>
 			<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-				Letter finished: 2025 | Letter written: 2025
+				Draft Started: February 27, 2025 | Letter finished: 2025 | Letter written: 2025
 			</h3>
 			<div class="text-[#f5f3f3]">
 				<article class="m-5">Hai Kat Kattttt, bat ka nandito eh wala pang laman to</article>

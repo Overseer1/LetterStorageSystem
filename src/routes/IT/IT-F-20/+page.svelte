@@ -1,12 +1,24 @@
 <script>
     // @ts-nocheck
 
-        //import DLJ from '$lib/assets/TM/LJ.jpg?url';
+        import J from '$lib/assets/ITCS/JB.jpg?url';
+        import J2 from '$lib/assets/ITCS/JB2.jpg?url';
+        import J3 from '$lib/assets/ITCS/JB3.jpg?url';
+        import J4 from '$lib/assets/ITCS/JB4.jpg?url';
+        import J5 from '$lib/assets/ITCS/JB5.jpg?url';
+        import Modal from '../../components/LetterModal.svelte';
+        import { Card, Button, Toggle, Spinner } from 'flowbite-svelte';
         import { goto } from '$app/navigation';
         import { onMount } from 'svelte';
         import { base } from '$app/paths';
         import Icon from '@iconify/svelte';
         import emailjs from '@emailjs/browser';
+        let showModal = false;
+	    let letterContent = '';
+	    function letterShow(contentSelect) {
+		letterContent = contentSelect;
+		showModal = true;
+	    }
           const sendEmail = (/** @type {{ target: string | HTMLFormElement; }} */ e) => {
             emailjs
               .sendForm(import.meta.env.VITE_EmailJS_ServiceID, import.meta.env.VITE_EmailJS_TemplateIDFF, e.target, {
@@ -36,23 +48,89 @@
             });
         }
     </script>
-    <!-- //! this page must be up and running ~ 4 weeks before Dec. 6-->
-    <title>IT/IT-F-20</title>
+    <title>Hallo ate Judayyyy</title>
     <div class="text-center m-5">Welcome, Ms. Belda, J.</div>
-    <div class="cheatline text-center">Letter finished: Month DD, 2024</div>
+    <div class="cheatline text-center">Page updated: February 27, 2025</div>
     <header class="overflow-hidden mb-5 flex justify-center">
-        <!-- //! change picture -->
-        <!-- <img src={DLJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" /> -->
+        <img src={J} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
     </header>
-    <article class="m-10 mb-3">
-        
-    </article>
-    <footer class="m-10 mr-18 text-end">
-        From your photographer and bff, <br />
-        Hanz
-    </footer>
     <hr />
-        
+    <header class="overflow-hidden flex justify-center cheatline my-5">
+        <p class="text-lg">Please select the letter that you want to read.</p>
+    </header>
+    <div class="flex justify-center max-sm:block">
+        <div class="overflow-hidden mb-5 flex justify-center mx-5">
+            <Card img={J2} reverse={false} class="bg-current text-[#f5f3f3]">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight">Gratitude letter</h5>
+                <p class="mb-3 font-normal leading-tight">Desc here.</p>
+                <Button
+                    class="bg-bgBlue border border-[#ffeb3b] hover:bg-[#ffeb3b] hover:text-[#313131]"
+                    on:click={() => letterShow('Gratitude')}
+                >
+                    Open letter
+                </Button>
+            </Card>
+        </div>
+        <div class="overflow-hidden mb-5 flex justify-center mx-5">
+            <Card img={J5} reverse={false} class="bg-current text-[#f5f3f3]">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
+                <p class="mb-3 font-normal leading-tight">Desc here.</p>
+                <Button
+                    class="bg-bgBlue border border-[#ffeb3b] hover:bg-[#ffeb3b] hover:text-[#313131]"
+                    on:click={() => letterShow('Birthday')}
+                >
+                    Open letter
+                </Button>
+            </Card>
+        </div>
+        {#if letterContent === 'Gratitude'}
+	    <Modal bind:showModal>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Birthday letter</h2>
+		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A </p>
+		<div class="text-[#f5f3f3]">
+			<article class="m-5">
+				dfsfds
+			</article>
+			<article class="m-5">
+				
+			</article>
+			<article class="m-5">
+				
+			</article>
+			<article class="m-5">
+				
+			</article>
+			<footer class="m-5 text-end">
+				
+			</footer>
+		</div>
+	</Modal>
+        {:else if letterContent === 'Birthday'}
+	    <Modal bind:showModal>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Birthday letter</h2>
+		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A</p>
+		<div class="text-[#f5f3f3]">
+			<article class="m-5">
+				Hai ate Judayyyy, HAPPY BIRTHDAY SAYOOOOO!!! sori ah late na late na to
+			</article>
+			<article class="m-5">
+				
+			</article>
+			<article class="m-5">
+				
+			</article>
+			<article class="m-5">
+			
+			</article>
+			    <footer class="m-5 text-end">
+				    From your photographer and bff, <br />
+                    Hanz
+			    </footer>
+		    </div>
+	    </Modal>
+        {/if}
+    </div>
+    <hr />
     <div class="text-center mt-5">If you want, you may leave a message to the developer. <br/> You may change your name in the text box below.</div>
     <form on:submit|preventDefault={sendEmail}>
         <div class="flex justify-center">

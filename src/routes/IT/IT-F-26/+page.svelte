@@ -1,7 +1,7 @@
 <script>
     // @ts-nocheck
     
-        import FC from '$lib/assets/ITCS/C.jpg?url';
+        import FC from '$lib/assets/ITCS/CF.jpg?url';
         import { goto } from '$app/navigation';
         import { onMount } from 'svelte';
         import { base } from '$app/paths';

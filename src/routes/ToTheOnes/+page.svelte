@@ -90,10 +90,8 @@
 				pHolder = "Adding space ain't gonna work, you understand?";
 				Passkey = null;
 			} else if (import.meta.env.VITE_SC_A1.includes(Passkey) || import.meta.env.VITE_SC_A1_N.includes(Passkey)) {
-				Question = 'One more question: ' + import.meta.env.VITE_TM_KC_Q;
-				pHolder = 'Use proper capitalization please.'
-				firstKey = true
-				Passkey = null
+				UserName = 'Cabrera, K. C.';
+				ShowLetter = 'secondCircle';
 			} else if (import.meta.env.VITE_SC_A2.includes(Passkey) || import.meta.env.VITE_SC_A2_N.includes(Passkey)) {
 				UserName = 'Cabrera, M. A.';
 				ShowLetter = 'secondCircle';
@@ -128,9 +126,7 @@
 				showAttempts = 'Attempts: ' + Attempts;
 				pHolder = 'What in the ever living fuck did you just type?';
 				Passkey = null;
-			} else if (firstKey) {
-				SFA();
-			} else {
+			}  else {
 				Attempts--;
 				showAttempts = 'Attempts: ' + Attempts;
 				pHolder = 'I said your name, not ' + Passkey + '.';
@@ -143,15 +139,6 @@
 			goto(base + '/');
 		}
 	};
-	const SFA = () =>
-	{
-		if (Passkey == import.meta.env.VITE_TM_KC_A1 || Passkey == import.meta.env.VITE_TM_KC_A2)
-		{
-			UserName = 'Cabrera, K. C.';
-			ShowLetter = 'secondCircle';
-			addKeys = 'TM-KC';
-		}
-	}
 	$: {
 		let valueCheck;
 		pHolder = 'Use proper capitalization please.';
@@ -254,24 +241,7 @@
 		a year pa lang ang pagsasama natin, magkaibigan pa din tayo. Yung tipong nagkaroon na ako ng school daughters at school sisters dahil doon. Hindi ako nagrereklamo, ang saya ko nga eh. Dumagdag pa legacy ko sa school and sa inyo.
 		Sana soon, makumpleto tayo ulit. Kase mas masaya kung magkasama tayong lahat. At least nagbibigay saya kayo sa akin nang hindi niyo alam. Mahal na mahal ko kayo. Thank you sa 1 year worth ng bondings, memories, kagaguhan, supporta and especially, thank you for saving my life. May God have mercy on our souls.
 	</article>
-	{#if addKeys == 'TM-KC'}
-	<article class="m-10">
-			Kat Kat, Ikaw lang makakakita neto. Kung hindi mo alam, ikaw lang ang pinagsasabihan ko (unless kung kaya kong sabihin sa iba) kapag feeling down ako.
-			Kase ikaw yung favorite person ko, and I am so thankful to God na nakilala kita. Out of all the persons in this circle, ikaw lang yung nagpapafeel sa akin na safe ako sayo, yung mga secrets ko and what not. I don't
-			know why, maybe dahil sa ikaw lang yung close friend ko na chill lang or dahil sa gusto pa kita. Pero whatever that may be, I hope na you accept that.
-			Aaminin ko beh, gusto pa din kita, pero ginagawa ko best ko na idisipate yung feelings kase ayokong ma-bali wala yung mga pinagsamahan natin just because na gusto kita
-			and hindi mo ako gusto pabalik. I can control it naman, don't worry. Eto pa Kat Kat, I don't want na masira friendship natin. Why? Marami akong reasons for that, like, 
-			Niligtas mo na ako before, I owe you for that, yung bondings natin, the times na nandyan ka para sa akin and also the times na nandito ako para sayo, cinomfort natin ang 
-			isa't isa, and a lot more pa. 
-	</article>
-	<article class="m-10">
-			Remember Kat Kat, I'm here for you. Every step of the way. If you're always there for me, then I'll be there for you. Oki? kahit na ayaw mo pag usapan yan, I'll still be here for you. 
-			And beh, I always include you in my prayers. Not just you,
-			but also our circle, my circle, my family, and kung sino pa. I'm sorry Kat Kat kung minsan ay nagiging irritable ako, sa times na hindi kita pinapakinggan about sa advices, and sa times na nagiging needy ako. I know na meron tayong sariling problems sa life pero nakakalimutan ko yon minsan, dumating pa ata sa point na ginugulo na kita sa personal time mo eh, and I'm truly sorry for that Kat Kat.
-			Thank you for being there for me Kat Kat, for comforting me, for being a sweetheart, for the memories, and especially, for saving my life. I love you so much Kat Kat. I know you know that. Dagdag ko lang to, gustong gusto ko na sabihin to.
-			To all the Starlights in this circle, You are my favorite as you shine the brightest, and of course, you light up darkest nights when you're around. Thank you so much for everything. God bless you and ingat ka palagi.
-	</article>
-	{:else if addKeys == 'TM-10'}
+	{#if addKeys == 'TM-10'}
 		<article class="m-10">
 			Ikaw naman anakis, kalma lang sa life ha? kaya mo yan. Nandito lang naman ako sa side mo eh. Kung ano man problems mo, nandito ang school father mo ha? Icocomfort kita. Sana soon makita na kita ulit.
 			Nakakamiss ka. Bwisitin. HSHSAHAHAHHASHA hinde ano, nakakamiss ka na talaga. Sana talaga makita kita soon kase namimiss ko na anakis ko at ang yakap niya. Remember, nandito ang school father mo for you, oki?
