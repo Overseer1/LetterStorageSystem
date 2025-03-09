@@ -144,6 +144,8 @@
 		pHolder = 'Use proper capitalization please.';
 		if (CircleType == circleSelection[0]) {
 			Question = import.meta.env.VITE_FC_Q;
+			// Add logic for new modal. Once name of an IC member has been inputted, the letter must immediately show the letter.
+			//add code here
 		} else if (CircleType == circleSelection[1]) {
 			Question = import.meta.env.VITE_SC_Q;
 		}

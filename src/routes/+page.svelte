@@ -197,6 +197,11 @@
 				Alumnus | IT | IT-2020-2024-05
 			</p>
 		</div>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = '')}>
+			<p class="text-xl text-[#eed202]">
+				Alumnus | ITM-2020-IT/Entrp-2024-IT-2025
+			</p>
+		</div>
 		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/STI'))}>
 			<p class="text-xl">
 				Final letter
@@ -228,7 +233,7 @@
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SN-A')}>
 			<p class="text-xl">
-				School Nurse | SN-19
+				Former School Nurse | SN-19
 			</p>
 		</div>
 	</div>

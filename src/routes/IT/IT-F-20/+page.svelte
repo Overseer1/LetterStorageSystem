@@ -92,16 +92,17 @@
 				dfsfds
 			</article>
 			<article class="m-5">
-				
+				dfsfds
 			</article>
 			<article class="m-5">
-				
+				dfsfds
 			</article>
 			<article class="m-5">
-				
+				dfsfds
 			</article>
 			<footer class="m-5 text-end">
-				
+                From your photographer and bff, <br />
+                Hanz
 			</footer>
 		</div>
 	</Modal>
@@ -114,13 +115,13 @@
 				Hai ate Judayyyy, HAPPY BIRTHDAY SAYOOOOO!!! sori ah late na late na to
 			</article>
 			<article class="m-5">
-				
+				dfsfds*
 			</article>
 			<article class="m-5">
-				
+				dfsfds*
 			</article>
 			<article class="m-5">
-			
+                dfsfds*
 			</article>
 			    <footer class="m-5 text-end">
 				    From your photographer and bff, <br />
