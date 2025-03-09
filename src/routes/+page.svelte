@@ -43,9 +43,12 @@
 		} else if (QKey == 'SA/WD' && Answer == import.meta.env.VITE_DevPass) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/IT/IT-00');
-		} else if (QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A1 || QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A2) {
+		} else if (QKey == 'JB' && Answer == import.meta.env.VITE_DevPass) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_IT_20_T);
 			goto(base + '/IT/IT-F-20');
+		} else if (QKey == 'ICITE' && Answer == import.meta.env.VITE_DevPass) {
+			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
+			goto(base + '/ToTheOnes');
 		}
 		//NTS
 		else if (QKey == 'Q' && Answer == import.meta.env.VITE_GA_15_A) {
@@ -112,6 +115,10 @@
 			showModal = true;
 		} else if (QKey == 'JB') {
 			Question = import.meta.env.VITE_IT_20_Q;
+			showModal = true;
+		}else if (QKey == 'ICITE') {
+			//replace with key from env
+			Question ="Your password please.";
 			showModal = true;
 		}
 		//NTS
@@ -197,6 +204,11 @@
 				Alumnus | IT | IT-2020-2024-05
 			</p>
 		</div>
+		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'ICITE')}>
+			<p class="text-xl text-[#eed202]">
+				Alumni | IC/IT/E | ITM20-IT/E24-IT25
+			</p>
+		</div>
 		<!-- <div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/STI'))}>
 			<p class="text-xl">
 				Final letter
@@ -228,7 +240,7 @@
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SN-A')}>
 			<p class="text-xl">
-				School Nurse | SN-19
+				Former School Nurse | SN-19
 			</p>
 		</div>
 	</div>

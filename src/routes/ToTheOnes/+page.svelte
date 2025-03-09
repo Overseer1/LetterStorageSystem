@@ -9,7 +9,7 @@
 	import Icon from '@iconify/svelte';
 	import emailjs from '@emailjs/browser';
 	const circleSelection = ['TA/1C', 'TS/2C'];
-	const tokenFinder = [import.meta.env.VITE_TM_KC_T, import.meta.env.VITE_TM_12_T, import.meta.env.VITE_TM_10_T, import.meta.env.VITE_TM_26_T, import.meta.env.VITE_IT_05_T, import.meta.env.VITE_CS_15_T];
+	const tokenFinder = [import.meta.env.VITE_TM_KC_T, import.meta.env.VITE_TM_12_T, import.meta.env.VITE_TM_10_T, import.meta.env.VITE_TM_26_T, import.meta.env.VITE_IT_05_T, import.meta.env.VITE_CS_15_T, import.meta.env.VITE_SiteKey];
 	let CircleType, UserName, ShowLetter, Question, Passkey, firstKey, addKeys;
 	let Attempts = 5;
 	let showModal = false;
@@ -144,6 +144,8 @@
 		pHolder = 'Use proper capitalization please.';
 		if (CircleType == circleSelection[0]) {
 			Question = import.meta.env.VITE_FC_Q;
+			// Add logic for new modal. Once name of an IC member has been inputted, the letter must immediately show the letter.
+			//add code here
 		} else if (CircleType == circleSelection[1]) {
 			Question = import.meta.env.VITE_SC_Q;
 		}
