@@ -174,8 +174,8 @@
 	<div class="text-center m-5 text-2xl">
 		Welcome, please select your circle and identify yourself.
 	</div>
-	<!-- <div class="cheatline text-center">‎</div> -->
-	<div class="cheatline text-center">Each person may or may not have an additional paragraph to the general letter.</div>
+	<div class="cheatline text-center">‎</div>
+	<!-- <div class="cheatline text-center">Each person may or may not have an additional paragraph to the general letter.</div> -->
 {/if}
 {#if !ShowLetter}
 	<p class="text-2xl bold text-center m-5">From what circle are you?</p>

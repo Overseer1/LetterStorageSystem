@@ -85,7 +85,7 @@
         </div>
         {#if letterContent === 'Gratitude'}
 	    <Modal bind:showModal>
-		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Birthday letter</h2>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Gratitude letter</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A </p>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
@@ -112,7 +112,7 @@
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A</p>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
-				Hai ate Judayyyy, HAPPY BIRTHDAY SAYOOOOO!!! sori ah late na late na to
+				Hai ate Judayyyy, HAPPY BIRTHDAY SAYOOOOO!!!  
 			</article>
 			<article class="m-5">
 				dfsfds*
@@ -127,6 +127,9 @@
 				    From your photographer and bff, <br />
                     Hanz
 			    </footer>
+            <article class="m-5">
+                 P.S. sori ah late na late na to medyo di ako goods eh pero gawin ko pa din to.
+            </article>
 		    </div>
 	    </Modal>
         {/if}

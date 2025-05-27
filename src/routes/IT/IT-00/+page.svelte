@@ -91,7 +91,7 @@
 	</div> -->
 	{#if letterContent === 'Graduation'}
 	<Modal bind:showModal>
-		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Birthday letter</h2>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">XXXXX letter</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A | Letter written: N/A</p>
 		<h3 class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
 			Letter show
@@ -116,7 +116,7 @@
 	</Modal>
 	{:else if letterContent === 'Birthday'}
 	<Modal bind:showModal>
-		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Birthday letter</h2>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">XXXXXX letter</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A | Letter written: N/A</p>
 		<h3 class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
 			Letter show

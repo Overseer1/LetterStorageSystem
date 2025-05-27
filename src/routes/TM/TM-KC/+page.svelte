@@ -59,11 +59,7 @@
 	}
 </script>
 
-
-
 <!-- //! change image cards to the latest pictures, if necessary. -->
-
-
 
 <title>Henlo, Kat Kattttt</title>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
@@ -308,31 +304,24 @@
 				Graduation letter
 			</h2>
 			<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-				Draft Started: February 27, 2025 | Letter finished: 2025 | Letter written: 2025
+				Draft Started: February 27, 2025 | Letter finished: May 2025 | <span class="line-through">Letter written: 2025</span>
 			</h3>
 			<div class="text-[#f5f3f3]">
-				<article class="m-5">Hai Kat Kattttt, bat ka nandito eh wala pang laman to</article>
 				<article class="m-5">
-					May draft ako pero konting konti pa lang kaya balik ka na lang soon dito and galingan mo
-					sa school or internship (kung 2nd sem mo na to binabasa) and sa life oki? oki
+					CONGRATULATIONS MY KAT KATTTT!!!! //multiple additionals for letter | helping,
+					supporting, and teaching her<br />
 				</article>
-				<div class="hidden">
-					<article class="m-5">
-						CONGRATULATIONS MY KAT KATTTT!!!! //multiple additionals for letter | helping,
-						supporting, and teaching her<br />
-					</article>
-					<article class="m-5"></article>
-					<article class="m-5">
-						Katrina Clarisse B. Cabrera | Batch 2025 <br />
-						Bachelor of Science in Tourism Management <br />
-						Cum Laude
-					</article>
-					<footer class="m-5 text-end">
-						From your not related brother, personal photographer, supporter, guide, teacher, and
-						close friend, <br />
-						Hanz
-					</footer>
-				</div>
+				<article class="m-5"></article>
+				<article class="m-5">
+					Katrina Clarisse B. Cabrera | Batch 2025 <br />
+					Bachelor of Science in Tourism Management <br />
+					Cum Laude
+				</article>
+				<footer class="m-5 text-end">
+					From your not related brother, personal photographer, supporter, guide, teacher, and
+					close friend, <br />
+					Hanz
+				</footer>
 			</div>
 		</Modal>
 	{/if}

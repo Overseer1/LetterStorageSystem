@@ -43,7 +43,7 @@
 		} else if (QKey == 'SA/WD' && Answer == import.meta.env.VITE_DevPass) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/IT/IT-00');
-		} else if (QKey == 'JB' && Answer == import.meta.env.VITE_DevPass) {
+		} else if (QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A1 || QKey == 'JB' && Answer == import.meta.env.VITE_IT_20_A2) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_IT_20_T);
 			goto(base + '/IT/IT-F-20');
 		} else if (QKey == 'ICITE' && Answer == import.meta.env.VITE_DevPass) {
@@ -141,7 +141,7 @@
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <div>
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the list below</h1>
-	<h1 class="text-lg m-2 text-center">Note: <span class="text-[#eed202]">Yellow coded </span>= under development | <span class="text-green-400">Light Green coded</span> = New UI</h1>
+	<h1 class="text-lg m-2 text-center">Note: <span class="text-[#eed202]">Yellow</span> = under development | <span class="text-green-400">Light Green</span> = New letters</h1>
 	<!-- TM -->
 	<div class="gridName text-center">
 		<h1 class="text-2xl mb-2">Tourism Management</h1>
@@ -167,7 +167,7 @@
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'LJ')}>
 			<p class="text-xl">
-				Faculty | TM-F-12
+				Former faculty | TM-F-12
 			</p>
 		</div>
 	</div>
