@@ -151,17 +151,17 @@
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5 " on:click={() => (QKey = 'MA')}>
-			<p class="text-xl text-green-400">
+			<p class="text-xl">
 				2nd year | TM-12
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'J')}>
-			<p class="text-xl text-green-400">
+			<p class="text-xl">
 				2nd year | TM-10
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'E')}>
-			<p class="text-xl text-green-400">
+			<p class="text-xl">
 				2nd year | TM-26
 			</p>
 		</div>
@@ -180,7 +180,7 @@
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'MK')}>
-			<p class="text-xl text-green-400">
+			<p class="text-xl">
 				3rd year | CS | CS-15
 			</p>
 		</div>
@@ -234,7 +234,7 @@
 			</p>
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5" on:click={() => (QKey = 'SL-A')}>
-			<p class="text-xl text-green-400">
+			<p class="text-xl">
 				School Librarian | SL-24
 			</p>
 		</div>

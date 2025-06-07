@@ -5,6 +5,7 @@
 	import EKJ2 from '$lib/assets/ITCS/KJ2.jpg?url';
 	import EKJ3 from '$lib/assets/ITCS/KJ3.jpg?url';
 	import EKJ4 from '$lib/assets/ITCS/KJ4.jpg?url';
+	import EKJ5 from '$lib/assets/ITCS/KJ5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -78,6 +79,15 @@
 		  </Button>
 		</Card>
 	</div>
+	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
+		<Card img={EKJ5} reverse={false} class="bg-current text-[#f5f3f3]">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
+			<p class="mb-3 font-normal leading-tight">Draft is hidden as per your request and mine.</p>
+		  <Button class="bg-bgGreen border border-[#059142] hover:bg-[#059142]" on:click={()=>(letterShow('Graduation'))}>
+			Open letter
+		  </Button>
+		</Card>
+	</div>
 </div>
 <hr/>
 {#if letterContent === 'Gratitude'}
@@ -114,14 +124,44 @@
 	</Modal>
 {:else if letterContent === 'Reminder'}
 <Modal bind:showModal>
-	<h2 slot="letterType" class="text-white text-xl cheatline text-center">To my 2nd circle</h2>
-	<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: October 9, 2024</h3>
+	<h2 slot="letterType" class="text-white text-xl cheatline text-center">
+		Graduation letter
+	</h2>
+	<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
+		Draft Started: 2025 | Letter finished: 2025 | Letter written: 2025
+	</h3>
 	<div class="text-[#f5f3f3]">
 		<article class="m-5">
 			Please access this page, <button class="cursor-pointer underline" on:click={() => goto(base + '/ToTheOnes')}>to my second circle.</button>
 		</article>
 		<footer class="m-5 text-end">
 			From the developer.
+		</footer>
+	</div>
+</Modal>
+{:else if letterContent === 'Graduation'}
+<Modal bind:showModal>
+	<h2 slot="letterType" class="text-white text-xl cheatline text-center">
+		Graduation letter
+	</h2>
+	<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
+		Draft Started: 2025 | Letter finished: 2025 | Letter written: 2025
+	</h3>
+	<div class="text-[#f5f3f3]">
+		<article class="m-5">
+			CONGRATULATIONS MY TIN TINNNNN!!!! //multiple additionals for letter | helping and 
+			supporting<br />
+		</article>
+		<article class="m-5"></article>
+		<article class="m-5">
+			Kristine Joy G. Estipona | Batch 2025 <br />
+			Bachelor of Science in Information Technology <br />
+			//Cum Laude
+		</article>
+		<footer class="m-5 text-end">
+			From your not related brother, personal photographer, supporter, guide, teacher, and
+			close friend, <br />
+			Hanz
 		</footer>
 	</div>
 </Modal>

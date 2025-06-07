@@ -12,6 +12,7 @@
 	import CKC8 from '$lib/assets/TM/KC8.jpg?url';
 	import CKC9 from '$lib/assets/TM/KC9.jpg?url';
 	import CKC10 from '$lib/assets/TM/KC10.webp?url';
+	import CKC11 from '$lib/assets/TM/DSC_49sadsaddsa21.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle, Spinner } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -116,7 +117,7 @@
 
 	<!-- //* for graduation letter -->
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CKC6} reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CKC11} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
 			<p class="mb-3 font-normal leading-tight">Draft is hidden as per your request and mine.</p>
 			<Button
@@ -304,7 +305,7 @@
 				Graduation letter
 			</h2>
 			<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-				Draft Started: February 27, 2025 | Letter finished: May 2025 | <span class="line-through">Letter written: 2025</span>
+				Draft Started: February 27, 2025 | Letter finished: 2025 | Letter written: 2025
 			</h3>
 			<div class="text-[#f5f3f3]">
 				<article class="m-5">
