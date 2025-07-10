@@ -1,9 +1,12 @@
 <script>
 // @ts-nocheck
 
-	// import CKC from '$lib/assets/TM/KC.jpg?url';
+	import cartasTM from '../../TM/letterHolderTM.json'
+	import cartasIT from '../../IT/letterHolderIT.json'
+	import CKC from '$lib/assets/TM/KC11.jpg?url';
 	// import CMA from '$lib/assets/TM/MA1.jpg?url';
 	// import CKC1 from '$lib/assets/TM/KC1.jpg?url';
+	import EKJ5 from '$lib/assets/ITCS/KJ5.jpg?url';
 	import TD from '$lib/assets/ITCS/TD.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { goto } from '$app/navigation';
@@ -61,9 +64,9 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card class="bg-current text-[#f5f3f3]">
-		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Cleared</h5>
-		  <p class="mb-3 font-normal leading-tight">Letter summarization</p>
+		<Card img={CKC} class="bg-current text-[#f5f3f3]">
+		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">TM-KC</h5>
+		  <p class="mb-3 font-normal leading-tight">Graduation letter</p>
 		  <Button class="bg-bgBlue hover:bg-[#ffeb3b] hover:text-[#313131]" on:click={()=>(letterShow('Graduation'))}>
 			Read more
 		  </Button>
@@ -71,9 +74,9 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card class="bg-current text-[#f5f3f3]">
-		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Cleared</h5>
-		  <p class="mb-3 font-normal leading-tight">Letter summarization</p>
+		<Card img={EKJ5} class="bg-current text-[#f5f3f3]">
+		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">IT-05</h5>
+		  <p class="mb-3 font-normal leading-tight">Graduation letter</p>
 		  <Button class="bg-bgBlue hover:bg-[#ffeb3b] hover:text-[#313131]" on:click={()=>(letterShow('Birthday'))}>
 			Read more
 		  </Button>
@@ -91,51 +94,42 @@
 	</div> -->
 	{#if letterContent === 'Graduation'}
 	<Modal bind:showModal>
-		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">XXXXX letter</h2>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Graduation letter</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A | Letter written: N/A</p>
-		<h3 class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-			Letter show
-		</h3>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
-				
+				{cartasTM.TMKC.Graduation.Section1}
 			</article>
 			<article class="m-5">
-				
+				{cartasTM.TMKC.Graduation.Section2}
 			</article>
 			<article class="m-5">
-				
+				{cartasTM.TMKC.Graduation.Section3}
 			</article>
 			<article class="m-5">
-				
+				{cartasTM.TMKC.Graduation.Section4}
 			</article>
 			<footer class="m-5 text-end">
-				
+				{cartasTM.TMKC.Graduation.Footer}
 			</footer>
 		</div>
 	</Modal>
 	{:else if letterContent === 'Birthday'}
 	<Modal bind:showModal>
-		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">XXXXXX letter</h2>
+		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Graduation letter</h2>
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A | Letter written: N/A</p>
-		<h3 class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
-			Letter show
-		</h3>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
-				
+				{cartasIT.IT05.Graduation.Section1}
 			</article>
 			<article class="m-5">
-				
+				{cartasIT.IT05.Graduation.Section2}
 			</article>
 			<article class="m-5">
-				
-			</article>
-			<article class="m-5">
-			
+				{cartasIT.IT05.Graduation.Section3}
 			</article>
 			<footer class="m-5 text-end">
-				
+				{cartasIT.IT05.Graduation.Footer}
 			</footer>
 		</div>
 	</Modal>
