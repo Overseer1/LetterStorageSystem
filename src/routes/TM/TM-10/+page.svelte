@@ -1,11 +1,12 @@
 <script>
 	// @ts-nocheck
-
+	import cartas from '../letterHolderTM.json'
 	import MJ from '$lib/assets/TM/J.jpg?url';
 	import MJB from '$lib/assets/TM/J1.webp?url';
 	import MJ2 from '$lib/assets/TM/J2.jpg?url';
 	import MJ3 from '$lib/assets/TM/J3.jpg?url';
 	import MJ4 from '$lib/assets/TM/J4.jpg?url';
+	import MJ5 from '$lib/assets/TM/J5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -15,6 +16,9 @@
 	import emailjs from '@emailjs/browser';
 	let showModal = false;
 	let letterContent = '';
+	const gratitudeFooter = cartas.TM12.Gratitude.Footer.replace(/\n/g, '<br />');
+	const birthdayFooter = cartas.TM12.Birthday.Footer.replace(/\n/g, '<br />');
+	const graduationPlaceholder = cartas.TM12.Graduation.placeholder.replace(/\n/g, '<br />');
 	function letterShow(contentSelect) {
 		letterContent = contentSelect;
 		showModal = true;
@@ -98,6 +102,20 @@
 			<Button
 				class="bg-bgRoseGold border border-[#b76e79] hover:bg-[#b76e79]"
 				on:click={() => letterShow('Birthday')}
+			>
+				Open letter
+			</Button>
+		</Card>
+	</div>
+	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
+		<Card img={MJ5} reverse={false} class="bg-current text-[#f5f3f3]">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
+			<p class="mb-3 font-normal leading-tight">
+				Draft is hidden as per my decision.
+			</p>
+			<Button
+				class="bg-bgRoseGold border border-[#b76e79] hover:bg-[#b76e79]"
+				on:click={() => letterShow('Graduation')}
 			>
 				Open letter
 			</Button>
@@ -210,6 +228,27 @@
 					>
 				</article>
 				<footer class="m-5 text-end">From the developer.</footer>
+			</div>
+		</Modal>
+	{:else if letterContent === 'Graduation'}
+		<Modal bind:showModal>
+			<h2 slot="letterType" class="text-white text-xl cheatline text-center select-none">Graduation letter</h2>
+			<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
+				Letter finished: 2026/2027 | Letter written: 2027 
+			</p>
+			<div class="text-[#f5f3f3]">
+				<!-- //* insert img here (preferrably grad pic) -->
+				<article class="m-5">
+					Jovy M. Margate | Batch 2027 <br />
+					Bachelor of Science in Tourism Management <br />
+				</article>
+				<article class="m-5">
+					
+				</article>
+				<footer class="m-5 text-end">
+					From your school father, photographer, and close friend, <br />
+					Hanz
+				</footer>
 			</div>
 		</Modal>
 	{/if}

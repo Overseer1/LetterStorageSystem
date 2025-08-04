@@ -197,7 +197,7 @@
 		<div class="overflow-hidden mb-5 flex justify-center mx-5">
 			<Card reverse={false} class="bg-current text-[#f5f3f3]">
 				<h5 class="mb-2 text-2xl font-bold tracking-tight">TM-10</h5>
-				<p class="mb-3 font-normal leading-tight">1st year</p>
+				<p class="mb-3 font-normal leading-tight">2nd year</p>
 				<Button
 					class="bg-bgBlack border border-[#dddddd] hover:bg-[#dddddd] hover:text-[#313131]"
 					on:click={() => (QKey = 'J')}

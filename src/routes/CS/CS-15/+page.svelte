@@ -5,6 +5,7 @@
 	import MMK2 from '$lib/assets/ITCS/MK2.jpg?url';
 	import MMK3 from '$lib/assets/ITCS/MK3.jpg?url';
 	import MMK4 from '$lib/assets/ITCS/MK4.jpg?url';
+	import MMK5 from '$lib/assets/ITCS/MK5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
