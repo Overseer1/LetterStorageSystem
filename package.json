@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"deploy": "gh-pages -d build -t true",
+		"deploy": "gh-pages -d build -t",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@emailjs/browser": "^4.3.3"
+		"@emailjs/browser": "^4.3.3",
+		"gh-pages": "^6.3.0"
 	}
 }
