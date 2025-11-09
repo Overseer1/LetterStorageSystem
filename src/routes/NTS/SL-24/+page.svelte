@@ -1,11 +1,11 @@
 <script>
 // @ts-nocheck
 
-	import RA from '$lib/assets/NTS/SL-A.jpg?url';
-	import RA2 from '$lib/assets/NTS/SL-A2.jpg?url';
-	import RA3 from '$lib/assets/NTS/SL-A3.jpg?url';
-	import RA4 from '$lib/assets/NTS/SL-A4.jpg?url';
-	import RA5 from '$lib/assets/NTS/SL-A5.jpg?url';
+	// import RA from '$lib/assets/NTS/SL-A.jpg?url';
+	// import RA2 from '$lib/assets/NTS/SL-A2.jpg?url';
+	// import RA3 from '$lib/assets/NTS/SL-A3.jpg?url';
+	// import RA4 from '$lib/assets/NTS/SL-A4.jpg?url';
+	// import RA5 from '$lib/assets/NTS/SL-A5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -52,7 +52,7 @@
 <div class="text-center m-5">Welcome, Mrs. Rosal, A.</div>
 <div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={RA} alt="N/A" class="object-cover mt-5 h-[270px] w-[450px] rounded-lg" />
+	<!-- <img src={RA} alt="N/A" class="object-cover mt-5 h-[270px] w-[450px] rounded-lg" /> -->
 </header>
 <hr/>
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -62,7 +62,8 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class="overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={RA2} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={RA2} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Gratitude letter</h5>
 		  <p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 		  <Button class="bg-bgPurp border border-[#6d28d9] hover:bg-[#6d28d9]" on:click={()=>(letterShow('Gratitude'))}>
@@ -71,7 +72,8 @@
 		</Card>
 	</div>
 	<div class="overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={RA3} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={RA3} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Teacher's day letter</h5>
 		  <p class="mb-3 font-normal leading-tight">A thank you letter to our second mother.</p>
 		  <Button class="bg-bgPurp border border-[#6d28d9] hover:bg-[#6d28d9]" on:click={()=>(letterShow('TeacherDay'))}>
@@ -118,7 +120,7 @@
 		<h2 slot="letterType" class="text-white text-xl cheatline text-center">Teacher's day letter</h2>
 		<h3 slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: October 4, 2024</h3>
 		<div class="flex justify-center">
-			<img src={RA4} alt="N/A" class="object-cover mt-10 h-[270px] w-[450px] rounded-lg" />
+			<!-- <img src={RA4} alt="N/A" class="object-cover mt-10 h-[270px] w-[450px] rounded-lg" /> -->
 		</div>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
@@ -132,7 +134,7 @@
 			</footer>
 		</div>
 		<div class="flex justify-center">
-			<img src={RA5} alt="N/A" class="object-cover mt-5 h-[270px] w-[450px] rounded-lg" />
+			<!-- <img src={RA5} alt="N/A" class="object-cover mt-5 h-[270px] w-[450px] rounded-lg" /> -->
 		</div>
 	</Modal>
 {/if}

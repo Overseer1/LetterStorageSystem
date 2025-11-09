@@ -38,10 +38,10 @@
       <span>Name</span>
       <Input type="text" name="from_name" placeholder="Juan Dela Cruz" bind:value={clearName} required />
     </Label>
-    <Label class="space-y-2">
+    <!-- <Label class="space-y-2">
       <span>Email</span>
       <Input type="email" name="from_email" placeholder="name@domain.com" bind:value={clearEmail} required/>
-    </Label>
+    </Label> -->
 	<Label class="space-y-2">
       <span>Your message</span>
 	  <Textarea id="textarea-id" placeholder="Your message" rows={4} name="message" class="w-full" bind:value={clearMessage} required/>

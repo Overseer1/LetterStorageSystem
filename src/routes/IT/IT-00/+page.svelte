@@ -3,10 +3,10 @@
 
 	import cartasTM from '../../TM/letterHolderTM.json'
 	import cartasIT from '../../IT/letterHolderIT.json'
-	import CKC from '$lib/assets/TM/KC11.jpg?url';
+	// import CKC from '$lib/assets/TM/KC11.jpg?url';
 	// import CMA from '$lib/assets/TM/MA1.jpg?url';
 	// import CKC1 from '$lib/assets/TM/KC1.jpg?url';
-	import EKJ5 from '$lib/assets/ITCS/KJ5.jpg?url';
+	// import EKJ5 from '$lib/assets/ITCS/KJ5.jpg?url';
 	import TD from '$lib/assets/ITCS/TD.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { goto } from '$app/navigation';
@@ -64,9 +64,9 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CKC} class="bg-current text-[#f5f3f3]">
-		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">TM-KC</h5>
-		  <p class="mb-3 font-normal leading-tight">Graduation letter</p>
+		<Card class="bg-current text-[#f5f3f3]">
+		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">N/A</h5>
+		  <p class="mb-3 font-normal leading-tight">Definition</p>
 		  <Button class="bg-bgBlue hover:bg-[#ffeb3b] hover:text-[#313131]" on:click={()=>(letterShow('Graduation'))}>
 			Read more
 		  </Button>
@@ -74,9 +74,9 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={EKJ5} class="bg-current text-[#f5f3f3]">
-		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">IT-05</h5>
-		  <p class="mb-3 font-normal leading-tight">Graduation letter</p>
+		<Card class="bg-current text-[#f5f3f3]">
+		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">N/A</h5>
+		  <p class="mb-3 font-normal leading-tight">Definition</p>
 		  <Button class="bg-bgBlue hover:bg-[#ffeb3b] hover:text-[#313131]" on:click={()=>(letterShow('Birthday'))}>
 			Read more
 		  </Button>

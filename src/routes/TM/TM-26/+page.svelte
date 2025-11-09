@@ -1,9 +1,9 @@
 <script>
 // @ts-nocheck
 
-	import PE from '$lib/assets/TM/E.jpg?url';
-	import PE2 from '$lib/assets/TM/E2.jpg?url';
-	import PE3 from '$lib/assets/TM/E3.jpg?url';
+	// import PE from '$lib/assets/TM/E.jpg?url';
+	// import PE2 from '$lib/assets/TM/E2.jpg?url';
+	// import PE3 from '$lib/assets/TM/E3.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -13,6 +13,7 @@
 	import emailjs from '@emailjs/browser';
 	let showModal = false;
 	let letterContent = '';
+	let userCheck = '';
 	function letterShow(contentSelect){
 		letterContent = contentSelect;
 		showModal = true;
@@ -33,24 +34,36 @@
           );
       };
 	$: {
+		// Page non-accessible to others. Only to the developer.
 		let hasItem;
 		let valueCheck;
 		onMount(async () => {
 			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
 			// Conditional logic based on hasItem
-			if (hasItem && valueCheck == import.meta.env.VITE_TM_26_T) {
+			// if (hasItem && valueCheck == import.meta.env.VITE_TM_26_T) {
+			// } else {
+			// 	goto(base + '/');
+			// }
+			if (hasItem && valueCheck == import.meta.env.VITE_SiteKey) {
 			} else {
 				goto(base + '/');
 			}
+			return userCheck = localStorage.getItem('letterKey');
 		});
 	}
 </script>
+
+{#if userCheck == import.meta.env.VITE_TM_26_T}
 <title>TM/TM-26</title>
 <div class="text-center m-5">Welcome, Pagulayan, E.</div>
+{:else if userCheck == import.meta.env.VITE_SiteKey}
+<title>Hello Developer.</title>
+<div class="text-center m-5">Welcome, Lizaso, H. This is now hidden from her.</div>
+{/if}
 <div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={PE2} alt="N/A" class="object-cover mt-5 h-[300px] w-[500px] rounded-lg" />
+	<!-- <img src={PE2} alt="N/A" class="object-cover mt-5 h-[300px] w-[500px] rounded-lg" /> -->
 </header>
 <hr/>
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -60,7 +73,8 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={PE} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={PE} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Gratitude letter</h5>
 		  <p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 		  <Button class="bg-bgBlackWhite border border-[#dddddd] hover:bg-[#dddddd]" on:click={()=>(letterShow('Gratitude'))}>
@@ -69,7 +83,8 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={PE3} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={PE3} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 		  <Button class="bg-bgBlackWhite border border-[#dddddd] hover:bg-[#dddddd]" on:click={()=>(letterShow('Reminder'))}>

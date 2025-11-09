@@ -1,7 +1,7 @@
 <script>
     // @ts-nocheck
     
-        import DLJ from '$lib/assets/TM/LJ.jpg?url';
+        // import DLJ from '$lib/assets/TM/LJ.jpg?url';
         import { goto } from '$app/navigation';
         import { onMount } from 'svelte';
         import { base } from '$app/paths';
@@ -40,7 +40,7 @@
     <div class="text-center m-5">Welcome, Ms. Domingo, L. J.</div>
     <div class="cheatline text-center">Letter finished: October 3, 2024</div>
     <header class="overflow-hidden mb-5 flex justify-center">
-        <img src={DLJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
+        <!-- <img src={DLJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" /> -->
     </header>
     <article class="m-10 mb-3">
         Haiii ate ma'am bff! Happy teacher's day sayooooo!!! So eto lang gift ko sayo, unless nakaisip ako ng idadagdag na gift, so ayun nga no,

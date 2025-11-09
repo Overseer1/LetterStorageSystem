@@ -1,6 +1,6 @@
 <script>
     // @ts-nocheck
-        import MP from '$lib/assets/ITCS/MP.jpg?url';
+        // import MP from '$lib/assets/ITCS/MP.jpg?url';
         import { goto } from '$app/navigation';
         import { base } from '$app/paths';
         import { onMount } from 'svelte';
@@ -39,7 +39,7 @@
     <div class="text-center m-5">Welcome, Paltingca, Ma. M.</div>
     <div class="cheatline text-center">Message finished: July 04, 2024</div>
     <header class="overflow-hidden mb-5 flex justify-center">
-        <img src={MP} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" />
+        <!-- <img src={MP} alt="N/A" class="object-cover mt-10 h-[260px] w-[450px] rounded-lg" /> -->
     </header>
     <article class="m-10 mb-3">
         Hai Cedes, Thank you sa mga memories and what not since A.Y. 2022-2023. Alam mo naman na current mental situation ko ngayon so eto na lang update q sayo, 

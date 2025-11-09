@@ -2,16 +2,16 @@
 	// @ts-nocheck
 
 	import cartas from '../letterHolderTM.json';
-	import CMA from '$lib/assets/TM/MA.jpg?url'; //unused
-	import CMA1 from '$lib/assets/TM/MA1.jpg?url'; //unused
-	import CMA2 from '$lib/assets/TM/MA2.jpg?url';
-	import CMA3 from '$lib/assets/TM/MA3.jpg?url'; //unused
-	import CMA4 from '$lib/assets/TM/MA4.jpg?url'; //unused
-	import CMA5 from '$lib/assets/TM/MA5.jpg?url'; //unused
-	import CMA6 from '$lib/assets/TM/MA6.jpg?url';
-	import CMA7 from '$lib/assets/TM/MA7.jpg?url';
-	import CMA8 from '$lib/assets/TM/MA8.jpg?url';
-	import CMA9 from '$lib/assets/TM/MA9.webp?url';
+	// import CMA from '$lib/assets/TM/MA.jpg?url'; //unused
+	// import CMA1 from '$lib/assets/TM/MA1.jpg?url'; //unused
+	// import CMA2 from '$lib/assets/TM/MA2.jpg?url';
+	// import CMA3 from '$lib/assets/TM/MA3.jpg?url'; //unused
+	// import CMA4 from '$lib/assets/TM/MA4.jpg?url'; //unused
+	// import CMA5 from '$lib/assets/TM/MA5.jpg?url'; //unused
+	// import CMA6 from '$lib/assets/TM/MA6.jpg?url';
+	// import CMA7 from '$lib/assets/TM/MA7.jpg?url';
+	// import CMA8 from '$lib/assets/TM/MA8.jpg?url';
+	// import CMA9 from '$lib/assets/TM/MA9.webp?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -21,6 +21,7 @@
 	import emailjs from '@emailjs/browser';
 	let showModal = false;
 	let letterContent = '';
+	let userCheck = '';
 	const gratitudeFooter = cartas.TM12.Gratitude.Footer.replace(/\n/g, '<br />');
 	const birthdayFooter = cartas.TM12.Birthday.Footer.replace(/\n/g, '<br />');
 	const graduationPlaceholder = cartas.TM12.Graduation.placeholder.replace(/\n/g, '<br />');
@@ -51,25 +52,37 @@
 			);
 	};
 	$: {
+		// Page non-accessible to others. Only to the developer.
 		let hasItem;
 		let valueCheck;
 		onMount(async () => {
 			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
 			// Conditional logic based on hasItem
-			if (hasItem && valueCheck == import.meta.env.VITE_TM_12_T) {
+			// if (hasItem && valueCheck == import.meta.env.VITE_TM_12_T) {
+			// } else {
+			// 	goto(base + '/');
+			// }
+			if (hasItem && valueCheck == import.meta.env.VITE_SiteKey) {
 			} else {
 				goto(base + '/');
 			}
+			return userCheck = localStorage.getItem('letterKey');
 		});
 	}
 </script>
 
+{#if userCheck == import.meta.env.VITE_TM_12_T}
 <title>Hai, Asliiii</title>
 <div class="text-center m-5">Welcome, Cabrera, M. A.</div>
+{:else if userCheck == import.meta.env.VITE_SiteKey}
+<title>Hello Developer.</title>
+<div class="text-center m-5">Welcome, Lizaso, H. This is now hidden from her.</div>
+{/if}
+
 <div class="cheatline text-center">Page updated: December 8, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={CMA6} alt="N/A" class="object-cover mt-5 h-[250px] w-[400px] rounded-lg" />
+	<!-- <img src={CMA6} alt="N/A" class="object-cover mt-5 h-[250px] w-[400px] rounded-lg" /> -->
 </header>
 <hr />
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -77,7 +90,8 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CMA} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={CMA} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Gratitude letter</h5>
 			<p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 			<Button
@@ -89,7 +103,8 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CMA8} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={CMA8} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 			<Button
@@ -102,7 +117,8 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CMA7} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={CMA7} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
 			<p class="mb-3 font-normal leading-tight">
 				Happy 22nd birthday mi hermana, bff, and model!!!
@@ -118,7 +134,8 @@
 
 	<!-- //* for graduation | 2027 -->
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={CMA2} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={CMA2} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
 			<p class="mb-3 font-normal leading-tight">Draft is hidden as per my decision.</p>
 			<Button

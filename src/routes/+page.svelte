@@ -4,10 +4,12 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { Card, Button, Label, Input, Checkbox } from 'flowbite-svelte';
+	import Icon from '@iconify/svelte';
 	let showModal = false;
 	let QKey = '';
 	let Question = '';
 	let Answer = '';
+	let showPass = false;
 	let pHolder = 'Use proper capitalization please.';
 	const answerCheck = () => {
 		//TM
@@ -16,18 +18,31 @@
 			(QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A2)
 		) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_KC_T);
+			//goto(base + '/TM/TM-KC');
+			pHolder = 'Page under maintenance. Sorry for the inconvenience.';
+			//NOTE: Remove lines 22-24, 32-34, and 42-44 if there are changes, or apologies.
+		} else if (QKey == 'KC' && Answer == import.meta.env.VITE_DevPass){
+			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/TM/TM-KC');
 		} else if (
 			(QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A1) ||
 			(QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A2)
 		) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_12_T);
+			//goto(base + '/TM/TM-12');
+			pHolder = 'Page under maintenance. Sorry for the inconvenience.';
+		} else if (QKey == 'MA' && Answer == import.meta.env.VITE_DevPass){
+			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/TM/TM-12');
 		} else if (QKey == 'J' && Answer == import.meta.env.VITE_TM_10_A) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_10_T);
 			goto(base + '/TM/TM-10');
 		} else if (QKey == 'E' && Answer == import.meta.env.VITE_TM_26_A) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_26_T);
+			//goto(base + '/TM/TM-26');
+			pHolder = 'Page under maintenance. Sorry for the inconvenience.';
+		} else if (QKey == 'E' && Answer == import.meta.env.VITE_DevPass){
+			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/TM/TM-26');
 		} else if (
 			(QKey == 'LJ' && Answer == import.meta.env.VITE_TM_F_12_A1) ||
@@ -164,15 +179,15 @@
 <div>
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the cards below</h1>
 	<h1 class="text-lg m-2 text-center">
-		Note: <span class="text-[#eed202]">Yellow</span> = under development |
-		<span class="text-green-400">Light Green</span> = New letters
+		Note: <span class="text-[#eed202]">Yellow</span> = under development
+		<!-- <span class="text-green-400">Light Green</span> = New letters -->
 	</h1>
 	<!-- //* Tourism Management  -->
 	<h1 class="text-2xl text-center cheatline my-5">Tourism Management</h1>
 	<div class="flex justify-center max-sm:block">
 		<div class="overflow-hidden mb-5 flex justify-center mx-5">
 			<Card reverse={false} class="bg-current text-[#f5f3f3]">
-				<h5 class="mb-2 text-2xl font-bold tracking-tight text-green-400">TM-KC-2025</h5>
+				<h5 class="mb-2 text-2xl font-bold tracking-tight">TM-KC-2025</h5>
 					<p class="mb-3 font-normal leading-tight">Alumnus Batch 2025, Cum Laude</p>
 				<Button
 				class="bg-bgBlack border border-[#dddddd] hover:bg-[#dddddd] hover:text-[#313131]"
@@ -237,7 +252,7 @@
 	<div class="flex justify-center max-sm:block">
 		<div class="overflow-hidden mb-5 flex justify-center mx-5">
 			<Card reverse={false} class="bg-current text-[#f5f3f3]">
-				<h5 class="mb-2 text-2xl font-bold tracking-tight text-green-400">IT-05-2025</h5>
+				<h5 class="mb-2 text-2xl font-bold tracking-tight ">IT-05-2025</h5>
 				<p class="mb-3 font-normal leading-tight">IT Alumnus Batch 2025</p>
 				<Button
 					class="bg-bgBlack border border-[#dddddd] hover:bg-[#dddddd] hover:text-[#313131]"
@@ -334,7 +349,7 @@
 		</div>
 		<div class="gridDesc flex overflow-hidden mb-5 text-center" on:click={() => (goto(base + '/BirthdayMessages'))}>
 			<p class="text-xl">
-				Send your bithday greetings here
+				Send your birthday greetings here
 			</p>
 		</div> -->
 	</div>
@@ -396,11 +411,12 @@
 		<p class="text-base text-center">{Question}</p>
 		<form on:submit|preventDefault={answerCheck} class="text-center">
 			<input
-				type="text"
+				type="password"
 				class="border-b-2 rounded-sm my-2"
 				placeholder="Answer"
 				bind:value={Answer}
-			/>
+			>
+			<!-- //TODO: add show password here -->
 			<hr />
 			<button
 				class="inline-flex w-full justify-center border-t-2 border-b-2 border-bgBlack font-medium text-sm px-5 py-2.5 text-center"

@@ -1,11 +1,11 @@
 <script>
 // @ts-nocheck
 
-	import MMK from '$lib/assets/ITCS/MK.jpg?url';
-	import MMK2 from '$lib/assets/ITCS/MK2.jpg?url';
-	import MMK3 from '$lib/assets/ITCS/MK3.jpg?url';
-	import MMK4 from '$lib/assets/ITCS/MK4.jpg?url';
-	import MMK5 from '$lib/assets/ITCS/MK5.jpg?url';
+	// import MMK from '$lib/assets/ITCS/MK.jpg?url';
+	// import MMK2 from '$lib/assets/ITCS/MK2.jpg?url';
+	// import MMK3 from '$lib/assets/ITCS/MK3.jpg?url';
+	// import MMK4 from '$lib/assets/ITCS/MK4.jpg?url';
+	// import MMK5 from '$lib/assets/ITCS/MK5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -52,7 +52,7 @@
 <div class="text-center m-5">Welcome, Marson, M. K.</div>
 <div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={MMK} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
+	<!-- <img src={MMK} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" /> -->
 </header>
 <hr/>
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -62,7 +62,8 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={MMK3} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={MMK3} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Gratitude letter</h5>
 		  <p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 		  <Button class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]" on:click={()=>(letterShow('Gratitude'))}>
@@ -71,7 +72,8 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={MMK4} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={MMK4} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
 		  <p class="mb-3 font-normal leading-tight">Happy 22nd birthday mi hija, hermana, bff, and model!!!</p>
 		  <Button class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]" on:click={()=>(letterShow('Birthday'))}>
@@ -80,7 +82,8 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={MMK2} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={MMK2} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 		  <Button class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]" on:click={()=>(letterShow('Reminder'))}>

@@ -1,12 +1,12 @@
 <script>
 	// @ts-nocheck
 	import cartas from '../letterHolderTM.json'
-	import MJ from '$lib/assets/TM/J.jpg?url';
-	import MJB from '$lib/assets/TM/J1.webp?url';
-	import MJ2 from '$lib/assets/TM/J2.jpg?url';
-	import MJ3 from '$lib/assets/TM/J3.jpg?url';
-	import MJ4 from '$lib/assets/TM/J4.jpg?url';
-	import MJ5 from '$lib/assets/TM/J5.jpg?url';
+	// import MJ from '$lib/assets/TM/J.jpg?url';
+	// import MJB from '$lib/assets/TM/J1.webp?url';
+	// import MJ2 from '$lib/assets/TM/J2.jpg?url';
+	// import MJ3 from '$lib/assets/TM/J3.jpg?url';
+	// import MJ4 from '$lib/assets/TM/J4.jpg?url';
+	// import MJ5 from '$lib/assets/TM/J5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -16,9 +16,9 @@
 	import emailjs from '@emailjs/browser';
 	let showModal = false;
 	let letterContent = '';
-	const gratitudeFooter = cartas.TM12.Gratitude.Footer.replace(/\n/g, '<br />');
-	const birthdayFooter = cartas.TM12.Birthday.Footer.replace(/\n/g, '<br />');
-	const graduationPlaceholder = cartas.TM12.Graduation.placeholder.replace(/\n/g, '<br />');
+	const gratitudeFooter = cartas.TM10.Gratitude.Footer.replace(/\n/g, '<br />');
+	const birthdayFooter = cartas.TM10.Birthday.Footer.replace(/\n/g, '<br />');
+	const graduationPlaceholder = cartas.TM10.Graduation.Footer.replace(/\n/g, '<br />');
 	function letterShow(contentSelect) {
 		letterContent = contentSelect;
 		showModal = true;
@@ -58,11 +58,11 @@
 	}
 </script>
 
-<title>TM/TM-10</title>
+<title>Hello mi bebeeee</title>
 <div class="text-center m-5">Welcome, Margate, J.</div>
 <div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<img src={MJ} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] rounded-lg imgHead" />
+	<!-- <img src={MJ} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] rounded-lg imgHead" /> -->
 </header>
 <hr />
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -70,7 +70,8 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={MJ3} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={MJ3} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Gratitude letter</h5>
 			<p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 			<Button
@@ -82,7 +83,8 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={MJ4} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={MJ4} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 			<Button
@@ -94,7 +96,8 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={MJ2} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={MJ2} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
 			<p class="mb-3 font-normal leading-tight">
 				Happy 20th birthday mi hija, hermana, bff, and model!!!
@@ -108,7 +111,8 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<Card img={MJ5} reverse={false} class="bg-current text-[#f5f3f3]">
+		<!-- img={MJ5} -->
+		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
 			<p class="mb-3 font-normal leading-tight">
 				Draft is hidden as per my decision.
@@ -131,46 +135,19 @@
 			<div class="text-[#f5f3f3]">
 				<!-- //* you may add carousel or images in between -->
 				<article class="m-5">
-					Hai Jovy/Anakis, thank u for the memories and bonding sa life and sa school. Mamimiss q
-					yon and yung mga random photoshoots natin. Oo, kaya pa ng camera ko pagmumukha mo kase
-					sabi ko. Himala nga na kaya pa eh. Alam mo naman na current status ko sa life, wala ng
-					gusto na babae (for now), inaatupag ang kalusugan ko dahil lumalala na ulit, and
-					naghahanap na trabaho. Yes nagpupuyat pa din pero di na masyado (well, pinagpuyatan ko
-					tong pag draft ng letters).
+					{cartas.TM10.Gratitude.Section1}
 				</article>
 				<article class="m-5">
-					So yun nga no, thankful ako na kilala kita. Why? kase ikaw ang reason kung paano ko
-					nakilala ang magkapatid at si Fem. Ikaw ang reason kung bakit nabuo ulit yung 2nd circle
-					ko. Kayo yung pumalit sa mga former members noon and I'm proud. Isipin mo yon, ikaw yung
-					naging reason sa reformation ng 2nd circle ko. Ang lupit no? Ikaw kase eh. Ang uniqueness
-					lang ng 2nd circle is majority ay babae. Parang naging babaero ako doon ah, pero meh, at
-					least kaibigan ko kayo and you all know it naman. Speaking of that, ang uniqueness sayo is
-					yung bigla mo akong ginawang tatay. Ewan q kung bakit mo naisip yon pero sige, you do you
-					girl. Tsaka eto pala, thank you at tumulong ka sa hide and seek natin nung nahimatay ako.
-					Inalalayan mo pa nga ako eh, kaso na kay Marielle yung bigat HSHAHA tas nag domino effect
-					pa. Alam ko na say ko na to sayo pero here oh, doon ko narealize kung gaano ko sila
-					kaclose, kung gaano ko kayo kaclose, at kung anong klaseng pag aalaga ang binigay niyo sa
-					akin that day. Dahil doon, magiging reason ko yon if ever na magisip ako na tapusin ang
-					life ko. Hindi naman na mangyayari yon ever again. Malaki ang utang na loob ko sa inyo.
-					Thank you so much.
+					{cartas.TM10.Gratitude.Section2}
 				</article>
 				<article class="m-5">
-					I'm so thankful na nakilala kita Jovy, mamimiss ko talaga yung memories and bondings natin
-					and thankful talaga ako sa reformation ng 2nd circle dahil sayo. Ang ganda ng pinagsamahan
-					natin since last sem (mga random photoshoots, tamang pag comfort sayo pag malungkot ka,
-					inalalay mo aq nung May 30, tamang asaran, tamang chismisan). So yun nga anakis, thank you
-					again sa mga memories, kakulitan, and bondings natin! Mahal na mahal kita anakis. Thank
-					you for being the foundation ng 2nd circle! God bless u, ingat ka palagi, see u when I see
-					u, and thank u ulit! To more memories with u!!!
+					{cartas.TM10.Gratitude.Section3}
 				</article>
 				<footer class="m-5 text-end">
-					From your school father, photographer, and close friend, <br />
-					Hanz
+					{@html gratitudeFooter}
 				</footer>
 				<article class="m-5">
-					P.S. Oo alam ko na aalis ka na soon kaya nilagay ko na dito yung leave a message. Ikaw na
-					bahala kung gagamitin mo or not, pero please keep in touch ha? Yun lang naman, ingat ka
-					palagi and love u so mats!
+					{cartas.TM10.Gratitude.PostScript}
 				</article>
 			</div>
 		</Modal>
@@ -182,7 +159,7 @@
 			</p>
 			<div class="text-[#f5f3f3]">
 				<div class="flex justify-center">
-					<img src={MJB} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
+					<!-- <img src={MJB} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" /> -->
 				</div>
 				<article class="m-5">
 					Hai Jovy, HAPPY 20TH BIRTHDAY SAYO MI ANAKISSS!!! or HAPPY 20TH BIRTHDAY SAYO MY FOUNDING
