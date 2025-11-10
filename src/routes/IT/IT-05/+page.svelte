@@ -1,12 +1,12 @@
 <script>
 // @ts-nocheck
 	import cartas from '../letterHolderIT.json'
-	// import EKJ from '$lib/assets/ITCS/KJ.jpg?url';
-	// import EKJ2 from '$lib/assets/ITCS/KJ2.jpg?url';
-	// import EKJ3 from '$lib/assets/ITCS/KJ3.jpg?url';
-	// import EKJ4 from '$lib/assets/ITCS/KJ4.jpg?url';
-	// import EKJ5 from '$lib/assets/ITCS/KJ5.jpg?url';
-	// import EKJ6 from '$lib/assets/ITCS/KJ6.jpg?url';
+	import EKJ from '$lib/assets/ITCS/KJ0.jpg?url';
+	import EKJ2 from '$lib/assets/ITCS/KJ02.jpg?url';
+	import EKJ3 from '$lib/assets/ITCS/KJ03.jpg?url';
+	import EKJ4 from '$lib/assets/ITCS/KJ04.jpg?url';
+	import EKJ5 from '$lib/assets/ITCS/KJ5.jpg?url';
+	import EKJ6 from '$lib/assets/ITCS/KJ6.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -55,7 +55,7 @@
 <div class="text-center m-5">Welcome, Estipona, K.</div>
 <div class="cheatline text-center">Page updated: July 10, 2025</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<!-- <img src={EKJ2} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" /> -->
+	<img src={EKJ2} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>
 <hr/>
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -65,8 +65,7 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={EKJ} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={EKJ} reverse={false} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Gratitude letter</h5>
 		  <p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 		  <Button class="bg-bgGreen border border-[#059142] hover:bg-[#059142]" on:click={()=>(letterShow('Gratitude'))}>
@@ -75,8 +74,7 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={EKJ3} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={EKJ3} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 		  <Button class="bg-bgGreen border border-[#059142] hover:bg-[#059142]" on:click={()=>(letterShow('Reminder'))}>
@@ -85,8 +83,7 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={EKJ5} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={EKJ5} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Graduation letter</h5>
 			<p class="mb-3 font-normal leading-tight">Congratulations mi hermana!</p>
 		  <Button class="bg-bgGreen border border-[#059142] hover:bg-[#059142]" on:click={()=>(letterShow('Graduation'))}>
@@ -141,7 +138,7 @@
 		Draft Started: June 10, 2025 | Letter finished: July 9, 2025 | Letter written: July 10, 2025
 	</h3>
 	<div class="flex justify-center">
-				<!-- <img src={EKJ6} alt="N/A" class="object-cover mt-5 h-[300px] w-[250px] rounded-lg" /> -->
+				<img src={EKJ6} alt="N/A" class="object-cover mt-5 h-[300px] w-[250px] rounded-lg" />
 			</div>
 	<div class="text-[#f5f3f3]">
 		<article class="m-5">

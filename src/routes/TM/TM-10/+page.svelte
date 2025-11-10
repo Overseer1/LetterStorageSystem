@@ -1,12 +1,12 @@
 <script>
 	// @ts-nocheck
 	import cartas from '../letterHolderTM.json'
-	// import MJ from '$lib/assets/TM/J.jpg?url';
-	// import MJB from '$lib/assets/TM/J1.webp?url';
-	// import MJ2 from '$lib/assets/TM/J2.jpg?url';
-	// import MJ3 from '$lib/assets/TM/J3.jpg?url';
-	// import MJ4 from '$lib/assets/TM/J4.jpg?url';
-	// import MJ5 from '$lib/assets/TM/J5.jpg?url';
+	import MJ from '$lib/assets/TM/J0.jpg?url';
+	import MJB from '$lib/assets/TM/J1B.webp?url';
+	import MJ2 from '$lib/assets/TM/J02.jpg?url';
+	import MJ3 from '$lib/assets/TM/J03.jpg?url';
+	import MJ4 from '$lib/assets/TM/J04.jpg?url';
+	import MJ5 from '$lib/assets/TM/J5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -18,7 +18,8 @@
 	let letterContent = '';
 	const gratitudeFooter = cartas.TM10.Gratitude.Footer.replace(/\n/g, '<br />');
 	const birthdayFooter = cartas.TM10.Birthday.Footer.replace(/\n/g, '<br />');
-	const graduationPlaceholder = cartas.TM10.Graduation.Footer.replace(/\n/g, '<br />');
+	const graduationHeader = cartas.TM10.Graduation.Header.replace(/\n/g, '<br />');
+	const graduationFooter = cartas.TM10.Graduation.Footer.replace(/\n/g, '<br />');
 	function letterShow(contentSelect) {
 		letterContent = contentSelect;
 		showModal = true;
@@ -62,7 +63,7 @@
 <div class="text-center m-5">Welcome, Margate, J.</div>
 <div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<!-- <img src={MJ} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] rounded-lg imgHead" /> -->
+	<img src={MJ} alt="N/A" class="object-cover mt-5 h-[250px] w-[450px] rounded-lg imgHead" />
 </header>
 <hr />
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -70,8 +71,7 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={MJ3} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={MJ3} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Gratitude letter</h5>
 			<p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 			<Button
@@ -83,8 +83,7 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={MJ4} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={MJ4} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 			<Button
@@ -96,8 +95,7 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={MJ2} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={MJ2} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
 			<p class="mb-3 font-normal leading-tight">
 				Happy 20th birthday mi hija, hermana, bff, and model!!!
@@ -111,8 +109,7 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={MJ5} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={MJ5} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
 			<p class="mb-3 font-normal leading-tight">
 				Draft is hidden as per my decision.
@@ -159,35 +156,13 @@
 			</p>
 			<div class="text-[#f5f3f3]">
 				<div class="flex justify-center">
-					<!-- <img src={MJB} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" /> -->
+					<img src={MJB} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 				</div>
 				<article class="m-5">
-					Hai Jovy, HAPPY 20TH BIRTHDAY SAYO MI ANAKISSS!!! or HAPPY 20TH BIRTHDAY SAYO MY FOUNDING
-					MOTHER!!! Sorry kung eto lang regalo ko, yung picture naman na naka layout is gawa ko
-					naman kaya ayan lang muna ha? Anw, dahil ikaw ay 20 na, dapat maging maayos ang decisions
-					and/or choices mo sa life and of course, nandito lang kami for you. Tandaan mo palagi yon
-					ha? Nandito lang ako, si Kat Kat, si Asli, si Marielle, at kung sino pa para supportahan,
-					samahan, tulungan, at pakinggan ka. Oki? Ano pa ba, well namimiss ko na random photoshoots
-					natin. Aminin natin na mas madami photoshoots ni Kat Kat at ni Asli, pero kulang pics mo
-					dito aba. Dapat madami to eh, so dapat makapag photoshoot tayo soon. Feel ko need mo
-					malaman to kahit alam na alam mo na to, so eto, mahal na mahal ka namin, as in. Kahit alam
-					mo na yan, sabihin mo na lang na reminder lang yon. So ayun. Sana nasa mabuting kalagayan
-					ka ngayon and mag ingat ka palagi ha? Miss na miss ka na namin or should I say, MISS NA
-					MISS NA KITA!!! Sana talaga magkita tayo soon. Of course, sorry kung minsan
-					napapaoverthink kita and sa kung ano pang bad things. I'm really sorry anak. I wish you
-					all the best girl, do your best lang ha? Proud na proud ako sayo kahit malayo ako sayo.
-					Uulitin ko, nandito lang ako/kami for you ha? I love you so fucking much Jovy, Alam mo
-					yon. I'm so thankful for you mi hija. Ikaw nag link sa amin ni Kat Kat at Asli, naging
-					founding mother (wao) ng 2nd circle ko, and syempre, naging kaibigan kita, tas malapit pa.
-					It's beautiful. Nakakamiss ka sobra. Baka maiyak pa tayong dalawa pag nagkita tayo ulit.
-					Do me a favor, grumaduate ka ng may Latin Honors. Si Kat Kat ang unang kaibigan natin na
-					magiging Cum Laude, dapat ikaw din at yung iba ay Cum Laude. Okay lang kung hindi, at
-					least ginawa niyo best niyo. I know that and I'm proud of you for doing your best. See u
-					soonest, God bless you, and to more memories with you!!!
+					{cartas.TM10.Birthday.Section1}
 				</article>
 				<footer class="m-5 text-end">
-					From your school father, photographer, and close friend, <br />
-					Hanz
+					{@html birthdayFooter}
 				</footer>
 			</div>
 		</Modal>
@@ -209,22 +184,20 @@
 		</Modal>
 	{:else if letterContent === 'Graduation'}
 		<Modal bind:showModal>
-			<h2 slot="letterType" class="text-white text-xl cheatline text-center select-none">Graduation letter</h2>
+			<h2 slot="letterType" class="text-white text-xl cheatline text-center select-none blur-md">Graduation letter</h2>
 			<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">
 				Letter finished: 2026/2027 | Letter written: 2027 
 			</p>
 			<div class="text-[#f5f3f3]">
-				<!-- //* insert img here (preferrably grad pic) -->
+				<!-- //* insert img here (preferably grad pic) -->
 				<article class="m-5">
-					Jovy M. Margate | Batch 2027 <br />
-					Bachelor of Science in Tourism Management <br />
+					{@html graduationHeader}
 				</article>
 				<article class="m-5">
-					
+					{cartas.TM10.Graduation.placeholder}
 				</article>
 				<footer class="m-5 text-end">
-					From your school father, photographer, and close friend, <br />
-					Hanz
+					{@html graduationFooter}
 				</footer>
 			</div>
 		</Modal>

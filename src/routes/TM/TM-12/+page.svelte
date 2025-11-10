@@ -2,16 +2,16 @@
 	// @ts-nocheck
 
 	import cartas from '../letterHolderTM.json';
-	// import CMA from '$lib/assets/TM/MA.jpg?url'; //unused
-	// import CMA1 from '$lib/assets/TM/MA1.jpg?url'; //unused
-	// import CMA2 from '$lib/assets/TM/MA2.jpg?url';
-	// import CMA3 from '$lib/assets/TM/MA3.jpg?url'; //unused
-	// import CMA4 from '$lib/assets/TM/MA4.jpg?url'; //unused
-	// import CMA5 from '$lib/assets/TM/MA5.jpg?url'; //unused
-	// import CMA6 from '$lib/assets/TM/MA6.jpg?url';
-	// import CMA7 from '$lib/assets/TM/MA7.jpg?url';
-	// import CMA8 from '$lib/assets/TM/MA8.jpg?url';
-	// import CMA9 from '$lib/assets/TM/MA9.webp?url';
+	import CMA from '$lib/assets/TM/MA0.jpg?url'; //unused
+	import CMA1 from '$lib/assets/TM/MA01.jpg?url'; //unused
+	import CMA2 from '$lib/assets/TM/MA02.jpg?url';
+	import CMA3 from '$lib/assets/TM/MA03.jpg?url'; //unused
+	import CMA4 from '$lib/assets/TM/MA04.jpg?url'; //unused
+	import CMA5 from '$lib/assets/TM/MA5.jpg?url'; //unused
+	import CMA6 from '$lib/assets/TM/MA6.jpg?url';
+	import CMA7 from '$lib/assets/TM/MA7.jpg?url';
+	import CMA8 from '$lib/assets/TM/MA8.jpg?url';
+	import CMA9 from '$lib/assets/TM/MA9.webp?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -25,8 +25,8 @@
 	const gratitudeFooter = cartas.TM12.Gratitude.Footer.replace(/\n/g, '<br />');
 	const birthdayFooter = cartas.TM12.Birthday.Footer.replace(/\n/g, '<br />');
 	const graduationPlaceholder = cartas.TM12.Graduation.placeholder.replace(/\n/g, '<br />');
-	// const graduationHeader = cartas.TM12.Graduation.Header.replace(/\n/g, '<br />');
-	// const graduationFooter = cartas.TM12.Graduation.Footer.replace(/\n/g, '<br />');
+	const graduationHeader = cartas.TM12.Graduation.Header.replace(/\n/g, '<br />');
+	const graduationFooter = cartas.TM12.Graduation.Footer.replace(/\n/g, '<br />');
 	function letterShow(contentSelect) {
 		letterContent = contentSelect;
 		showModal = true;
@@ -82,7 +82,7 @@
 
 <div class="cheatline text-center">Page updated: December 8, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<!-- <img src={CMA6} alt="N/A" class="object-cover mt-5 h-[250px] w-[400px] rounded-lg" /> -->
+	<img src={CMA6} alt="N/A" class="object-cover mt-5 h-[250px] w-[400px] rounded-lg" />
 </header>
 <hr />
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -90,8 +90,7 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={CMA} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CMA} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Gratitude letter</h5>
 			<p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 			<Button
@@ -103,8 +102,7 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={CMA8} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CMA8} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 			<Button
@@ -117,8 +115,7 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={CMA7} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CMA7} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
 			<p class="mb-3 font-normal leading-tight">
 				Happy 22nd birthday mi hermana, bff, and model!!!
@@ -134,8 +131,7 @@
 
 	<!-- //* for graduation | 2027 -->
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={CMA2} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CMA2} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
 			<p class="mb-3 font-normal leading-tight">Draft is hidden as per my decision.</p>
 			<Button
@@ -155,7 +151,6 @@
 			<div class="text-[#f5f3f3]">
 				<!-- //* you may add carousel or images in between -->
 				<article class="m-5">
-					``
 					{cartas.TM12.Gratitude.Section1}
 				</article>
 				<article class="m-5">
@@ -229,25 +224,18 @@
 			<div class="text-[#f5f3f3]">
 				<article class="m-5">{cartas.TM12.Graduation.placeholder}</article>
 				<div class="hidden">
-					<!-- //* insert img here (preferrably grad pic) -->
+					<!-- //* insert img here (preferably grad pic) -->
 					<article class="m-5">
-						<!-- Marykate Ashley B. Cabrera | Batch 2027 <br />
-						Bachelor of Science in Tourism Management <br />
-						School Spirit Awardee <br />
-						Cum Laude -->
-						{cartas.TM12.Graduation.Header}
+						{@html graduationHeader}
 					</article>
 					<article class="m-5">
-						CONGRATULATIONS MY ASLIIII!!!! //multiple additionals for letter | helping, supporting,
-						and teaching her<br />
+						{cartas.TM12.Graduation.Section1}
 					</article>
 					<article class="m-5">
 
 					</article>
 					<footer class="m-5 text-end">
-						From your not related brother, personal photographer, supporter, guide, teacher, and
-						close friend, <br />
-						Hanz
+						{@html graduationFooter}
 					</footer>
 				</div>
 			</div>

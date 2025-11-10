@@ -10,20 +10,31 @@
             "Footer":"From your photographer, customer, and close friend,\nHanzyboy"
         },
         "Graduation":{
-            "Header":"Kristine Joy G. Estipona | Batch 2025\nBachelor of Science in Information Technology\n",
+            "Header":"Kristine Joy G. Estipona | Batch 2025\nBachelor of Science in Information Technology",
             "Section1":"CONGRATULATIONS MY TIN TINNNNN!!!! Nakagraduate na ikaw sa wakas! Thru ups and downs, challenges, and problems nakagraduate na ikaw. I'm so proud of you mi hermana! I hope na proud ka din sa sarili mo dahil nakapagtapos ka na. Kase hindi biro ang dinaanan mo ha, nahirapan ka pero nagpursigi ka lang and that's something that I'm proud of.",
             "Section2":"Now here ah, napapansin ko na may times ka na nahihirapan ka sa schoolworks. Pero alam ko nagagawan mo ng paraan yan para maging maganda yung output mo or para maging acceptable siya sa teacher or kagroup mo. Sorry sa times na nanghihingi ka ng help sa akin at hindi ko napapansin (if there's any, kase feel ko meron eh). Anyways, alam ko nagtataka ka kung bakit ka may medal. Yung medal na yan is Academic Excellence and the reason kung bakit ka may ganyan kase deserve mo yan. Yes, I know na hindi ka Cum Laude  and muntikan ka na doon but I think na deserve mo pa din to. You've come this far. Deserve mo talaga yan and I'm so proud of you. Sobrang proud ako sayo Kristine. Sa mata ko, Cum Laude ka. I hope you like it. I appreciate you so much mi hermana and I'm grateful to God na nakilala kita.",
             "Section3":"Basta Tin Tin, I'm proud of you so damn much. Nakakaiyak na ikaw naman ngayon ang ga-graduate. Hindi ako magsasawa na supportahan ka. Nandito lang ako para gabayan at supportahan ka no matter what. Mahal na mahal kita mi hermanaaaa! I wish na you'll achieve your goals and dreams in life! Remember na one chat or call away lang ako ha?  Palagi ako nandito, ang kapatid/tatay mo, para sayo. I love you Kristineeee! Ingat ka palagi and God bless you always!",
             "Footer":"From your brother by friendship, personal photographer, supporter, guide, teacher, and close friend,\n Hanz Edilberto O. Lizaso III | Batch 2024\n Bachelor of Science in Information Technology\n Loyalty Awardee"
+        },
+         "Birthday":{
+            "Section1":"",
+            "Section2":"",
+            "Section3":"",
+            "Footer":""
         }
     },
     "IT12":{
-        "":""
+        "Section1":"  Hai Cedes, Thank you sa mga memories and what not since A.Y. 2022-2023. Alam mo naman na current mental situation ko ngayon so eto na lang update q sayo, wala ng gusto na babae (for now), inaatupag ang kalusugan ko dahil lumalala na ulit, and naghahanap na trabaho. Nahimatay ako nung May 30 kung hindi mo alam. Pero okay naman na ako.",
+        "Section2":" Maikli lang naman to so ganto, thank you sa mga times na ginawa mo akong personal photographer mo. Masaya din naman yon kahit paano. Tsaka also, thank you din sa mga bondings and sa times na naging rant person kita and lastly, thank you sa time na kinamusta mo ako nung hindi ako okay. Ayoko sabihin naman kung ano yung nag push sa akin kung bakit, pero inside my head lang naman yon eh. Thank you talaga. Thankful ako na nakilala kita Cedes, I didn't know din na mag ca-care ka sa akin sa times na hindi ako okay. So yun nga, thank you sa 2 years worth of memories, bondings, and being my motivation and inspiration for 4 months (3Y2 yon). Love u beh, God bless u and ingat ka palagi. Congrats sa atin at nakagraduate na tayo! Goodluck sa magiging future mo and to more memories with u!!!",
+        "Footer":" From your photographer and friend,\nHanzyboy"
     },
     "ITF20":{
+       "":{
         "":""
+       }
     },
     "ITF26":{
-        "":""
+        "Section1":"Wasap boi, Happy teacher's day! So ayun nga no, eto lang regalo ko sayo unless makahanap pa ako nang madagdag dito, wag ka na magreklamo HSHSHAHAAHHAS tsaka wala naman ako naririnig na reklamo about sa teaching mo or sayo mismo so safe ka naman HDSHASHAHAHA basta boi galingan mo sa pagtuturo, total naman eh goods na goods ka daw mag turo tsaka masaya ka din naman sa trabaho mo so ayon. Enjoy your day and happy teacher's day ulit!!!",
+        "Footer":" From your helpdesk, photographer, and friend,\nHanz"
     }
 }

@@ -1,19 +1,19 @@
 <script>
 	// @ts-nocheck
 	import cartas from '../letterHolderTM.json'
-	// import CKC from '$lib/assets/TM/KC.jpg?url';
-	// import CKC1 from '$lib/assets/TM/KC1.jpg?url';
-	// import CKC2 from '$lib/assets/TM/KC2.jpg?url';
-	// import CKC3 from '$lib/assets/TM/KC3.jpg?url'; //unused
-	// import CKC4 from '$lib/assets/TM/KC4.jpg?url';
-	// import CKC5 from '$lib/assets/TM/KC5.jpg?url'; //unused
-	// import CKC6 from '$lib/assets/TM/KC6.jpg?url';
-	// import CKC7 from '$lib/assets/TM/KC7.jpg?url'; //unused
-	// import CKC8 from '$lib/assets/TM/KC8.jpg?url';
-	// import CKC9 from '$lib/assets/TM/KC9.jpg?url';
-	// import CKC10 from '$lib/assets/TM/KC10.webp?url';
-	// import CKC11 from '$lib/assets/TM/KC11.jpg?url';
-	// import CKC12 from '$lib/assets/TM/KC12.jpg?url';
+	import CKC from '$lib/assets/TM/KC0.jpg?url';
+	import CKC1 from '$lib/assets/TM/KC01.jpg?url';
+	import CKC2 from '$lib/assets/TM/KC02.jpg?url';
+	import CKC3 from '$lib/assets/TM/KC03.jpg?url'; //unused
+	import CKC4 from '$lib/assets/TM/KC04.jpg?url';
+	import CKC5 from '$lib/assets/TM/KC05.jpg?url'; //unused
+	import CKC6 from '$lib/assets/TM/KC6.jpg?url';
+	import CKC7 from '$lib/assets/TM/KC7.jpg?url'; //unused
+	import CKC8 from '$lib/assets/TM/KC8.jpg?url';
+	import CKC9 from '$lib/assets/TM/KC9.jpg?url';
+	import CKC10 from '$lib/assets/TM/KC10.webp?url';
+	import CKC11 from '$lib/assets/TM/KC11.jpg?url';
+	import CKC12 from '$lib/assets/TM/KC12.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle, Spinner } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -81,7 +81,7 @@
 {/if}
 <div class="cheatline text-center">Page updated: July 10, 2025</div>
 <header class="mb-5 flex justify-center">
-	<!-- <img src={CKC9} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" /> -->
+	<img src={CKC9} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>
 <hr />
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -90,8 +90,7 @@
 
 <div class="flex justify-center max-sm:block">
 	<div class="overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={CKC} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CKC} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Gratitude letter</h5>
 			<p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 			<Button
@@ -104,8 +103,7 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={CKC4} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CKC4} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 			<Button
@@ -118,8 +116,7 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={CKC8} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CKC8} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
 			<p class="mb-3 font-normal leading-tight">
 				Happy 22nd birthday mi hermana, bff, and model!!!
@@ -134,8 +131,7 @@
 	</div>
 
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={CKC11} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={CKC11} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Graduation letter</h5>
 			<p class="mb-3 font-normal leading-tight">Congratulations mi hermana!</p>
 			<Button
@@ -198,7 +194,7 @@
 				Letter finished: December 1, 2024 | Letter written: December 8, 2024
 			</h3>
 			<div class="flex justify-center">
-				<!-- <img src={CKC10} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" /> -->
+				<img src={CKC10} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 			</div>
 			<div class="text-[#f5f3f3]">
 				<article class="m-5">
@@ -230,7 +226,7 @@
 				Draft Started: February 27, 2025 | Letter finished: July 9, 2025 | Letter written: July 10, 2025
 			</h3>
 			<div class="flex justify-center">
-				<!-- <img src={CKC12} alt="N/A" class="object-cover mt-5 h-[250px] w-[250px] rounded-lg" /> -->
+				<img src={CKC12} alt="N/A" class="object-cover mt-5 h-[250px] w-[250px] rounded-lg" />
 			</div>
 			<div class="text-[#f5f3f3]">
 				<article class="m-5">

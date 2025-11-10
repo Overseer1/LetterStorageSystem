@@ -1,12 +1,13 @@
 <script>
     // @ts-nocheck
-    
         import FC from '$lib/assets/ITCS/CF.jpg?url';
+        import cartas from '../letterHolderIT.json';
         import { goto } from '$app/navigation';
         import { onMount } from 'svelte';
         import { base } from '$app/paths';
         import Icon from '@iconify/svelte';
         import emailjs from '@emailjs/browser';
+        const gratitudeFooter = cartas.ITF26.Footer.replace(/\n/g, '<br />');
           const sendEmail = (/** @type {{ target: string | HTMLFormElement; }} */ e) => {
             emailjs
               .sendForm(import.meta.env.VITE_EmailJS_ServiceID, import.meta.env.VITE_EmailJS_TemplateIDFF, e.target, {
@@ -43,14 +44,10 @@
         <img src={FC} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
     </header>
     <article class="m-10 mb-3">
-        Wasap boi, Happy teacher's day! So ayun nga no, eto lang regalo ko sayo unless makahanap pa ako nang madagdag dito, wag ka na magreklamo HSHSHAHAAHHAS tsaka wala naman ako naririnig na reklamo about sa teaching mo
-        or sayo mismo so safe ka naman
-        HDSHASHAHAHA basta boi galingan mo sa pagtuturo, total naman eh goods na goods ka daw mag turo tsaka masaya ka din naman sa trabaho mo so ayon. 
-        Enjoy your day and happy teacher's day ulit!!!
+      {cartas.ITF26.Section1}
     </article>
     <footer class="m-10 mr-18 text-end">
-        From your helpdesk, photographer, and friend, <br />
-        Hanz
+       {@html gratitudeFooter}
     </footer>
     <hr />
         

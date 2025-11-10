@@ -1,12 +1,5 @@
 <script>
 // @ts-nocheck
-
-	import cartasTM from '../../TM/letterHolderTM.json'
-	import cartasIT from '../../IT/letterHolderIT.json'
-	// import CKC from '$lib/assets/TM/KC11.jpg?url';
-	// import CMA from '$lib/assets/TM/MA1.jpg?url';
-	// import CKC1 from '$lib/assets/TM/KC1.jpg?url';
-	// import EKJ5 from '$lib/assets/ITCS/KJ5.jpg?url';
 	import TD from '$lib/assets/ITCS/TD.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { goto } from '$app/navigation';
@@ -98,19 +91,19 @@
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A | Letter written: N/A</p>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
-				{cartasTM.TMKC.Graduation.Section1}
+				
 			</article>
 			<article class="m-5">
-				{cartasTM.TMKC.Graduation.Section2}
+				
 			</article>
 			<article class="m-5">
-				{cartasTM.TMKC.Graduation.Section3}
+				
 			</article>
 			<article class="m-5">
-				{cartasTM.TMKC.Graduation.Section4}
+				
 			</article>
 			<footer class="m-5 text-end">
-				{cartasTM.TMKC.Graduation.Footer}
+				
 			</footer>
 		</div>
 	</Modal>
@@ -120,16 +113,16 @@
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A | Letter written: N/A</p>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
-				{cartasIT.IT05.Graduation.Section1}
+				
 			</article>
 			<article class="m-5">
-				{cartasIT.IT05.Graduation.Section2}
+				
 			</article>
 			<article class="m-5">
-				{cartasIT.IT05.Graduation.Section3}
+				
 			</article>
 			<footer class="m-5 text-end">
-				{cartasIT.IT05.Graduation.Footer}
+				
 			</footer>
 		</div>
 	</Modal>

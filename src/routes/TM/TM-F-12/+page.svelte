@@ -1,12 +1,13 @@
 <script>
     // @ts-nocheck
-    
-        // import DLJ from '$lib/assets/TM/LJ.jpg?url';
+        import cartas from '../letterHolderTM.json'
+        import DLJ from '$lib/assets/TM/LJ0.jpg?url';
         import { goto } from '$app/navigation';
         import { onMount } from 'svelte';
         import { base } from '$app/paths';
         import Icon from '@iconify/svelte';
         import emailjs from '@emailjs/browser';
+        const gratitudeFooter = cartas.TMF12.TeachersDay.Footer.replace(/\n/g, '<br />');
           const sendEmail = (/** @type {{ target: string | HTMLFormElement; }} */ e) => {
             emailjs
               .sendForm(import.meta.env.VITE_EmailJS_ServiceID, import.meta.env.VITE_EmailJS_TemplateIDFF, e.target, {
@@ -36,23 +37,17 @@
             });
         }
     </script>
-    <title>TM/TM-F-12</title>
+    <title>Hai Ate Ma'am BFF!</title>
     <div class="text-center m-5">Welcome, Ms. Domingo, L. J.</div>
     <div class="cheatline text-center">Letter finished: October 3, 2024</div>
     <header class="overflow-hidden mb-5 flex justify-center">
-        <!-- <img src={DLJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" /> -->
+        <img src={DLJ} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
     </header>
     <article class="m-10 mb-3">
-        Haiii ate ma'am bff! Happy teacher's day sayooooo!!! So eto lang gift ko sayo, unless nakaisip ako ng idadagdag na gift, so ayun nga no,
-        Sana you're doing good lang dyan beh and also, I hope na
-        maachive mo ang dreams mo! Sayang lang na hindi kita naging ka-workmate kase kung oo, baka nag chismisan na lang
-        tayo sa aquarium ng matagal HSDHSHAHSHA so ayun, kahit hindi mo ako naging estudyante (for obv reasons), I know na ginagawa mo best
-        mo sa pagtuturo sa mga estudyante mo. Alam ko yon kase ikaw yan and dahil sa estudyante mo yung mga kaibigan ko. Basta ate bff,
-        Do your best lang ah, dito lang ako para supportahan ka 🫶🏻. Happy teacher's day ulittt!!! To more memories with u 🫶🏻🫶🏻🫶🏻
+        {cartas.TMF12.TeachersDay.Section1}
     </article>
     <footer class="m-10 mr-18 text-end">
-        From your photographer and bff, <br />
-        Hanz
+        {@html gratitudeFooter}
     </footer>
     <hr />
         

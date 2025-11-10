@@ -1,11 +1,11 @@
 <script>
 // @ts-nocheck
-
-	// import MMK from '$lib/assets/ITCS/MK.jpg?url';
-	// import MMK2 from '$lib/assets/ITCS/MK2.jpg?url';
-	// import MMK3 from '$lib/assets/ITCS/MK3.jpg?url';
-	// import MMK4 from '$lib/assets/ITCS/MK4.jpg?url';
-	// import MMK5 from '$lib/assets/ITCS/MK5.jpg?url';
+	import cartas from '../CS-15/letterHolderCS.json';
+	import MMK from '$lib/assets/ITCS/MK0.jpg?url';
+	import MMK2 from '$lib/assets/ITCS/MK02.jpg?url';
+	import MMK3 from '$lib/assets/ITCS/MK03.jpg?url';
+	import MMK4 from '$lib/assets/ITCS/MK04.jpg?url';
+	import MMK5 from '$lib/assets/ITCS/MK5.jpg?url';
 	import Modal from '../../components/LetterModal.svelte';
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	import { goto } from '$app/navigation';
@@ -15,6 +15,10 @@
 	import emailjs from '@emailjs/browser';
 	let showModal = false;
 	let letterContent = '';
+	const gratitudeFooter = cartas.CS15.Gratitude.Footer.replace(/\n/g, '<br />');
+	const birthdayFooter = cartas.CS15.Birthday.Footer.replace(/\n/g, '<br />');
+	const graduationHeader = cartas.CS15.Graduation.Header.replace(/\n/g, '<br />');
+	const graduationFooter = cartas.CS15.Graduation.Footer.replace(/\n/g, '<br />');
 	function letterShow(contentSelect){
 		letterContent = contentSelect;
 		showModal = true;
@@ -52,7 +56,7 @@
 <div class="text-center m-5">Welcome, Marson, M. K.</div>
 <div class="cheatline text-center">Page updated: November 3, 2024</div>
 <header class="overflow-hidden mb-5 flex justify-center">
-	<!-- <img src={MMK} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" /> -->
+	<img src={MMK} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />
 </header>
 <hr/>
 <header class="overflow-hidden flex justify-center cheatline my-5">
@@ -62,8 +66,7 @@
 </header>
 <div class="flex justify-center max-sm:block">
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={MMK3} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={MMK3} reverse={false} class="bg-current text-[#f5f3f3]">
 		  <h5 class="mb-2 text-2xl font-bold tracking-tight ">Gratitude letter</h5>
 		  <p class="mb-3 font-normal leading-tight">A thank you letter before I leave my Alma Mater.</p>
 		  <Button class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]" on:click={()=>(letterShow('Gratitude'))}>
@@ -72,8 +75,7 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={MMK4} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={MMK4} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
 		  <p class="mb-3 font-normal leading-tight">Happy 22nd birthday mi hija, hermana, bff, and model!!!</p>
 		  <Button class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]" on:click={()=>(letterShow('Birthday'))}>
@@ -82,13 +84,25 @@
 		</Card>
 	</div>
 	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
-		<!-- img={MMK2} -->
-		<Card  reverse={false} class="bg-current text-[#f5f3f3]">
+		<Card img={MMK2} reverse={false} class="bg-current text-[#f5f3f3]">
 			<h5 class="mb-2 text-2xl font-bold tracking-tight">To my 2nd circle</h5>
 			<p class="mb-3 font-normal leading-tight">Access to cartas secreta.</p>
 		  <Button class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]" on:click={()=>(letterShow('Reminder'))}>
 			Open letter
 		  </Button>
+		</Card>
+	</div>
+		<!-- //* for graduation | 2027 -->
+	<div class=" overflow-hidden mb-5 flex justify-center mx-5">
+		<Card img={MMK5} reverse={false} class="bg-current text-[#f5f3f3]">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight">Being drafted</h5>
+			<p class="mb-3 font-normal leading-tight">Draft is hidden as per my decision.</p>
+			<Button
+				class="bg-bgPink border border-[#fd5da8] hover:bg-[#fd5da8]"
+				on:click={() => letterShow('Graduation')}
+			>
+				Open letter
+			</Button>
 		</Card>
 	</div>
 </div>
@@ -100,30 +114,16 @@
 		<div class="text-[#f5f3f3]">
 			<!-- //* you may add carousel or images in between -->
 			<article class="m-10 mb-3">
-				Hai Marielle, so ano no, bakit kita ginagawan ng letter eh inaaway mo q palagi. De ano, thank u sa mga memories and bondings
-				natin. Tsaka sa mga katarantaduhan since last school year. Ewan ko kung kanino mo nakuha yung ugali na yan pero oks lang, gago din kami eh.
-				Update about sa life ko kahit alam mo na,
-				wala ng gusto na babae (for now), inaatupag ang kalusugan ko dahil lumalala na ulit (alam mo naman na kung bakit), 
-				and naghahanap na trabaho. Yes nagpupuyat pa din pero di na masyado (well, pinagpuyatan ko tong pag draft ng letters).
+				{cartas.CS15.Gratitude.Section1}
 			</article>
 			<article class="m-10 mb-3 ">
-				So yun nga, grabe pinagsamahan natin ah, lalo na yung nagpakitang gilas pa tayo nung intrams. Nahimatay ba naman tayo eh,
-				tas nadamay pa natin si Ashley. Well, at least okay na tayong tatlo. Thankful ako kase tinulungan mo pa din ako kahit pagod ka na. 
-				I owe you for that. Tsaka alam ko na sinabi ko na sayo to before, pero sasabihin ko ulit.
-				Doon ko narealize kung gaano ko sila kaclose, kung gaano ko kayo kaclose, at kung anong klaseng pag aalaga ang binigay 
-				niyo sa akin that day. Dahil doon, magiging reason ko yon if ever na magisip ako na tapusin ang life ko. Hindi naman na mangyayari yon ever again. Thank you talaga.
-				Tsaka eto pa, buti ikaw yung co-photographer ko minsan. Enthusiastic ka kase pag may hawak ka na camera eh. Baka nga ikaw na maging photographer ng school eh
-				(kung want mo lang). Tsaka ang lupit mo din manggisa ah. Konting gisa pa, maaamoy ko na yung chopsuey eh. Baka nga masunog mo pa.
+				{cartas.CS15.Gratitude.Section2}
 			</article>
 			<article class="m-10 mb-3">
-				I'm so thankful na nakilala kita, mamimiss ko talaga yung memories and bondings natin and
-				ang ganda ng pinagsamahan natin since last school year (mga random photoshoots, tamang asaran, tamang chismisan). 
-				So yun nga beh, thank you again sa mga memories, kakulitan, and bondings natin! Mahal na mahal kita. God bless u, 
-				ingat ka palagi, see u when I see u, and thank u ulit! To more memories with u!!!
+				{cartas.CS15.Gratitude.Section3}
 			</article>
 			<footer class="m-10 mr-18 text-end">
-				From your school twin brother, co-photographer, and close friend, <br />
-				Hanz
+				{@html gratitudeFooter}
 			</footer>
 		</div>
 	</Modal>
@@ -133,13 +133,10 @@
 		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: July 16, 2024</p>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
-				Hai Marielle, Happy birthday sayo! So napaka konti lang naman ng mensahe q sau. Ikaw ay maging maayos sa last 2 years ng college life mo. Malapit ka na din mag research.
-				Hindi ko alam kung running ka for Cum Laude, pero galingan mo pa din ha? So yun nga, nasa letter naman na yung want ko sabihin sayo so ayun. God bless you and enjoy your day!!
-				Ay wait, kung need mo ng kausap, nandito aq at sila, oki? oki, yun lang!
+				{cartas.CS15.Birthday.Section1}
 			</article>
 			<footer class="m-5 text-end">
-				From your school twin brother, co-photographer, and close friend, <br />
-				Hanz
+				{@html birthdayFooter}
 			</footer>
 		</div>
 	</Modal>
@@ -156,6 +153,22 @@
 		</footer>
 	</div>
 </Modal>
+{:else if letterContent === 'Graduation'}
+	<Modal bind:showModal>
+		<h2 slot="letterType" class="text-white text-xl cheatline text-center blur-md">Graduation letter</h2>
+		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: 2026/2027 | Letter written: 2027</p>
+		<div class="text-[#f5f3f3]">
+			<article class="m-5">
+				{@html graduationHeader}
+			</article>
+			<article class="m-5">
+				{cartas.CS15.Graduation.placeholder}
+			</article>
+			<footer class="m-5 text-end">
+				{@html graduationFooter}
+			</footer>
+		</div>
+	</Modal>
 {/if}
 
 <hr />
