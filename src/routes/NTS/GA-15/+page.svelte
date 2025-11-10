@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 	import cartas from '../letterHolderNTS.json';
-	import GQ from '$lib/assets/NTS/GA-Q.jpg?url';
+	import GQ from '$lib/assets/NTS/GA-Q01.jpg?url';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';

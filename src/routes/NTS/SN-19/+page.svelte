@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 	import cartas from '../letterHolderNTS.json';
-	import TA from '$lib/assets/NTS/SN-A.jpg?url';
+	import TA from '$lib/assets/NTS/SN-A01.jpg?url';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';

@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 	import cartas from '../letterHolderNTS.json';
-	import RA from '$lib/assets/NTS/SL-A.jpg?url';
+	import RA from '$lib/assets/NTS/SL-A01.jpg?url';
 	import RA2 from '$lib/assets/NTS/SL-A02.jpg?url';
 	import RA3 from '$lib/assets/NTS/SL-A03.jpg?url';
 	import RA4 from '$lib/assets/NTS/SL-A04.jpg?url';
