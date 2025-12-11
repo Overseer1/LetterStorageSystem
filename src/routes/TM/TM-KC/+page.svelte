@@ -71,14 +71,8 @@
 		});
 	}
 </script>
-
-{#if userCheck == import.meta.env.VITE_TM_KC_T}
 <title>Henlo, Kat Kattttt</title>
 <div class="text-center m-5">Welcome, Cabrera, K. C.</div>
-{:else if userCheck == import.meta.env.VITE_SiteKey}
-<title>Hello Developer.</title>
-<div class="text-center m-5">Welcome, Lizaso, H. This is now hidden from her.</div>
-{/if}
 <div class="cheatline text-center">Page updated: July 10, 2025</div>
 <header class="mb-5 flex justify-center">
 	<img src={CKC9} alt="N/A" class="object-cover mt-5 h-[400px] w-[250px] rounded-lg" />

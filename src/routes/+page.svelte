@@ -18,29 +18,17 @@
 			(QKey == 'KC' && Answer == import.meta.env.VITE_TM_KC_A2)
 		) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_KC_T);
-			//goto(base + '/TM/TM-KC');
-			pHolder = 'Page under maintenance. Sorry for the inconvenience.';
-			//NOTE: Remove lines 22-24, 32-34, and 42-44 if there are changes, or apologies.
-		} else if (QKey == 'KC' && Answer == import.meta.env.VITE_DevPass){
-			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/TM/TM-KC');
 		} else if (
 			(QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A1) ||
 			(QKey == 'MA' && Answer == import.meta.env.VITE_TM_12_A2)
 		) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_12_T);
-			//goto(base + '/TM/TM-12');
-			pHolder = 'Page under maintenance. Sorry for the inconvenience.';
-		} else if (QKey == 'MA' && Answer == import.meta.env.VITE_DevPass){
-			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/TM/TM-12');
 		} else if (QKey == 'J' && Answer == import.meta.env.VITE_TM_10_A) {
 			localStorage.setItem('letterKey', import.meta.env.VITE_TM_10_T);
 			goto(base + '/TM/TM-10');
-		} else if (QKey == 'E' && Answer == import.meta.env.VITE_TM_26_A) {
-			localStorage.setItem('letterKey', import.meta.env.VITE_TM_26_T);
-			//goto(base + '/TM/TM-26');
-			pHolder = 'Page under maintenance. Sorry for the inconvenience.';
+			//TM-26 deprecated. Please use dev pass to access.
 		} else if (QKey == 'E' && Answer == import.meta.env.VITE_DevPass){
 			localStorage.setItem('letterKey', import.meta.env.VITE_SiteKey);
 			goto(base + '/TM/TM-26');
@@ -216,18 +204,6 @@
 				<Button
 					class="bg-bgBlack border border-[#dddddd] hover:bg-[#dddddd] hover:text-[#313131]"
 					on:click={() => (QKey = 'J')}
-				>
-					Open
-				</Button>
-			</Card>
-		</div>
-		<div class="overflow-hidden mb-5 flex justify-center mx-5">
-			<Card reverse={false} class="bg-current text-[#f5f3f3]">
-				<h5 class="mb-2 text-2xl font-bold tracking-tight">TM-26</h5>
-				<p class="mb-3 font-normal leading-tight">3rd year</p>
-				<Button
-					class="bg-bgBlack border border-[#dddddd] hover:bg-[#dddddd] hover:text-[#313131]"
-					on:click={() => (QKey = 'E')}
 				>
 					Open
 				</Button>

@@ -91,6 +91,7 @@
 		  </Button>
 		</Card>
 	</div>
+	<!-- //TODO: Add new card for her birthday -->
 </div>
 <hr/>
 {#if letterContent === 'Gratitude'}
