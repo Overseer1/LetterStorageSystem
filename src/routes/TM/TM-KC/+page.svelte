@@ -59,11 +59,7 @@
 		onMount(async () => {
 			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
-			// if (hasItem && valueCheck == import.meta.env.VITE_TM_KC_T) {
-			// } else {
-			// 	goto(base + '/');
-			// }
-			if (hasItem && valueCheck == import.meta.env.VITE_SiteKey) {
+			if (hasItem && valueCheck == import.meta.env.VITE_TM_KC_T) {
 			} else {
 				goto(base + '/');
 			}

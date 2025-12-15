@@ -1,6 +1,6 @@
 <script>
     // @ts-nocheck
-
+        import cartas from '../letterHolderIT.json'
         import J from '$lib/assets/ITCS/JB.jpg?url';
         import J2 from '$lib/assets/ITCS/JB2.jpg?url';
         import J3 from '$lib/assets/ITCS/JB3.jpg?url';
@@ -15,6 +15,9 @@
         import emailjs from '@emailjs/browser';
         let showModal = false;
 	    let letterContent = '';
+        let currentDate = new Date();
+        const gratitudeFooter = cartas.ITF20.Gratitude.Footer.replace(/\n/g, '<br />');
+        const birthdayFooter = cartas.ITF20.Gratitude.Footer.replace(/\n/g, '<br />');
 	    function letterShow(contentSelect) {
 		letterContent = contentSelect;
 		showModal = true;
@@ -35,6 +38,7 @@
               );
           };
         $: {
+            console.log(currentDate)
             let hasItem;
             let valueCheck;
             onMount(async () => {
@@ -50,7 +54,7 @@
     </script>
     <title>Hallo ate Judayyyy</title>
     <div class="text-center m-5">Welcome, Ms. Belda, J.</div>
-    <div class="cheatline text-center">Page updated: February 27, 2025</div>
+    <div class="cheatline text-center">Page updated: December 15, 2025</div>
     <header class="overflow-hidden mb-5 flex justify-center">
         <img src={J} alt="N/A" class="object-cover mt-10 h-[250px] w-[450px] rounded-lg" />
     </header>
@@ -62,7 +66,7 @@
         <div class="overflow-hidden mb-5 flex justify-center mx-5">
             <Card img={J2} reverse={false} class="bg-current text-[#f5f3f3]">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight">Gratitude letter</h5>
-                <p class="mb-3 font-normal leading-tight">Desc here.</p>
+                <p class="mb-3 font-normal leading-tight">Being thankful to my ate ma'am.</p>
                 <Button
                     class="bg-bgBlue border border-[#ffeb3b] hover:bg-[#ffeb3b] hover:text-[#313131]"
                     on:click={() => letterShow('Gratitude')}
@@ -74,7 +78,7 @@
         <div class="overflow-hidden mb-5 flex justify-center mx-5">
             <Card img={J5} reverse={false} class="bg-current text-[#f5f3f3]">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight">Birthday letter</h5>
-                <p class="mb-3 font-normal leading-tight">Desc here.</p>
+                <p class="mb-3 font-normal leading-tight">Happy birthday my ate maaaaaaaaam!</p>
                 <Button
                     class="bg-bgBlue border border-[#ffeb3b] hover:bg-[#ffeb3b] hover:text-[#313131]"
                     on:click={() => letterShow('Birthday')}
@@ -86,50 +90,44 @@
         {#if letterContent === 'Gratitude'}
 	    <Modal bind:showModal>
 		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Gratitude letter</h2>
-		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A </p>
+		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter drafted: November 17, 2025 | Letter finished: December 15, 2025 </p>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
-				dfsfds
+                {cartas.ITF20.Gratitude.Section1}
 			</article>
 			<article class="m-5">
-				dfsfds
+                {cartas.ITF20.Gratitude.Section2}
 			</article>
 			<article class="m-5">
-				dfsfds
-			</article>
-			<article class="m-5">
-				dfsfds
+                {cartas.ITF20.Gratitude.Section3}
 			</article>
 			<footer class="m-5 text-end">
-                From your photographer and bff, <br />
-                Hanz
+                {@html gratitudeFooter}
 			</footer>
+            <article class="m-5">
+                {cartas.ITF20.Gratitude.PostScript}
+			</article>
 		</div>
 	</Modal>
         {:else if letterContent === 'Birthday'}
 	    <Modal bind:showModal>
 		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Birthday letter</h2>
-		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter finished: N/A</p>
-		<div class="text-[#f5f3f3]">
-			<article class="m-5">
+		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter drafted: November 17, 2025 | Letter finished: December 1X, 2025</p>
+        <div class="text-[#f5f3f3]">
+            <p class="text-[#f5f3f3] text-center">di m pa nga birtdey eh ikw tlg btw baka maikli lng to pero I know na matutuwa ka whether mahaba to or maikli (yung letter ha? HASHASHAHASHA)</p>
+			<article class="m-5 hidden">
 				Hai ate Judayyyy, HAPPY BIRTHDAY SAYOOOOO!!!  
 			</article>
-			<article class="m-5">
+			<article class="m-5 hidden">
 				dfsfds*
 			</article>
-			<article class="m-5">
+			<article class="m-5 hidden">
 				dfsfds*
 			</article>
-			<article class="m-5">
-                dfsfds*
-			</article>
-			    <footer class="m-5 text-end">
+			    <footer class="m-5 text-end hidden">
 				    From your photographer and bff, <br />
                     Hanz
 			    </footer>
-            <article class="m-5">
-                 P.S. sori ah late na late na to medyo di ako goods eh pero gawin ko pa din to.
-            </article>
 		    </div>
 	    </Modal>
         {/if}

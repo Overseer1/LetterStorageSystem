@@ -167,7 +167,7 @@
 <div>
 	<h1 class="text-lg m-2 text-center">Please select your Year/Course or work in the cards below</h1>
 	<h1 class="text-lg m-2 text-center">
-		Note: <span class="text-[#eed202]">Yellow</span> = under development
+		<!-- Note: <span class="text-[#eed202]">Yellow</span> = under development -->
 		<!-- <span class="text-green-400">Light Green</span> = New letters -->
 	</h1>
 	<!-- //* Tourism Management  -->
@@ -263,7 +263,6 @@
 			</Card>
 		</div>
 	</div>
-	<!-- //! Remove divider once it fits all 6 cards in one div flex -->
 	<div class="flex justify-center max-sm:block">
 		<div class="overflow-hidden mb-5 flex justify-center mx-5">
 			<Card reverse={false} class="bg-current text-[#f5f3f3]">
@@ -279,7 +278,7 @@
 		</div>
 		<div class="overflow-hidden mb-5 flex justify-center mx-5">
 			<Card reverse={false} class="bg-current text-[#f5f3f3]">
-				<h5 class="mb-2 text-2xl font-bold tracking-tight text-[#eed202]">IT-F-20</h5>
+				<h5 class="mb-2 text-2xl font-bold tracking-tight">IT-F-20</h5>
 				<p class="mb-3 font-normal leading-tight">Former IT Faculty, IT Alumnus Batch 2023</p>
 				<Button
 					class="bg-bgBlack border border-[#dddddd] hover:bg-[#dddddd] hover:text-[#313131]"

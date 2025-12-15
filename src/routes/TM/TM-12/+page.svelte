@@ -58,12 +58,7 @@
 		onMount(async () => {
 			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
-			// Conditional logic based on hasItem
-			// if (hasItem && valueCheck == import.meta.env.VITE_TM_12_T) {
-			// } else {
-			// 	goto(base + '/');
-			// }
-			if (hasItem && valueCheck == import.meta.env.VITE_SiteKey) {
+			if (hasItem && valueCheck == import.meta.env.VITE_TM_12_T) {
 			} else {
 				goto(base + '/');
 			}
