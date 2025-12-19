@@ -41,7 +41,7 @@
 		onMount(async () => {
 			hasItem = localStorage.getItem('letterKey') !== null;
 			valueCheck = localStorage.getItem('letterKey');
-			// Conditional logic based on hasItem
+			// Page deprecated
 			// if (hasItem && valueCheck == import.meta.env.VITE_TM_26_T) {
 			// } else {
 			// 	goto(base + '/');

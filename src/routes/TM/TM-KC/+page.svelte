@@ -53,7 +53,6 @@
 			);
 	};
 	$: {
-		// Page non-accessible to others. Only to the developer.
 		let hasItem;
 		let valueCheck;
 		onMount(async () => {

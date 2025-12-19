@@ -17,7 +17,7 @@
 	    let letterContent = '';
         let currentDate = new Date();
         const gratitudeFooter = cartas.ITF20.Gratitude.Footer.replace(/\n/g, '<br />');
-        const birthdayFooter = cartas.ITF20.Gratitude.Footer.replace(/\n/g, '<br />');
+        const birthdayFooter = cartas.ITF20.Birthday.Footer.replace(/\n/g, '<br />');
 	    function letterShow(contentSelect) {
 		letterContent = contentSelect;
 		showModal = true;
@@ -90,7 +90,7 @@
         {#if letterContent === 'Gratitude'}
 	    <Modal bind:showModal>
 		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Gratitude letter</h2>
-		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter drafted: November 17, 2025 | Letter finished: December 15, 2025 </p>
+		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter drafted: November 17, 2025 | Letter finished: December 15, 2025 | Letter updated: December 19, 2025 </p>
 		<div class="text-[#f5f3f3]">
 			<article class="m-5">
                 {cartas.ITF20.Gratitude.Section1}
@@ -112,22 +112,17 @@
         {:else if letterContent === 'Birthday'}
 	    <Modal bind:showModal>
 		<h2 slot="letterType" class="text-[#313131] text-xl cheatline text-center">Birthday letter</h2>
-		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter drafted: November 17, 2025 | Letter finished: December 1X, 2025</p>
+		<p slot="dateOfLetter" class="text-white text-lg text-center border-b-[1px] px-5 py-2.5">Letter drafted: November 17, 2025 | Letter finished: December 19, 2025</p>
         <div class="text-[#f5f3f3]">
-            <p class="text-[#f5f3f3] text-center">di m pa nga birtdey eh ikw tlg btw baka maikli lng to pero I know na matutuwa ka whether mahaba to or maikli (yung letter ha? HASHASHAHASHA)</p>
-			<article class="m-5 hidden">
-				Hai ate Judayyyy, HAPPY BIRTHDAY SAYOOOOO!!!  
+			<article class="m-5">
+				{cartas.ITF20.Birthday.Section1}
 			</article>
-			<article class="m-5 hidden">
-				dfsfds*
+			<footer class="m-5 text-end">
+				{@html birthdayFooter}
+			</footer>
+            <article class="m-5">
+				{cartas.ITF20.Birthday.PostScript}
 			</article>
-			<article class="m-5 hidden">
-				dfsfds*
-			</article>
-			    <footer class="m-5 text-end hidden">
-				    From your photographer and bff, <br />
-                    Hanz
-			    </footer>
 		    </div>
 	    </Modal>
         {/if}
